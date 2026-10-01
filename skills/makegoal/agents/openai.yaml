@@ -1,0 +1,7 @@
+interface:
+  display_name: "Make Goal (→ /goal make)"
+  short_description: "Merged into /goal — routes to /goal make"
+  default_prompt: "Use $goal in make mode (read goal/references/make-mode.md) to turn this task into a build brief, a top-level goal, and ledger deliverables."
+
+policy:
+  allow_implicit_invocation: true
