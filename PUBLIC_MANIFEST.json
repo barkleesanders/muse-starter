@@ -1,16 +1,15 @@
 {
   "schema_version": 1,
-  "skill_count": 84,
-  "agent_count": 35,
-  "command_count": 21,
-  "file_count": 430,
   "files": [
     ".gitignore",
+    "BEADS.md",
     "CONTRIBUTING.md",
     "LICENSE",
     "MUSE.md",
     "PORTING.md",
+    "PUBLIC_MANIFEST.json",
     "README.md",
+    "SHARE.md",
     "install.sh",
     "agents/README.md",
     "agents/agent-native-reviewer.md",
@@ -435,5 +434,6 @@
     "templates/SOUL.md",
     "templates/TOOLS.md",
     "templates/USER.md"
-  ]
+  ],
+  "file_count": 433
 }

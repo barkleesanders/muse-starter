@@ -42,6 +42,9 @@ Set `MUSE_WORKSPACE` to install the workspace parts somewhere other than
 - **Identity templates** — starter `SOUL.md`, `USER.md`, `MEMORY.md`,
   `AGENTS.md`, `TOOLS.md`, and `IDENTITY.md`: the standing files this
   setup is designed around.
+- **Beads task tracking** — [`BEADS.md`](BEADS.md) sets up `bd`, the
+  Dolt-backed tracker several skills assume. [`SHARE.md`](SHARE.md) is a
+  short copy-paste blurb for handing this starter to someone.
 
 ## Claude Code heritage
 
