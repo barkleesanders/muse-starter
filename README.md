@@ -28,15 +28,15 @@ Set `MUSE_WORKSPACE` to install the workspace parts somewhere other than
 
 ## What's inside
 
-- **84 skills** — engineering workflows (`code`, `debug`, `ship`), research,
-  marketing, SEO, mobile, and more. Each skill is a `SKILL.md` with
+- **118 skills** — engineering workflows (`carmack`, `debug`, `ship`), research,
+  government accountability (`gov`), marketing, SEO, mobile, and more. Each skill is a `SKILL.md` with
   frontmatter (`name`, `description`) that Muse's skill search discovers
   automatically, plus supporting `references/`, `scripts/`, `tools/`, and
   `bin/` files.
-- **35 agents** — specialist briefs (code reviewer, security sentinel,
+- **36 agents** — specialist briefs (code reviewer, security sentinel,
   architecture strategist, …). In Muse, spawn a subagent with the file's
   content as the task brief.
-- **21 commands** — prompt templates for recurring workflows (triage,
+- **22 commands** — prompt templates for recurring workflows (triage,
   release docs, bug reproduction, …). Paste one into chat or ask Muse to
   run it.
 - **Identity templates** — starter `SOUL.md`, `USER.md`, `MEMORY.md`,
