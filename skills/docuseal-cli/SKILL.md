@@ -356,13 +356,13 @@ Fix is `AWS_REQUEST_CHECKSUM_CALCULATION=when_required` +
 ## Source
 
 - CLI: `$HOME/tools/docuseal/dscli`
-- Skill: `~/workspace/skills/docuseal-cli/SKILL.md`
+- Skill: `~/workspace/custom-skills/docuseal-cli/SKILL.md`
 - API key: `~/.config/docuseal/api-key.txt`
 
 
 ## Ground-truth gate (MANDATORY)
 
-Before this skill asserts a stakes-bearing fact or takes any outward/irreversible action, apply the global standard — verify against a **primary source fetched now**, never a cached/remembered value. Full standard: `~/workspace/skills/shared/ground-truth-standard.md`.
+Before this skill asserts a stakes-bearing fact or takes any outward/irreversible action, apply the global standard — verify against a **primary source fetched now**, never a cached/remembered value. Full standard: `~/workspace/custom-skills/shared/ground-truth-standard.md`.
 
 **Verify live before you act or assert (this skill):**
 - Verify signer identity + the exact document before dispatch; explicit approval; capture the submission id.

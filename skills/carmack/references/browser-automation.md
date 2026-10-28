@@ -216,7 +216,7 @@ agent-browser snapshot -i --json
 
 ## Driving a React wizard with fcdp (validated on muse.ai/platform, 2026-09-19)
 
-Full recipe: `~/workspace/skills/shared/agent-readiness-surfaces.md` §Muse. The four rules:
+Full recipe: `~/workspace/custom-skills/shared/agent-readiness-surfaces.md` §Muse. The four rules:
 
 1. **Set values through the prototype setter, then fire `input`** — React ignores a plain `el.value=`:
    `Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set.call(el,v); el.dispatchEvent(new Event('input',{bubbles:true}))`

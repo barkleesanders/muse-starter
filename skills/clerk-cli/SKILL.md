@@ -275,7 +275,7 @@ Full matrix and sandbox details in [references/agent-mode.md](references/agent-m
 
 ## Ground-truth gate (MANDATORY)
 
-Before this skill asserts a stakes-bearing fact or takes any outward/irreversible action, apply the global standard — verify against a **primary source fetched now**, never a cached/remembered value. Full standard: `~/workspace/skills/shared/ground-truth-standard.md`.
+Before this skill asserts a stakes-bearing fact or takes any outward/irreversible action, apply the global standard — verify against a **primary source fetched now**, never a cached/remembered value. Full standard: `~/workspace/custom-skills/shared/ground-truth-standard.md`.
 
 **Verify live before you act or assert (this skill):**
 - Resolve the target user/org/session against live Clerk before any mutation; confirm the subject; prefer read/dry-run first.

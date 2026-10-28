@@ -1,0 +1,5 @@
+name: "loop_runner"
+title: "Loop Runner"
+description: "Run a Loop Library loop as a real, bounded, verifiable cycle — not just a pasted prompt. Use when the user says \"/loop-run\", \"run a loop\", \"start a loop\", \"run this loop-library loop\", \"loop until X\", or wants a repeatable agent workflow that measures, learns, and stops on its own. Fetches a loop from the live Loop Library catalog (or a local/inline prompt), then enforces it with a verify check, stop predicates, a JSONL ledger, and two hooks that drive each cycle and refuse premature \"done\". Triggers: \"/loop-run\", \"run a loop\", \"start a loop\", \"loop library\", \"loop until\", \"keep iterating until\"."
+category: "Work and knowledge"
+include_in_prompt: false

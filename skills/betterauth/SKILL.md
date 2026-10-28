@@ -26,7 +26,7 @@ cycle, and each carries the command that proves it rather than an assertion.
 
 ## Mandatory security baseline for every site and every ship
 
-Load `~/workspace/skills/shared/betterauth-security-baseline.md` before implementation.
+Load `~/workspace/custom-skills/shared/betterauth-security-baseline.md` before implementation.
 Every Better Auth site must propagate authentication email failures through the actual HTTP
 handler, explicitly protect OTP storage, hash magic-link tokens when enabled, and enforce
 second-factor challenges for enrolled users across every enabled primary sign-in path without

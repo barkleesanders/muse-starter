@@ -3,7 +3,7 @@
 # Muse Starter installer.
 #
 # Copies the curated public files into a Muse environment:
-#   skills/    -> ${MUSE_WORKSPACE:-$HOME/workspace}/skills/
+#   skills/    -> ${MUSE_WORKSPACE:-$HOME/workspace}/custom-skills/
 #   agents/    -> ${MUSE_WORKSPACE:-$HOME/workspace}/agents/
 #   commands/  -> ${MUSE_WORKSPACE:-$HOME/workspace}/commands/
 #   MUSE.md    -> ${MUSE_WORKSPACE:-$HOME/workspace}/MUSE.md   (only if absent)
@@ -15,8 +15,8 @@ set -euo pipefail
 SOURCE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 WS="${MUSE_WORKSPACE:-$HOME/workspace}"
 
-mkdir -p "$WS/skills" "$WS/agents" "$WS/commands"
-rsync -a "$SOURCE_DIR/skills/" "$WS/skills/"
+mkdir -p "$WS/custom-skills" "$WS/agents" "$WS/commands"
+rsync -a "$SOURCE_DIR/skills/" "$WS/custom-skills/"
 rsync -a "$SOURCE_DIR/agents/" "$WS/agents/"
 rsync -a "$SOURCE_DIR/commands/" "$WS/commands/"
 
@@ -36,5 +36,5 @@ for f in SOUL.md USER.md MEMORY.md AGENTS.md TOOLS.md IDENTITY.md; do
   fi
 done
 
-printf 'Muse Starter installed: skills=%s/skills agents=%s/agents commands=%s/commands\n' \
+printf 'Muse Starter installed: skills=%s/custom-skills agents=%s/agents commands=%s/commands\n' \
   "$WS" "$WS" "$WS"

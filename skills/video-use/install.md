@@ -19,7 +19,7 @@ Three things must exist on this machine:
 
 And one thing must be true about the current agent:
 
-4. It can discover `SKILL.md` — either via a global skills directory (`~/workspace/skills/`, `~/.codex/skills/`) or via a `CLAUDE.md` / system-prompt import.
+4. It can discover `SKILL.md` — either via a global skills directory (`~/workspace/custom-skills/`, `~/.codex/skills/`) or via a `CLAUDE.md` / system-prompt import.
 
 ## Install prompt contract
 
@@ -74,8 +74,8 @@ Figure out which agent you are running under, and register once. A symlink of th
 - **Claude Code** (`~/.claude/` present):
 
     ```bash
-    mkdir -p ~/workspace/skills
-    ln -sfn ~/Developer/video-use ~/workspace/skills/video-use
+    mkdir -p ~/workspace/custom-skills
+    ln -sfn ~/Developer/video-use ~/workspace/custom-skills/video-use
     ```
 
 - **Codex** (`$CODEX_HOME` set, or `~/.codex/` present):

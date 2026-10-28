@@ -1,0 +1,5 @@
+name: "routerctl"
+title: "Routerctl"
+description: "Use when managing the user's local Xfinity router, DHCP reservations, printer/Mac LAN stability, firewall/Wi-Fi/DMZ/remote-management audits, or dry-running router actionHandler endpoints through the routerctl CLI."
+category: "Work and knowledge"
+include_in_prompt: false

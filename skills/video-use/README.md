@@ -50,7 +50,7 @@ If you'd rather do it by hand:
 ```bash
 # 1. Clone and symlink into your agent's skills directory
 git clone https://github.com/browser-use/video-use ~/Developer/video-use
-ln -sfn ~/Developer/video-use ~/workspace/skills/video-use        # Claude Code
+ln -sfn ~/Developer/video-use ~/workspace/custom-skills/video-use        # Claude Code
 # ln -sfn ~/Developer/video-use ~/.codex/skills/video-use       # Codex
 
 # 2. Install deps

@@ -81,7 +81,7 @@ app.use('/static/*', etag())
 >
 > Verify on the **rendered** HTML (`curl … | grep '<iframe'`), not the source —
 > then in a real browser. Full pattern + probes:
-> `~/workspace/skills/debug/references/csp-cache-patterns.md` #27.
+> `~/workspace/custom-skills/debug/references/csp-cache-patterns.md` #27.
 
 Order matters: middleware runs top-down to `next()`, then unwinds bottom-up. Put `logger`,
 `secureHeaders`, `cors` early.

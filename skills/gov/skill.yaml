@@ -1,0 +1,5 @@
+name: "gov"
+title: "Gov"
+description: "Use for stalled bureaucratic problems that need authority mapping, regulatory citations, exact forms, and escalation paths across local, state, or federal agencies. Do not use for simple SF311, public records, VA claim, Medicaid audit, emergency, or pure legal-advice requests."
+category: "Work and knowledge"
+include_in_prompt: false

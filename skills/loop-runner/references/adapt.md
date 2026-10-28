@@ -43,7 +43,7 @@ If running the loop could deploy, send, post, delete, or spend, say so to the us
 Catalog loop `overnight-docs-sweep` (verification: "Documentation matches the current implementation. Finish with a reviewable pull request."):
 
 ```bash
-bash ~/workspace/skills/loop-runner/scripts/loop.sh start overnight-docs-sweep \
+bash ~/workspace/custom-skills/loop-runner/scripts/loop.sh start overnight-docs-sweep \
   --verify "npm run docs:check" \
   --stop "max-iter=8,no-progress=2,target=git diff --quiet origin/main -- docs/"
 ```

@@ -51,7 +51,7 @@ When the user invokes `/exec-plan "Build auth system"`:
 ### Step 1: Initialize plan directory
 
 ```bash
-bash ~/workspace/skills/exec-plan/scripts/init-plan.sh "{plan-name}"
+bash ~/workspace/custom-skills/exec-plan/scripts/init-plan.sh "{plan-name}"
 ```
 
 ### Step 2: Act as Planner
@@ -217,7 +217,7 @@ You are a skeptical code evaluator. Your job is to grade milestone M{N} of exec-
 
 1. Read ~/tools/exec-plans/{plan-name}/sprint-log.md for the sprint contract
 2. Read ~/tools/exec-plans/{plan-name}/evidence.md for test results
-3. Read ~/workspace/skills/exec-plan/references/evaluator-prompt.md for your evaluation rules
+3. Read ~/workspace/custom-skills/exec-plan/references/evaluator-prompt.md for your evaluation rules
 4. Run EVERY acceptance test listed in the sprint contract
 5. Grade each criterion as PASS or FAIL with specific evidence
 6. Write your verdict to ~/tools/exec-plans/{plan-name}/sprint-log.md

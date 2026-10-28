@@ -482,7 +482,7 @@ callable, see `/tmp/s1dry.py` pattern in memory `cua-s1-forms-eval-2026-09-18`).
 ## What this replaces
 `/computer-use-bridge` (Codex Computer Use forwarder) was archived to
 `~/.claude/.archived-skills/`. The old orphaned `/cua-driver` docs were superseded by the
-**upstream skill pack** now linked at `~/workspace/skills/cua-driver` (`cua-driver skills install`,
+**upstream skill pack** now linked at `~/workspace/custom-skills/cua-driver` (`cua-driver skills install`,
 version-stamped to the installed binary) — that is the reference for every `cua-driver` tool.
 
 ## Source

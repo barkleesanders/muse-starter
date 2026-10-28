@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Weekly drift validator — walks every ~/workspace/skills/*/skill.md and
+# Weekly drift validator — walks every ~/workspace/custom-skills/*/skill.md and
 # SKILL.md, extracts backticked commands and path references, verifies they
 # still resolve. Writes findings to ~/.claude/skill-drift.md.
 #

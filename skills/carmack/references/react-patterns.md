@@ -210,7 +210,7 @@ grep -rn "document.documentElement.style" --include="*.tsx" src/react-app/ | gre
 **Fix**: Either the SSR layout's `body` background+color must win (`!important` — the leaked rules carry none), or the island CSS must not emit global `body` rules.
 
 **Detection — computed style in a real browser, never a source grep.** This is the whole difficulty: nothing in the source or the HTML reveals it. Two ways to get it:
-- **Pre-deploy (preferred)**: the CF integration harness + playwright — `~/workspace/skills/shared/cf-integration-harness.md` (this is /ship Phase 1.3d).
+- **Pre-deploy (preferred)**: the CF integration harness + playwright — `~/workspace/custom-skills/shared/cf-integration-harness.md` (this is /ship Phase 1.3d).
 - **Post-deploy**: drive the live browser and read `getComputedStyle`.
 
 ### ⚠️ The contrast check MUST alpha-composite, or it lies

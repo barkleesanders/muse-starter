@@ -1,0 +1,5 @@
+name: "hono"
+title: "Hono"
+description: ">- Build, structure, and ship web apps/sites with the Hono framework — the the user default for new sites and for converting React SPAs to SSR. Use when the user wants to create a Hono app, convert/remake a site in Hono, add SSR + islands on Cloudflare Workers, set up Hono routing/middleware/JSX, choose between hono/jsx (server) and hono/jsx/dom (client), wire the Vite build, or asks \"is this Hono\", \"make it Hono\", \"Hono SSR\", \"Hono on Workers\", \"@hono/jsx\", \"islands\", \"hono framework\". Loads current, verified Hono API patterns so you leverage the framework fully instead of guessing from memory."
+category: "Work and knowledge"
+include_in_prompt: false

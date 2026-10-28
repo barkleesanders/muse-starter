@@ -1,0 +1,5 @@
+name: "printing_press_score"
+title: "Printing Press Score"
+description: "Score a generated CLI against the Steinberger bar, compare two CLIs side-by-side"
+category: "Work and knowledge"
+include_in_prompt: false

@@ -118,7 +118,7 @@ lines = [
     "- Append a new numbered section to tool-error-recovery.md (What it means / How to recover / Prevention)",
     "- If already covered under a different wording, just note it and move on",
     "",
-    "After classifying, run `~/workspace/skills/carmack/tools/scan-tool-errors.sh --clear` to archive the log.",
+    "After classifying, run `~/workspace/custom-skills/carmack/tools/scan-tool-errors.sh --clear` to archive the log.",
     "",
     "---",
     "",

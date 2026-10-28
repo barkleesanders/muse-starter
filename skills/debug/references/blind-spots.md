@@ -157,7 +157,7 @@ fi
 
 ## 12. Auth provider cutover (dev → prod instance) blind spots
 
-> **Tooling shortcut for Clerk specifically**: the `clerk` CLI (npm `clerk` package, currently 1.0.3) is the supported way to manage everything in this section without writing curl. `clerk skill install` already loaded an agent skill at `~/workspace/skills/clerk/`. Useful commands:
+> **Tooling shortcut for Clerk specifically**: the `clerk` CLI (npm `clerk` package, currently 1.0.3) is the supported way to manage everything in this section without writing curl. `clerk skill install` already loaded an agent skill at `~/workspace/custom-skills/clerk/`. Useful commands:
 > - `clerk doctor [--fix]` — single-shot health check (auth, link, env, instance reachability)
 > - `clerk env pull --instance prod` — write `pk_live_*` + `sk_live_*` directly into `.env.local`
 > - `clerk config pull --instance prod` — dump live instance config as JSON (alternative to `/v1/environment`)

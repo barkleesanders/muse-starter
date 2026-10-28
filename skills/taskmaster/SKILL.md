@@ -47,7 +47,7 @@ The hook must be registered in `~/.claude/settings.json`:
         "hooks": [
           {
             "type": "command",
-            "command": "~/workspace/skills/taskmaster/hooks/check-completion.sh",
+            "command": "~/workspace/custom-skills/taskmaster/hooks/check-completion.sh",
             "timeout": 10
           }
         ]

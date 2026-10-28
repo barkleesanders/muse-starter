@@ -1,0 +1,5 @@
+name: "debug"
+title: "Debug"
+description: "Quick debugging patterns and known production failure traps, including passkey, TOTP/2FA, passwordless-account, session-freshness, reauthentication, and recovery-code failures. Use for common production and account-security issues."
+category: "Work and knowledge"
+include_in_prompt: false

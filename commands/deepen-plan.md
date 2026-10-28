@@ -68,7 +68,7 @@ Dynamically discover all available skills and match them to plan sections. Don't
 ls .claude/skills/
 
 # 2. User's global skills (~/.claude/)
-ls ~/workspace/skills/
+ls ~/workspace/custom-skills/
 
 # 3. compound-engineering plugin skills
 ls ~/.claude/plugins/cache/*/compound-engineering/*/skills/
@@ -137,7 +137,7 @@ Task general-purpose: "Use the frontend-design skill at ~/.claude/plugins/.../fr
 
 Task general-purpose: "Use the agent-native-architecture skill at ~/.claude/plugins/.../agent-native-architecture. Read SKILL.md and apply it to: [agent/tool sections of plan]"
 
-Task general-purpose: "Use the security-patterns skill at ~/workspace/skills/security-patterns. Read SKILL.md and apply it to: [full plan]"
+Task general-purpose: "Use the security-patterns skill at ~/workspace/custom-skills/security-patterns. Read SKILL.md and apply it to: [full plan]"
 ```
 
 **No limit on skill sub-agents. Spawn one for every skill that could possibly be relevant.**

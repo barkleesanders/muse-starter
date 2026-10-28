@@ -29,7 +29,7 @@ case "$mode" in
   summary)
     curl -sf --max-time 20 -H "Authorization: Bearer $MERCURY_TOKEN" \
       "$API/account/$CHECKING_ID/transactions?limit=200&offset=0" | \
-      python3 "~/workspace/skills/carmack/tools/mercury-summary.py"
+      python3 "~/workspace/custom-skills/carmack/tools/mercury-summary.py"
     ;;
   *) echo "usage: mercury-pull.sh {accounts|txns|savings|summary}"; exit 1 ;;
 esac

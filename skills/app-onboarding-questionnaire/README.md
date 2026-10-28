@@ -51,7 +51,7 @@ Most onboarding generators stop at the questionnaire. This skill goes further:
 ### Option 1: Add to your Claude Code skills directory
 
 ```bash
-cd ~/workspace/skills
+cd ~/workspace/custom-skills
 git clone https://github.com/adamlyttleapps/claude-skill-app-onboarding-questoinnaire.git app-onboarding-questionnaire
 ```
 

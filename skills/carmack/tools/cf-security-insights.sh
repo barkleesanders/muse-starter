@@ -11,7 +11,7 @@
 # sites for AI/LLM SEO in the user's "new AI work"; both settings hurt that. They are
 # now REPORT-ONLY here and are NEVER written. For the zone/DNS security layer (DNSSEC,
 # Free WAF Managed Ruleset, Leaked-Credential detection, CAA) run the companion
-# ~/workspace/skills/carmack/tools/cf-account-harden.py (DRY_RUN=1 to preview).
+# ~/workspace/custom-skills/carmack/tools/cf-account-harden.py (DRY_RUN=1 to preview).
 #
 #   (2) Worker preview hostnames OFF (subdomain.previews_enabled=false, EVERY worker) —
 #      `<name>.cloudflare.app` previews are half-provisioned (522, no zone security)
@@ -34,7 +34,7 @@
 #   cf-security-insights.sh --apply    # apply the 3 safe fixes to every zone
 #   cf-security-insights.sh --apply --contact mailto:you@example.com
 #
-# Ref: ~/workspace/skills/shared/site-security-defaults.md (triage map + Compared-to-What rule)
+# Ref: ~/workspace/custom-skills/shared/site-security-defaults.md (triage map + Compared-to-What rule)
 set -euo pipefail
 
 APPLY=0

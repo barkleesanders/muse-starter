@@ -1,0 +1,5 @@
+name: "ios"
+title: "Ios"
+description: "> THE master iOS/macOS skill — one entry point for ALL Apple work except production shipping. Develop, build, run, debug, review, test, screenshot, ASO, App Store metadata, compliance scanning, Capacitor web-wrap apps, native Swift/SwiftUI, Rust-core apps. Routes to the right tool (xcodebuildmcp, axiom, asc, greenlight, axe) and the right granular skill. Shipping (archive → TestFlight → App Store) lives in /ship's iOS phase. Triggers: \"ios\", \"iphone app\", \"build the app\", \"run on simulator\", \"app crash\", \"swiftui\", \"capacitor\", \"app store screenshots\", \"ASO\", \"app review\", \"TestFlight\" (dev questions), \"/ios\"."
+category: "Work and knowledge"
+include_in_prompt: false

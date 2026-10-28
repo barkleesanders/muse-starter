@@ -21,7 +21,7 @@ You are a Design Systems Lead. Every `/design` invocation runs in **two phases**
 
 The direction picked in Phase 0 is the single source of truth for whatever runs in Phase 1 — it becomes the *brief* handed to Hallmark.
 
-> **Engine precedence (added 2026-07-14):** `hallmark` (github.com/nutlope/hallmark, installed at `~/workspace/skills/hallmark/`) is the design engine for ALL design work — new pages, components, redesigns, audits, reference-study. It ships 20 themes, 21 macrostructures, and a 57-gate anti-slop test, and it enforces **structural** variety (two briefs must not share the same hero → 3-feature → CTA rhythm), which is exactly the failure mode Stitch and raw code-writing both fall into. **Do not reach for Stitch unless the user names it.**
+> **Engine precedence (added 2026-07-14):** `hallmark` (github.com/nutlope/hallmark, installed at `~/workspace/custom-skills/hallmark/`) is the design engine for ALL design work — new pages, components, redesigns, audits, reference-study. It ships 20 themes, 21 macrostructures, and a 57-gate anti-slop test, and it enforces **structural** variety (two briefs must not share the same hero → 3-feature → CTA rhythm), which is exactly the failure mode Stitch and raw code-writing both fall into. **Do not reach for Stitch unless the user names it.**
 
 ---
 
@@ -143,14 +143,14 @@ Why preview at all (2026-07-02, ecobee dashboard): restyling directly in code pr
 - **No "modern" / "clean" / "sleek"** as a direction. Push back to the user.
 - **UI descriptions:** Do not add subtitles, helper text, or descriptive copy beneath headings, labels, cards, or settings by default. Prefer one concise, self-explanatory heading or label. Only add supporting copy when the user explicitly asks for it or when it is necessary to prevent misunderstanding or error, and never use it to restate the heading.
 - **Motion is gated, not decorated.** Before any animation is written (by Hallmark, Stitch-port, or hand), run the four-question gate from `references/aesthetic-core.md` → Motion: *frequency tier → named purpose → cheapest tool → curve/duration from the table*. 100+/day or keyboard-initiated actions get **no** animation. Never `ease-in`, `scale(0)`, `transition: all`, or a UI duration over 300 ms without a stated reason. Full rule set: `Skill(animate)`.
-- **Emil Kowalski skills** (github.com/emilkowalski/skills, **installed 2026-09-20** at upstream commit `85e8e23` into BOTH `~/workspace/skills/<name>/` and `~/.agents/skills/<name>/`, each with a `.upstream` provenance file — the earlier "installed 2026-07-10" note was false; nothing had been installed). They are chained by `/design` at the points below and never replace `aesthetic-core.md` / Hallmark; strictest rule wins:
+- **Emil Kowalski skills** (github.com/emilkowalski/skills, **installed 2026-09-20** at upstream commit `85e8e23` into BOTH `~/workspace/custom-skills/<name>/` and `~/.agents/skills/<name>/`, each with a `.upstream` provenance file — the earlier "installed 2026-07-10" note was false; nothing had been installed). They are chained by `/design` at the points below and never replace `aesthetic-core.md` / Hallmark; strictest rule wins:
 
   | Moment in a `/design` run | Load | Why |
   |---|---|---|
   | Building any interactive component, or the ask is "make it feel great" | `Skill(emil-design-eng)` | Polish philosophy: press feedback, origin-aware popovers, `@starting-style`, blur-masked crossfades, gesture/drag rules, Motion `x`/`y` hardware-accel caveat. Ships `performance-cheatsheet.md`. |
   | Writing an animation from scratch | `Skill(animate)` (+ its `RECIPES.md`) | Build sequence in the right order; recipes for press / dropdown / tooltip / modal / drawer / toast / accordion / stagger / hold-to-confirm / tab indicator / scroll reveal / drag-to-dismiss |
   | iOS-flavored web, Capacitor / WKWebView surface, sheets, drags, springs | `Skill(apple-design)` | Apple's fluid-interface physics for the web (springs, velocity handoff, momentum projection, rubber-banding, materials, optical typography). Motion physics only — HIG rules live in `references/apple-hig.md` |
-  | The output ships inside the iOS app (Capacitor shell, native SwiftUI) and you need to SEE it on a real iOS runtime, not desktop emulation | `baguette` / `serve-sim` — boot an iPhone 17 Pro sim headless, `baguette screenshot` at 402×874 pt for the Hallmark mobile gate, `describe-ui` to verify labels/hit-targets, `serve-sim camera --webcam` for camera-driven screens; routing in `~/workspace/skills/shared/ios-sim-agent-control.md` | Simulator-only, never the real phone. The rendered artifact on the real runtime is the evidence for "mobile-verified", not a resized desktop viewport |
+  | The output ships inside the iOS app (Capacitor shell, native SwiftUI) and you need to SEE it on a real iOS runtime, not desktop emulation | `baguette` / `serve-sim` — boot an iPhone 17 Pro sim headless, `baguette screenshot` at 402×874 pt for the Hallmark mobile gate, `describe-ui` to verify labels/hit-targets, `serve-sim camera --webcam` for camera-driven screens; routing in `~/workspace/custom-skills/shared/ios-sim-agent-control.md` | Simulator-only, never the real phone. The rendered artifact on the real runtime is the evidence for "mobile-verified", not a resized desktop viewport |
   | The output will be used on a phone (any mobile-facing web, PWA, Capacitor) | `Skill(mobile-native)` — its **Baseline** block is a ship gate | Sticky hover, tap-highlight flash, `100vh`, input zoom, 300 ms tap delay, overscroll, safe areas, `theme-color`. None reproduce in desktop emulation |
   | "Which library for toasts / ⌘K / OTP / DnD / virtualization / charts / state / dark mode?" | `Skill(pick-ui-library)` | One opinionated pick per task; check `package.json` first, never churn an installed competitor |
   | Sonner is in play (toasts missing, doubled, unstyled, behind a modal, wrong theme) | `Skill(ask-sonner)` | Setup, styling ladder, troubleshooting, `API.md` |
@@ -168,7 +168,7 @@ Why preview at all (2026-07-02, ecobee dashboard): restyling directly in code pr
 
 ## Prerequisites by Engine
 
-- **Hallmark (default)** — no external prerequisites, no API key, no MCP server. Installed at `~/workspace/skills/hallmark/` (source: `github.com/nutlope/hallmark`, MIT, by Together AI; installed 2026-07-14 at v1.1.0). Invoke with `Skill(hallmark)`. To update:
+- **Hallmark (default)** — no external prerequisites, no API key, no MCP server. Installed at `~/workspace/custom-skills/hallmark/` (source: `github.com/nutlope/hallmark`, MIT, by Together AI; installed 2026-07-14 at v1.1.0). Invoke with `Skill(hallmark)`. To update:
   ```bash
   ! npx skills add nutlope/hallmark
   ```

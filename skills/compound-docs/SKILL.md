@@ -37,7 +37,7 @@ Execute the 7-step capture process. Read `capture-process.md` for full step deta
 
 ## Reference Files
 
-Read the relevant reference file for each phase. All files are in `~/workspace/skills/compound-docs/references/`.
+Read the relevant reference file for each phase. All files are in `~/workspace/custom-skills/compound-docs/references/`.
 
 | File | Content |
 |------|---------|

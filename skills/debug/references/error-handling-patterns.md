@@ -306,7 +306,7 @@ curl -s "<upstream read api>/<id>" | jq -r '.description | length, .description'
 ### Related patterns
 - `feedback_verify_with_actual_frontend_body_shape.md` (memory): closed-loop curl must mirror the EXACT frontend body — synthesized curls with cleaner descriptions wouldn't have caught this
 - `feedback_post_fix_curl_must_cache_bust.md` (memory): cache-bust the post-fix curl or you'll read stale cached responses
-- `~/workspace/skills/shared/upstream-protocol-investigation.md`: when a third-party integration silently drops content, read the upstream's actual sanitizer logic — never trust a "should work" assumption
+- `~/workspace/custom-skills/shared/upstream-protocol-investigation.md`: when a third-party integration silently drops content, read the upstream's actual sanitizer logic — never trust a "should work" assumption
 
 ---
 
@@ -372,7 +372,7 @@ The original Pattern #21 fix added `streetOnlyAddress()` to normalize Verint inp
 - Pattern 19 (Verint dform Request_description bracket truncation): same class — Verint sanitizers silently drop content based on character shape.
 - Pattern 36 (Experience Cloud catalog-and-submit): same class, different backend — address on the wrong object + skipped GIS bind; also listed≠fileable / unwrap / remint.
 - `feedback_verify_with_actual_frontend_body_shape.md`: closed-loop curl must mirror the actual frontend body, not a "cleaner" synthesized one.
-- `~/workspace/skills/shared/upstream-protocol-investigation.md`: when third-party output disagrees with input, read the upstream's actual mapper — don't trust "verified YYYY-MM-DD" comments alone.
+- `~/workspace/custom-skills/shared/upstream-protocol-investigation.md`: when third-party output disagrees with input, read the upstream's actual mapper — don't trust "verified YYYY-MM-DD" comments alone.
 
 ---
 
@@ -482,8 +482,8 @@ If any match in a diff that touches third-party-response parsing: **BLOCK** unti
 - **Pattern 19 (Verint bracket truncation)** — that's content the third party silently mutates; this is signal we incorrectly extract.
 
 **Related:**
-- `~/workspace/skills/shared/third-party-signal-fixtures.md` — the generalized rule, fixture layout, audit greps.
-- `~/workspace/skills/shared/upstream-protocol-investigation.md` — the broader "read upstream's actual client / capture real traffic" doctrine. This pattern is a specialization: same doctrine applied to **response parsing**, not just **request shaping**.
+- `~/workspace/custom-skills/shared/third-party-signal-fixtures.md` — the generalized rule, fixture layout, audit greps.
+- `~/workspace/custom-skills/shared/upstream-protocol-investigation.md` — the broader "read upstream's actual client / capture real traffic" doctrine. This pattern is a specialization: same doctrine applied to **response parsing**, not just **request shaping**.
 - `/feedback_dig_deep_on_site_fixes` (MEMORY.md) — token cost is irrelevant for ground-truth verification.
 
 ---
@@ -616,7 +616,7 @@ cannot lose typed edits — proving that redirects the whole investigation.
 ### Detection
 
 ```bash
-~/workspace/skills/shared/tools/single-winner-merge-check.sh <repo-root>
+~/workspace/custom-skills/shared/tools/single-winner-merge-check.sh <repo-root>
 ```
 
 Flags collections filled from ≥2 sources and consumed at index 0 with **no
@@ -772,7 +772,7 @@ wrong intermediate conclusion in the incident):**
 to do when the async lifecycle signal exists but you can't recognise it), #23
 (synthetic fixtures encode the same wrong assumption the bug came from — the
 regression fixture must be the REAL captured row), and
-`~/workspace/skills/shared/upstream-protocol-investigation.md` (read the
+`~/workspace/custom-skills/shared/upstream-protocol-investigation.md` (read the
 upstream's own client before believing any "the API can't do X").
 
 ## Pattern 40: Your own cron is the caller — ATTRIBUTE the traffic before you debug the code (2026-08-29)
@@ -925,9 +925,9 @@ dangerous shape, because the copy keeps making claims the real site retracted.
 ### The check
 
 ```bash
-python3 ~/workspace/skills/shared/tools/orphan-worker-content-check.py
+python3 ~/workspace/custom-skills/shared/tools/orphan-worker-content-check.py
 #   exit 0 ok | 1 flagged | 2 UNMEASURED (never a pass) | 3 no creds
-python3 ~/workspace/skills/shared/tools/test_orphan_worker_content_check.py
+python3 ~/workspace/custom-skills/shared/tools/test_orphan_worker_content_check.py
 ```
 Wired as `/ship` Phase 4.09b, account-wide, unconditioned on the diff. Measured
 surface at the time: **53 workers, 25 with a public twin, 1 flagged.**
@@ -1061,7 +1061,7 @@ Nominatim fallback, own-accuracy placements, generation abort + fingerprint
 re-read. Worker `024db873`. Post-fix repro: 0 dialogs, 0 holds, 4/4 taps POST in
 both arms.
 
-**Ship:** Phase 1.45i runs `~/workspace/skills/ship/tools/silent-outcome-check.sh
+**Ship:** Phase 1.45i runs `~/workspace/custom-skills/ship/tools/silent-outcome-check.sh
 <repo>` (BLOCK on a newly added native dialog in client code; runs the repo's
 `probe:constrained` script; UNMEASURED, never a pass, when a primary-action UI
 exists without a probe) and re-runs it `--live <url>` after deploy. `/carmack`

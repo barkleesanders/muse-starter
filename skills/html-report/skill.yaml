@@ -1,0 +1,5 @@
+name: "html_report"
+title: "Html Report"
+description: "Default output format for reports, summaries, analyses, dashboards, audits, comparisons, digests, briefings, and any deliverable with structured/spatial information. Generates a single self-contained HTML file (no external dependencies) the user can open in a browser, share, print to PDF, or paste into Notion. Lightweight cousin of /design and /magazine — no AI generation server, no editorial chrome, just clean Tailwind-via-CDN HTML that beats Markdown on scannability, comparison, and feel. Use whenever the user asks for a report, summary, breakdown, analysis, audit, dashboard, comparison, or any deliverable that previously would have been a .md file. Triggers: 'report', 'summary', 'audit', 'analysis', 'dashboard', 'compare', 'breakdown', 'rundown', 'brief', 'digest', 'overview', 'recap', 'write up', 'document', 'deliverable'. Reference: https://thariqs.github.io/html-effectiveness/"
+category: "Work and knowledge"
+include_in_prompt: false

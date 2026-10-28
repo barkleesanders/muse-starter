@@ -1,0 +1,5 @@
+name: "betterauth"
+title: "Betterauth"
+description: ">- Stand up, migrate to, or debug Better Auth on Cloudflare Workers + D1 — the auth stack behind improvebayarea.com and example.com. Use when building auth into a NEW site from scratch (ordered greenfield path + the verified core D1 schema), when adding auth to an existing Worker, migrating off a hosted provider, wiring Google/Apple social sign-in, adding passkeys/2FA/magic-link/email-OTP, writing a plugin's D1 migration, or debugging \"Invalid token\", \"account_not_linked\", a native iOS sign-in that fails after the OAuth sheet succeeds, a social button that won't appear inside a Capacitor webview, a \"Turn on two-factor\" button that does nothing, a passkey ceremony that reports \"cancelled or timed out\", or a CORRECT password that reports the session did not stick. Encodes the traps that cost real deploy cycles on both sites, each with the probe that proves it."
+category: "Work and knowledge"
+include_in_prompt: false

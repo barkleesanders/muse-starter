@@ -169,5 +169,5 @@ Traps: only the app's OWN web client works (Playground/gcloud/device-code tokens
 `audience is not for this project`); in automated Chrome `signInWithPopup`→`popup-blocked` and
 `getRedirectResult` is flaky (use the raw fragment read); backends often mix `Bearer` (public/
 submit) with AWS-IAM/SigV4 (user-account routes). **Full playbook:**
-`~/workspace/skills/decompile/references/android-re.md` §"Firebase Google-auth token capture".
+`~/workspace/custom-skills/decompile/references/android-re.md` §"Firebase Google-auth token capture".
 Verified 2026-08-01 on Solve SF (`com.woahfinally.solvesf`).

@@ -3,8 +3,8 @@
 Three related failure classes, all measured on AIVA-Frontend in Sept 2026, all
 invisible to a diff-conditioned gate. Tools:
 
-- `~/workspace/skills/ship/tools/deployed-unmerged-check.sh [repo] [--sha <deployed>]`
-- `~/workspace/skills/ship/tools/sourcemap-exposure-check.sh [repo] [--live <origin>] [--live-path <p>]`
+- `~/workspace/custom-skills/ship/tools/deployed-unmerged-check.sh [repo] [--sha <deployed>]`
+- `~/workspace/custom-skills/ship/tools/sourcemap-exposure-check.sh [repo] [--live <origin>] [--live-path <p>]`
 
 Both: exit 0 ok · 1 finding · 2 UNMEASURED (never a pass).
 

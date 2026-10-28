@@ -123,12 +123,12 @@ node ~/tools/<your-mcp>/client.cjs execute NOTION_FETCH_ROW '{"page_id":"<id>"}'
 
 - `~/tools/notion-link-triage/triage.py` — the script
 - `~/tools/notion-link-triage/suggestions.jsonl` — append-only Linear-issue candidates
-- This skill: `~/workspace/skills/notion-link-triage/SKILL.md`
+- This skill: `~/workspace/custom-skills/notion-link-triage/SKILL.md`
 
 
 ## Ground-truth gate (MANDATORY)
 
-Before this skill asserts a stakes-bearing fact or takes any outward/irreversible action, apply the global standard — verify against a **primary source fetched now**, never a cached/remembered value. Full standard: `~/workspace/skills/shared/ground-truth-standard.md`.
+Before this skill asserts a stakes-bearing fact or takes any outward/irreversible action, apply the global standard — verify against a **primary source fetched now**, never a cached/remembered value. Full standard: `~/workspace/custom-skills/shared/ground-truth-standard.md`.
 
 **Verify live before you act or assert (this skill):**
 - Read the live Notion state before modifying; confirm the target page/block; explicit approval for destructive edits.

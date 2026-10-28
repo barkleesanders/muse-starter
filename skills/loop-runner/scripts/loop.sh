@@ -7,7 +7,7 @@
 # verify command, explicit stop predicates, a per-iteration JSONL ledger, and a
 # lifecycle the injector + Stop-gate hooks enforce.
 #
-# Architecture mirrors ~/workspace/skills/goal/scripts/goal.sh (atomic python
+# Architecture mirrors ~/workspace/custom-skills/goal/scripts/goal.sh (atomic python
 # writes, per-cwd state hashing, bd mirroring, case dispatch).
 #
 # Subcommands:
@@ -163,7 +163,7 @@ Tracked by the \`loop-runner\` skill — a running Loop Library loop.
 - state: $(state_file exact)
 - created: $(now_iso)
 
-Lifecycle via \`~/workspace/skills/loop-runner/scripts/loop.sh\`:
+Lifecycle via \`~/workspace/custom-skills/loop-runner/scripts/loop.sh\`:
 \`pause\`/\`resume\` → bd comment · \`complete\` → bd close · \`abort\` → bd status=deleted
 EOF
 )
@@ -486,8 +486,8 @@ loop.sh — run a Loop Library loop as a bounded, verifiable, ledgered cycle.
   complete [--evidence "…"] [--force]
 
 State:  ~/.claude/state/loop/<sha-of-cwd>.json   Ledger: same path .jsonl
-Hooks:  ~/workspace/skills/hooks/loop-injector.sh (UserPromptSubmit)
-        ~/workspace/skills/hooks/loop-stop-gate.sh (Stop; cap LOOP_STOP_MAX, 0=off)
+Hooks:  ~/workspace/custom-skills/hooks/loop-injector.sh (UserPromptSubmit)
+        ~/workspace/custom-skills/hooks/loop-stop-gate.sh (Stop; cap LOOP_STOP_MAX, 0=off)
 EOF
 }
 

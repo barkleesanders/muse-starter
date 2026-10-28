@@ -22,7 +22,7 @@ DIR="${1:-$PWD}"; cd "$DIR" 2>/dev/null || { echo "usage: $0 <repo-dir>"; exit 1
 # rewrites a field this script inspects. To read the deployed config instead:
 #   RD=.wrangler/deploy/config.json
 #   [ -f "$RD" ] && CFG=$(cd "$(dirname "$RD")" && realpath "$(python3 -c 'import json,sys;print(json.load(open(sys.argv[1]))["configPath"])' config.json)")
-# See ~/workspace/skills/shared/cf-integration-harness.md
+# See ~/workspace/custom-skills/shared/cf-integration-harness.md
 CFG=$(ls wrangler.jsonc wrangler.json wrangler.toml 2>/dev/null | head -1)
 [ -z "$CFG" ] && { echo "workers-cache-check: no wrangler config in $DIR — skip"; exit 0; }
 

@@ -22,13 +22,13 @@ Context7 was unavailable (`Invalid API key`), so WebFetch/curl of the docs' own 
 ## 1. Static gates (all armed with positive controls)
 
 ```
-$ cd ~/workspace/skills/infinite-faq/example && npm install --no-audit --no-fund   # ok
+$ cd ~/workspace/custom-skills/infinite-faq/example && npm install --no-audit --no-fund   # ok
 $ npx tsc --noEmit ; echo rc=$?                                                  # rc=0
 $ echo 'const x: number = "no";' > src/__tsc_control.ts; npx tsc --noEmit | grep -c 'error TS'   # 1  (armed)
 $ biome check --config-path=$HOME/.config/biome template example/src example/public/site.css example/package.json example/tsconfig.json
 Checked 12 files in 5ms. No fixes applied.      rc=0   (7 format/organizeImports findings were fixed with --write first; 0 lint/ findings)
 $ biome check … bad.ts | grep -c 'lint/'          # 4  (armed: any, ==, unused let)
-$ bash ~/workspace/skills/carmack/tools/detect-ts-slop.sh template example/src
+$ bash ~/workspace/custom-skills/carmack/tools/detect-ts-slop.sh template example/src
 ── anti-slop TypeScript scan (2 target(s)) ──
 ✅ no TypeScript slop patterns found.
 $ oxlint -c ~/.config/oxlint/oxlintrc.json src/index.tsx src/faq/index.ts src/faq/faq-route.ts src/faq/faq-island.tsx src/faq/faq-section.tsx ; echo rc=$?

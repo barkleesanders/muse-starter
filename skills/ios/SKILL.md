@@ -17,7 +17,7 @@ description: >
 **Division of labor (mirrors /carmack ↔ /ship):** everything up to "put it in
 users' hands" lives HERE. Production release — archive, sign, TestFlight,
 App Store submit, OTA publish — is **/ship**'s iOS phase
-(`~/workspace/skills/ship/references/ios-release.md`). When the user says
+(`~/workspace/custom-skills/ship/references/ios-release.md`). When the user says
 ship/release/submit/TestFlight-a-build, invoke /ship.
 
 ## Step 0 — Identify the app shape, then route
@@ -34,7 +34,7 @@ For iOS-version/API questions NEVER answer from memory — `axiom:axiom-apple-do
 skipped 19-25); newer may exist — check, don't assume.
 
 **Design/motion craft (emilkowalski/skills — installed 2026-09-20, upstream
-`85e8e23`, in `~/workspace/skills/<name>/` and `~/.agents/skills/<name>/`; the old
+`85e8e23`, in `~/workspace/custom-skills/<name>/` and `~/.agents/skills/<name>/`; the old
 "installed 2026-07-10" note was false, nothing was on disk):** route by app shape —
 - **Capacitor / WKWebView** → `Skill(mobile-native)` Baseline is a ship gate
   (tap-highlight flash, sticky hover, `100vh`, 16px inputs, `viewport-fit=cover`
@@ -94,7 +94,7 @@ Testing coverage.
   deep audit: `axiom:accessibility-auditor` agent.
 - **Simulator eyes + hands for agents: `baguette` (default) + `serve-sim`** —
   full routing table, verified command sequence and traps in
-  `~/workspace/skills/shared/ios-sim-agent-control.md` (both live-verified 2026-09-20, Xcode 27).
+  `~/workspace/custom-skills/shared/ios-sim-agent-control.md` (both live-verified 2026-09-20, Xcode 27).
   **baguette** (`brew install baguette`, 0.1.99): `boot --udid U` headless (no
   Simulator.app), `describe-ui` = a11y tree with pt frames, `tap/swipe/pinch/
   pan/press/key/type` in absolute pt (`--width 402 --height 874` on iPhone 17
@@ -137,7 +137,7 @@ Testing coverage.
   `axiom:concurrency-auditor`, `axiom:swiftui-architecture-auditor`, etc.
 - The full **App Review requirements table** (4.8 login services, account
   deletion, age rating, EU DSA, ATT, third-party-AI disclosure …) lives in
-  `~/workspace/skills/ship/references/ios-release.md` — consult it while
+  `~/workspace/custom-skills/ship/references/ios-release.md` — consult it while
   DESIGNING features, not just when shipping.
 
 ## Store assets & ASO (also pre-ship work)
@@ -251,7 +251,7 @@ the tee — grep the log for `error[`/`FAILED`.
    bundle. `xcrun simctl uninstall` (or CapacitorUpdater.reset()) before
    judging local web changes in the shell.
 10. **Installed-source ground truth** (mandatory, see
-   `~/workspace/skills/shared/installed-source-ground-truth.md`): read
+   `~/workspace/custom-skills/shared/installed-source-ground-truth.md`): read
    node_modules types/JSDoc + the plugin's Swift/Kotlin source before
    trusting any config option or "platform-only" claim.
 11. **`asc builds latest` doesn't exist** — `asc builds info --app ID --latest`.
@@ -286,7 +286,7 @@ code, run the cheap probe for the ceremony and confirm the binding is present:
 
 If the probe shows the binding is absent, that IS the root cause — stop, add the
 binding (or, for Google, hide the affordance), don't debug the JS ceremony. This is
-the premise-check gate (`~/workspace/skills/shared/premise-check.md`) specialized to
+the premise-check gate (`~/workspace/custom-skills/shared/premise-check.md`) specialized to
 in-webview auth.
 
 ## Quality gates before handing to /ship

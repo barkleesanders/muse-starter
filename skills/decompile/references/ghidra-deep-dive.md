@@ -40,7 +40,7 @@ mkdir -p "$PROJ_DIR"
 # 2) Re-run a script over an already-imported binary (no re-analysis)
 "$GHIDRA" "$PROJ_DIR" "$PROJ_NAME" \
   -process "sample.exe" -noanalysis \
-  -scriptPath ~/workspace/skills/decompile/scripts \
+  -scriptPath ~/workspace/custom-skills/decompile/scripts \
   -postScript decompile_all.py /tmp/sample-decomp.c
 
 # 3) Triage many binaries in parallel (xargs)

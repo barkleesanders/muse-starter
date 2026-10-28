@@ -51,7 +51,7 @@ for role in (m.get("UISceneConfigurations") or {}).values():
   if [ -z "$DELEGATE" ]; then
     echo "  FAIL: no UIApplicationSceneManifest / UISceneDelegateClassName — app crashes at launch on iOS 27"
     echo "        (EXC_BREAKPOINT UIApplicationEvaluateRuntimeIssueForNoSceneLifecycleAdoption)."
-    echo "        Fix: ~/workspace/skills/shared/ios-app-dev-release-traps.md §1"
+    echo "        Fix: ~/workspace/custom-skills/shared/ios-app-dev-release-traps.md §1"
     rc=1; continue
   fi
   DIR="$(dirname "$P")"

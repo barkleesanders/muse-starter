@@ -11,7 +11,7 @@ Full pipeline: **text script** → **portrait image** → **voice audio** → **
 ## /init - First-Time Setup
 
 ```bash
-~/workspace/skills/avatar-video/scripts/setup.sh
+~/workspace/custom-skills/avatar-video/scripts/setup.sh
 ```
 
 This creates `~/.avatar-video/.env` with your `FAL_KEY`. Get one at https://fal.ai → Dashboard → API Keys.
@@ -24,12 +24,12 @@ nano-banana must also be installed (see `/nano-banana` skill).
 
 ```bash
 # Premium quality (OmniHuman 1.5) — ~\$3.68 for 30s
-~/workspace/skills/avatar-video/scripts/generate-avatar.sh \
+~/workspace/custom-skills/avatar-video/scripts/generate-avatar.sh \
   "Hi, I'm your your app assistant. I'm here to help you navigate your VA disability claim." \
   --quality premium
 
 # Budget quality (Infinite Talk) — ~\$1.88 for 30s
-~/workspace/skills/avatar-video/scripts/generate-avatar.sh \
+~/workspace/custom-skills/avatar-video/scripts/generate-avatar.sh \
   "Welcome to our service" \
   --quality budget
 ```
@@ -41,19 +41,19 @@ nano-banana must also be installed (see `/nano-banana` skill).
 nano-banana "professional headshot of a woman, studio lighting, neutral background" -s 1K -o portrait
 
 # 2. Generate voice (MiniMax Speech)
-~/workspace/skills/avatar-video/scripts/minimax-tts.sh \
+~/workspace/custom-skills/avatar-video/scripts/minimax-tts.sh \
   "Hello, welcome to your app" \
   --voice Friendly_Person \
   --output speech.mp3
 
 # 3a. Lip-sync with OmniHuman 1.5 (premium)
-~/workspace/skills/avatar-video/scripts/omnihuman-lipsync.sh \
+~/workspace/custom-skills/avatar-video/scripts/omnihuman-lipsync.sh \
   --image portrait.png \
   --audio speech.mp3 \
   --output avatar-video.mp4
 
 # 3b. Lip-sync with Infinite Talk (budget)
-~/workspace/skills/avatar-video/scripts/infinitetalk-lipsync.sh \
+~/workspace/custom-skills/avatar-video/scripts/infinitetalk-lipsync.sh \
   --image portrait.png \
   --audio speech.mp3 \
   --output avatar-video.mp4
@@ -115,7 +115,7 @@ Custom voice cloning: provide a voice sample URL as `--voice <url_to_6sec_sample
 Every generation logs to `~/.avatar-video/costs.json`. View summary:
 
 ```bash
-~/workspace/skills/avatar-video/scripts/generate-avatar.sh --costs
+~/workspace/custom-skills/avatar-video/scripts/generate-avatar.sh --costs
 ```
 
 ## API Keys
@@ -129,7 +129,7 @@ All fal.ai services use a single key. Get one at https://fal.ai.
 
 ## Troubleshooting
 
-- **"FAL_KEY not found"** — Run setup: `~/workspace/skills/avatar-video/scripts/setup.sh`
+- **"FAL_KEY not found"** — Run setup: `~/workspace/custom-skills/avatar-video/scripts/setup.sh`
 - **"Audio must be under 30s"** (OmniHuman) — Use Infinite Talk for longer audio, or trim script
 - **Upload failed** — Check FAL_KEY is valid; fal.ai file upload requires auth
 - **Queue timeout** — OmniHuman can take 2-5 min; the script polls automatically

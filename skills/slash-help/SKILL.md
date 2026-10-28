@@ -57,6 +57,6 @@ bd dep add <child> <parent>                        # Add dependency
 **hurl** — plain-text HTTP replay + jsonpath asserts (Aura/311 envelopes). `hurl --test file.hurl`
 **gron** — flatten JSON so nested toast/`objCaseConfigWrapper` keys are greppable. `gron file.json | rg toastPayload`
 **yq / xh** — YAML/JSON transform; rust httpie. Prefer `xh` over ad-hoc curl for readable agent HTTP.
-**agnix** — lint SKILL.md / CLAUDE.md / hooks. `agnix --target claude-code ~/workspace/skills/<name>` (never `--fix-unsafe` here)
+**agnix** — lint SKILL.md / CLAUDE.md / hooks. `agnix --target claude-code ~/workspace/custom-skills/<name>` (never `--fix-unsafe` here)
 **lnav** — pager for `wrangler tail` pretty-printed JSON (Pattern #32). **hyperfine** — bench a command.
 **fhar** — on PATH as `fhar` (`~/.local/bin/fhar` → `~/tools/fcdp-har/fhar`)

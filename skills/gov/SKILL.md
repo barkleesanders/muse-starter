@@ -317,7 +317,7 @@ Each filing includes the exact submission URL.
 5. **Always offer parallel-filing** when more than one agency has authority — never a single point of failure.
 6. **Never advise illegal action** (forging signatures, harassing officials, bypassing court orders, etc.). This work is relentless, not lawless.
 7. **Apply the Email Approval Rule** — if any step involves sending email from the user, show recipient/subject/body and get explicit approval first. Default sender is Gmail per the Email Sending Rule.
-8. **Read every released document FULLY before judging coverage — OCR scanned PDFs, no excuses.** When you analyze a records release (or any production) for what was/wasn't produced, you MUST read the entire contents of every responsive file — all pages, all parts — not the filename, not the first page, not a snippet. Before claiming a clause/topic is "not present" or a request was "not satisfied": run `pdftotext file.pdf - | wc -c`; if it returns < ~100 chars (or < ~50 chars/page) the PDF is an image scan with NO text layer and a keyword grep sees nothing regardless of contents — you must OCR it (`pdftoppm -gray -png` + `tesseract`, parallel via `xargs -P`, background big jobs) and search the real text. Distinguish "not in the text I fully read" (a finding) from "couldn't read it yet / scanned" (NOT a finding — go OCR). Full standard + recipe: `~/workspace/skills/shared/full-document-read-standard.md`. (Enforced session-wide by the SessionStart hook `~/workspace/skills/hooks/full-document-read-session-start.sh`.)
+8. **Read every released document FULLY before judging coverage — OCR scanned PDFs, no excuses.** When you analyze a records release (or any production) for what was/wasn't produced, you MUST read the entire contents of every responsive file — all pages, all parts — not the filename, not the first page, not a snippet. Before claiming a clause/topic is "not present" or a request was "not satisfied": run `pdftotext file.pdf - | wc -c`; if it returns < ~100 chars (or < ~50 chars/page) the PDF is an image scan with NO text layer and a keyword grep sees nothing regardless of contents — you must OCR it (`pdftoppm -gray -png` + `tesseract`, parallel via `xargs -P`, background big jobs) and search the real text. Distinguish "not in the text I fully read" (a finding) from "couldn't read it yet / scanned" (NOT a finding — go OCR). Full standard + recipe: `~/workspace/custom-skills/shared/full-document-read-standard.md`. (Enforced session-wide by the SessionStart hook `~/workspace/custom-skills/hooks/full-document-read-session-start.sh`.)
 
 ## Scrapers & Bypass Tools by Wall
 
@@ -346,7 +346,7 @@ Default field-tested combo for one-off entity lookups:
 
 ## Ground-truth gate (MANDATORY)
 
-Before this skill asserts a stakes-bearing fact or takes any outward/irreversible action, apply the global standard — verify against a **primary source fetched now**, never a cached/remembered value. Full standard: `~/workspace/skills/shared/ground-truth-standard.md`.
+Before this skill asserts a stakes-bearing fact or takes any outward/irreversible action, apply the global standard — verify against a **primary source fetched now**, never a cached/remembered value. Full standard: `~/workspace/custom-skills/shared/ground-truth-standard.md`.
 
 **Verify live before you act or assert (this skill):**
 - Regulatory citations, forms, and authority paths come from primary .gov sources, curl-verified; never invent a citation, form number, or office.

@@ -389,7 +389,7 @@ r2 -A binary
 # Or Ghidra headless decompile-all
 GHIDRA=~/tools/ghidra_12.0.4_PUBLIC/support/analyzeHeadless
 "$GHIDRA" ~/ghidra-projects audit -import binary -overwrite \
-  -scriptPath ~/workspace/skills/decompile/scripts \
+  -scriptPath ~/workspace/custom-skills/decompile/scripts \
   -postScript decompile_all.py /tmp/decomp.c
 ```
 
@@ -716,7 +716,7 @@ Two ready-to-use Ghidra scripts ship with this skill in `scripts/`:
 ```bash
 GHIDRA=~/tools/ghidra_12.0.4_PUBLIC/support/analyzeHeadless
 "$GHIDRA" ~/ghidra-projects audit -import binary -overwrite \
-  -scriptPath ~/workspace/skills/decompile/scripts \
+  -scriptPath ~/workspace/custom-skills/decompile/scripts \
   -postScript decompile_all.py /tmp/decomp.c
 ```
 

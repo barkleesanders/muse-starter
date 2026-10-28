@@ -1,0 +1,5 @@
+name: "ios_ship"
+title: "Ios Ship"
+description: "> MERGED (2026-06-12) — kept as a redirect for muscle memory. iOS development (build/run/debug/review/test/screenshots/ASO) is now the /ios super skill; iOS release (greenlight → sign → archive → TestFlight → App Store → OTA sync) is /ship's Phase 4.7 (references/ios-release.md). Invoking /ios-ship routes to those."
+category: "Work and knowledge"
+include_in_prompt: false

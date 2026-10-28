@@ -17,7 +17,7 @@ model: inherit
 
 Turns a window of real logs into concrete code improvements: ambiguous errors → actionable, noise → quieter (recoverable), silent gaps → instrumented. The compounding investment that makes every *future* debugging session in the same subsystem faster.
 
-**Read `~/workspace/skills/shared/observability-instrumentation.md` first** — it is the standard this skill enforces (boundary-logging, the 4-part error-message design, the downgrade-never-delete guardrail, the stack's log sources).
+**Read `~/workspace/custom-skills/shared/observability-instrumentation.md` first** — it is the standard this skill enforces (boundary-logging, the 4-part error-message design, the downgrade-never-delete guardrail, the stack's log sources).
 
 ## Usage
 

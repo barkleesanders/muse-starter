@@ -398,7 +398,7 @@ Tracked by the \`goal\` skill (ported from Codex \`/goal\`).
 - state: $(state_file)
 - created: $(now_iso)
 
-Lifecycle is driven by \`~/workspace/skills/goal/scripts/goal.sh\`:
+Lifecycle is driven by \`~/workspace/custom-skills/goal/scripts/goal.sh\`:
 - \`goal pause\` / \`goal resume\` → bd comment
 - \`goal complete\` → bd close
 - \`goal clear\` → bd status=deleted
@@ -811,7 +811,7 @@ Usage:
 
 State:  $HOME/.claude/state/goal/<sha-of-cwd>.json   (active)
 Stack:  $HOME/.claude/state/goal/<sha-of-cwd>.stack.json  (saved goals, LIFO)
-Hook:   ~/workspace/skills/hooks/goal-injector.sh (UserPromptSubmit; reads the active goal only)
+Hook:   ~/workspace/custom-skills/hooks/goal-injector.sh (UserPromptSubmit; reads the active goal only)
 Beads:  an issue is created on \`set\`, closed on \`complete\`,
         marked deleted on \`clear\`, commented on pause/resume/stack.
 

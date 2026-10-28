@@ -48,7 +48,7 @@ npx wrangler secret list
 
 Run this for Cloudflare Worker apps that use Clerk/Auth0/Supabase/Firebase or any auth provider with dev/prod instances.
 
-**AIVA override (current architecture, August 2026):** AIVA uses first-party Better Auth at `/api/auth/*`; Clerk is retired. Do not require a Clerk custom domain or `pk_live_*`. For AIVA, block on **any** Clerk host/key/SDK/JWKS fingerprint in source, dry-run, live HTML, or CSP, then require `GET /api/auth/ok` → 200 and a wrong-password `POST /api/auth/sign-in/email` → 401. If auth/session/passkey/TOTP/password/recovery/sign-out code changed, also run `~/workspace/skills/shared/account-security-lifecycle.md`.
+**AIVA override (current architecture, August 2026):** AIVA uses first-party Better Auth at `/api/auth/*`; Clerk is retired. Do not require a Clerk custom domain or `pk_live_*`. For AIVA, block on **any** Clerk host/key/SDK/JWKS fingerprint in source, dry-run, live HTML, or CSP, then require `GET /api/auth/ok` → 200 and a wrong-password `POST /api/auth/sign-in/email` → 401. If auth/session/passkey/TOTP/password/recovery/sign-out code changed, also run `~/workspace/custom-skills/shared/account-security-lifecycle.md`.
 
 ```bash
 # Source/config scan for development auth fingerprints
@@ -138,7 +138,7 @@ for f in $CHANGED; do
     fi
   ;; esac
 done
-[ "$TRIPS" -gt 0 ] && echo "BLOCK: $TRIPS signal-extraction fixture violations — see ~/workspace/skills/shared/third-party-signal-fixtures.md"
+[ "$TRIPS" -gt 0 ] && echo "BLOCK: $TRIPS signal-extraction fixture violations — see ~/workspace/custom-skills/shared/third-party-signal-fixtures.md"
 ```
 
 Required to clear this gate:
@@ -147,7 +147,7 @@ Required to clear this gate:
 - The test file `readFileSync`s the fixture or `import`s it — synthetic hand-written HTML alone is rejected.
 - The detector's distinguishing feature (anchored DOM id, JSON field, status code combination) is present in exactly one of the two fixtures, verified by `grep`.
 
-Reference incident (2026-05-27): every IBA-submitted SF DBI complaint was reported as `validation` error for ~10 days while the city actually recorded every one of them. `src/sfdbi.ts` `looksLikeEchoedForm = html.includes("Sub_Button0") && html.includes("CheckBox1")` matched the real success page too — DBI's "Thank you" response is the SAME `AddressData2.aspx` page with only `<span id="InfoReq1_lblError">` text changed. The pre-existing test used a 100-byte synthetic success fixture (`<html><body><h1>Thank you</h1>...`) that didn't contain `Sub_Button0`, so the bug never tripped in CI. See Pattern #23 (`error-handling-patterns.md`) and `~/workspace/skills/shared/third-party-signal-fixtures.md` for the generalized rule.
+Reference incident (2026-05-27): every IBA-submitted SF DBI complaint was reported as `validation` error for ~10 days while the city actually recorded every one of them. `src/sfdbi.ts` `looksLikeEchoedForm = html.includes("Sub_Button0") && html.includes("CheckBox1")` matched the real success page too — DBI's "Thank you" response is the SAME `AddressData2.aspx` page with only `<span id="InfoReq1_lblError">` text changed. The pre-existing test used a 100-byte synthetic success fixture (`<html><body><h1>Thank you</h1>...`) that didn't contain `Sub_Button0`, so the bug never tripped in CI. See Pattern #23 (`error-handling-patterns.md`) and `~/workspace/custom-skills/shared/third-party-signal-fixtures.md` for the generalized rule.
 
 **1c-ter. Experience Cloud / Aura 311 catalog + submit envelope (BLOCKING when touched) — Phase 1.45g:**
 
@@ -284,8 +284,8 @@ BLOCK until:
 `disabled={isLoading}` + `finally` re-enable is the weaker WARN above and does **not** clear this gate.
 
 **7c. Silent outcome on a primary action (BLOCKING, every ship) — Phase 1.45i:**
-Pattern 43 (`~/workspace/skills/debug/references/error-handling-patterns.md`). Run
-`~/workspace/skills/ship/tools/silent-outcome-check.sh <repo>` pre-deploy and with
+Pattern 43 (`~/workspace/custom-skills/debug/references/error-handling-patterns.md`). Run
+`~/workspace/custom-skills/ship/tools/silent-outcome-check.sh <repo>` pre-deploy and with
 `--live <url>` post-deploy. BLOCK on a newly added native `alert/confirm/prompt`
 in client code; run the repo's `probe:constrained` (headless, no WebGL, no
 geolocation, dialogs dismissed, every `POST /api/*` intercepted; asserts per tap
@@ -488,7 +488,7 @@ If a query does a range scan on a TEXT `created_at`/`ts` column, confirm the sto
 
 **Run the automated gate (it does both checks):**
 ```bash
-~/workspace/skills/shared/tools/d1-schema-drift-check.sh <repo-dir> [<d1-name-or-id>]
+~/workspace/custom-skills/shared/tools/d1-schema-drift-check.sh <repo-dir> [<d1-name-or-id>]
 # exit 0 = clean · 1 = drift (BLOCK) · 2 = setup error
 ```
 
@@ -501,6 +501,6 @@ If a query does a range scan on a TEXT `created_at`/`ts` column, confirm the sto
 3. **NEVER run `wrangler d1 migrations apply` to catch up a drifted DB.** Migrations authored as non-idempotent data transforms corrupt data on re-run (AIVA `16_add_records_request_step.sql` does `UPDATE steps SET order_index = order_index + 1 WHERE order_index >= 3` — a double-run double-shifts every user's step order); bare `CREATE`/`ALTER` (no `IF NOT EXISTS`) error on existing objects. Diff object-by-object vs remote and apply only what's missing.
 4. Confirm the changed write handler wraps its `.run()` in try/catch that logs `sanitizeError(err)` and returns clean JSON (ties to Phase 1.57) — so the next drift is diagnosable, not a silent generic 500.
 
-Full pattern (detect + fix + instrument): `~/workspace/skills/shared/d1-schema-drift.md`.
+Full pattern (detect + fix + instrument): `~/workspace/custom-skills/shared/d1-schema-drift.md`.
 
 **Output:** BLOCK if the script exits non-zero; fix prod schema + reconcile inline, re-run until it exits 0. On pass: `-- Phase 1.56 OK: D1 schema in sync — N write-target table(s) verified vs remote PRAGMA, migrations tracker clean --`.

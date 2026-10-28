@@ -157,7 +157,7 @@ generic handler misfiring, **not** an auth problem (there is no auth).
 **Fires when the deliverable is people, not prose** — "who do I send this to", a press list, an
 agency distribution ladder, an oversight roster. Skip it for ordinary topic research.
 
-Load **`~/workspace/skills/shared/verified-contact-network.md`** before searching. A contact list is
+Load **`~/workspace/custom-skills/shared/verified-contact-network.md`** before searching. A contact list is
 the one artifact where a fabrication is invisible until it matters: `jsmith@cityofx.gov` looks
 exactly like a verified address, and "I notified the City" becomes false in a filing.
 
@@ -318,7 +318,7 @@ a `BLOCKED` run is terminal (workspace budget/run cap — tell the user, don't r
 `Health` column only to break ties (`unknown` is common, not a warning); read the **Hints**
 block before your next command; the CLI version and this skill's frontmatter `version` must
 match — `npm install -g @monid-ai/cli@latest` + re-save `https://monid.ai/SKILL.md` to
-`~/workspace/skills/monid/SKILL.md` **and** `~/.agents/skills/monid/SKILL.md` when they drift.
+`~/workspace/custom-skills/monid/SKILL.md` **and** `~/.agents/skills/monid/SKILL.md` when they drift.
 
 **Do NOT add Monid to the `websearch` provider stack** — same reasoning as the `/healthdata`
 tier: it is a structured-endpoint marketplace, not general web search, and every call costs

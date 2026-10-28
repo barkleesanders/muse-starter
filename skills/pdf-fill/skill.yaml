@@ -1,0 +1,5 @@
+name: "pdf_fill"
+title: "Pdf Fill"
+description: "Fill out fillable PDF forms (government, legal, tax, healthcare, insurance) using PyMuPDF (fitz). Triggered when user provides a PDF and asks to fill it out, complete it, populate fields, or auto-fill data. Covers AcroForm and XFA forms, text fields, radio buttons, checkboxes, and signature fields. Enforces fabrication prevention, visual verification, and multi-section form correctness (don't check boxes you don't qualify for)."
+category: "Work and knowledge"
+include_in_prompt: false

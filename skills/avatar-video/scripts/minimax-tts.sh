@@ -27,7 +27,7 @@ if [[ -f "$ENV_FILE" ]]; then
 fi
 
 if [[ -z "${FAL_KEY:-}" ]]; then
-    echo "ERROR: FAL_KEY not found. Run setup: ~/workspace/skills/avatar-video/scripts/setup.sh" >&2
+    echo "ERROR: FAL_KEY not found. Run setup: ~/workspace/custom-skills/avatar-video/scripts/setup.sh" >&2
     exit 1
 fi
 

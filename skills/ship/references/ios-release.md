@@ -90,12 +90,12 @@ Hard rules:
    archive/upload and physical-device checks open; do not substitute a public web
    deploy, a stale IPA, or a feature downgrade for the requested native release.
 6. **iOS 27 scene-lifecycle gate (BLOCKING, before any archive):**
-   `/bin/bash ~/workspace/skills/ship/tools/ios-scene-lifecycle-check.sh <repo>` must exit 0.
+   `/bin/bash ~/workspace/custom-skills/ship/tools/ios-scene-lifecycle-check.sh <repo>` must exit 0.
    Exit 1 = the app will crash AT LAUNCH on iOS 27 (no UIScene adoption) or will silently
    lose OAuth/universal-link returns (no scene URL forwarding). Exit 2 = unmeasured — not a
    pass. This is what shipped ImproveBayArea build 14 as a launch crash on 2026-09-28: it was
    VALID in TestFlight and launched on the iOS 26.5 simulator. Fix recipe:
-   `~/workspace/skills/shared/ios-app-dev-release-traps.md` §1–2.
+   `~/workspace/custom-skills/shared/ios-app-dev-release-traps.md` §1–2.
 7. **ASC + signing plumbing:** prefix every `asc` command with `ASC_BYPASS_KEYCHAIN=1` (creds
    in `~/.asc/config.json`; the login-keychain prompt otherwise blocks unattended runs — never
    type that password). Search BOTH profile dirs before declaring a profile missing:

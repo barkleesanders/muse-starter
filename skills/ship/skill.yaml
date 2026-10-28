@@ -1,0 +1,5 @@
+name: "ship"
+title: "Ship"
+description: "Safe production deployment with quality gates, safety audits, rollback, and dedicated passkey/TOTP/2FA/passwordless account-security lifecycle checks. Deploys to PRODUCTION by default."
+category: "Work and knowledge"
+include_in_prompt: false

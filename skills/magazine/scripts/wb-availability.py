@@ -6,9 +6,9 @@ patches the manifest with `wayback_url` (real timestamp form) and
 `wayback_timestamp` fields.
 
 Usage:
-    cd /path/to/repo && python3 ~/workspace/skills/magazine/scripts/wb-availability.py
+    cd /path/to/repo && python3 ~/workspace/custom-skills/magazine/scripts/wb-availability.py
     # or
-    REPO_ROOT=/path/to/repo python3 ~/workspace/skills/magazine/scripts/wb-availability.py
+    REPO_ROOT=/path/to/repo python3 ~/workspace/custom-skills/magazine/scripts/wb-availability.py
 """
 import json
 import os

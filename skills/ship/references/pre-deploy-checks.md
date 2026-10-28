@@ -131,7 +131,7 @@ git push -u origin HEAD                       # always
 
 **When this fires**: any repo whose wrangler config sets `cache.enabled: true`. No-op otherwise.
 
-**Run**: `~/workspace/skills/ship/tools/workers-cache-check.sh <repo-dir>` — checks:
+**Run**: `~/workspace/custom-skills/ship/tools/workers-cache-check.sh <repo-dir>` — checks:
 1. `cache.enabled` is actually true (skips cleanly if absent/false).
 2. **wrangler ≥ 4.69** — below that the flag is silently IGNORED at deploy (feature inert). WARN.
 3. Only `enabled` / `cross_version_cache` keys under `cache` (others → wrangler validation error). BLOCK.
@@ -139,7 +139,7 @@ git push -u origin HEAD                       # always
 
 **Re-verify against LIVE docs (do not trust the cached assumptions in the script)**: `WebFetch https://developers.cloudflare.com/workers/cache/configuration/` and confirm the min wrangler version, the "no-Cache-Control ⇒ heuristically cached" rule, and the allowed `cache` keys still hold. The config surface is new (shipped 2026-07) and may change.
 
-**Full pattern + safe-enable recipe:** `~/workspace/skills/shared/workers-cache-safety.md` (shared with /carmack and /debug).
+**Full pattern + safe-enable recipe:** `~/workspace/custom-skills/shared/workers-cache-safety.md` (shared with /carmack and /debug).
 
 **BLOCK on exit 2.** Override only with explicit user acknowledgement that no cookie-authed route can return an uncacheable-but-unmarked `200`.
 

@@ -30,7 +30,7 @@ Determine what the user needs, then read ONLY the relevant reference files befor
 | Getting started, Rails integration | `quickstart.md` |
 | Common patterns, agents, pipelines, vision | `patterns.md` |
 
-All reference files are in `~/workspace/skills/dspy-ruby/references/`.
+All reference files are in `~/workspace/custom-skills/dspy-ruby/references/`.
 
 ---
 

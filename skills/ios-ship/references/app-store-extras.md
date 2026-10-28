@@ -24,7 +24,7 @@ Captured from Notion link-inbox triage on 2026-04-28. None of these are installe
 | **`/app-onboarding-questionnaire`** | Generates a 14-screen psychological-framework onboarding flow based on Mob, Headspace, Noom, Cal AI patterns. Works on SwiftUI / React Native / Flutter / Expo. **This is different from the `onboarding-cro` skill** (which optimizes web post-signup activation). Use this for the in-app questionnaire flow new users see when they first open the app. |
 
 ```bash
-# Already installed at ~/workspace/skills/app-onboarding-questionnaire/
+# Already installed at ~/workspace/custom-skills/app-onboarding-questionnaire/
 # Trigger by saying: "build an onboarding flow" or "/app-onboarding-questionnaire"
 ```
 

@@ -377,7 +377,7 @@ Keep the plan actionable. Every item should be something the user can do today.
 
 ## Ground-truth gate (MANDATORY)
 
-Before this skill asserts a stakes-bearing fact or takes any outward/irreversible action, apply the global standard — verify against a **primary source fetched now**, never a cached/remembered value. Full standard: `~/workspace/skills/shared/ground-truth-standard.md`.
+Before this skill asserts a stakes-bearing fact or takes any outward/irreversible action, apply the global standard — verify against a **primary source fetched now**, never a cached/remembered value. Full standard: `~/workspace/custom-skills/shared/ground-truth-standard.md`.
 
 **Verify live before you act or assert (this skill):**
 - Fetch each directory's LIVE submission form + requirements before submitting; never submit against a remembered field set.

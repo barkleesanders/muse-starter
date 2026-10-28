@@ -488,9 +488,9 @@ Good luck!
 
 ## Ground-truth gate (MANDATORY)
 
-Before this skill asserts a stakes-bearing fact or takes any outward/irreversible action, apply the global standard — verify against a **primary source fetched now**, never a cached/remembered value. Full standard: `~/workspace/skills/shared/ground-truth-standard.md`.
+Before this skill asserts a stakes-bearing fact or takes any outward/irreversible action, apply the global standard — verify against a **primary source fetched now**, never a cached/remembered value. Full standard: `~/workspace/custom-skills/shared/ground-truth-standard.md`.
 
 **Verify live before you act or assert (this skill):**
-- When the skill being created/edited takes an outward action or asserts real-world facts, REQUIRE it to include a Ground-truth gate section pointing to `~/workspace/skills/shared/ground-truth-standard.md`.
+- When the skill being created/edited takes an outward action or asserts real-world facts, REQUIRE it to include a Ground-truth gate section pointing to `~/workspace/custom-skills/shared/ground-truth-standard.md`.
 
 Then: dry-run where possible, show the user exactly what will be sent/filed/asserted, get explicit chat approval for any outward action (per CLAUDE.md), capture the confirmation, and write any verified fact back into its source doc. State uncertainty as uncertainty; never assert plausible-but-unverified as fact.

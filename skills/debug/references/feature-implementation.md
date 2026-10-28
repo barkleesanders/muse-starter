@@ -285,18 +285,18 @@ machine-verifies each story, keeps a JSONL ledger + a beads issue, and its
 Stop-gate keeps the build going turn-to-turn and **refuses a premature "done"**
 until the real finish line (all stories pass) is met. The prd.json `passes`
 flags and progress.txt stay exactly as before — loop-runner wraps them.
-(If `~/workspace/skills/loop-runner/scripts/loop.sh` is missing, fall back to the
+(If `~/workspace/custom-skills/loop-runner/scripts/loop.sh` is missing, fall back to the
 bare loop: same 9 steps, manually.)
 
 **Start the loop ONCE, right after prd.json exists:**
 
 ```bash
-L=~/workspace/skills/loop-runner/scripts/loop.sh
+L=~/workspace/custom-skills/loop-runner/scripts/loop.sh
 bash "$L" start \
   --title "ralph: <feature>" \
   --prompt "Ralph: implement each highest-priority userStory in prd.json with passes:false — ONE per iteration — running the project quality checks after each, committing only when they pass." \
   --verify "<project quality check — e.g. npm run typecheck && npm test, or pytest -q, or cargo test>" \
-  --stop "max-iter=<#stories + 3>,no-progress=2,target=bash ~/workspace/skills/carmack/tools/ralph-prd-status.sh"
+  --stop "max-iter=<#stories + 3>,no-progress=2,target=bash ~/workspace/custom-skills/carmack/tools/ralph-prd-status.sh"
 ```
 
 - `--verify` = the SAME quality checks Step 5 already runs (typecheck/lint/test). Exit 0 ⇒ this story holds. Use the real project command; only omit `--verify` (self-graded) if the repo genuinely has no check — and say so to the user.
@@ -426,7 +426,7 @@ If ANY checkbox is unchecked, the story is not done.
 - KV-cache: keep static prompt sections stable (no timestamps, no whitespace changes)
 - Observation masking: replace verbose tool outputs with compact references when context is >70% utilized
 - Context partitioning: split work across sub-agents when task exceeds 60% of window
-- Reference: `~/workspace/skills/context-optimization/` and `~/workspace/skills/file-search/`
+- Reference: `~/workspace/custom-skills/context-optimization/` and `~/workspace/custom-skills/file-search/`
 
 ---
 

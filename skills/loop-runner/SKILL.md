@@ -12,8 +12,8 @@ Loop Library (`https://signals.forwardfuture.ai/loop-library/`) publishes loops 
 When you `start` a loop in a directory:
 1. A state file is written at `~/.claude/state/loop/<sha-of-cwd>.json` and a JSONL ledger beside it (`.jsonl`).
 2. A beads issue is created (`bd create --type=task --priority=2`, labels `workflow:loop` + `actor:agent`) and claimed; its id is stored in state.
-3. The **`UserPromptSubmit` hook** `~/workspace/skills/hooks/loop-injector.sh` injects a `<system-reminder>` each turn: the loop prompt (as untrusted data), current iteration vs. max, no-progress streak, the exact verify step, the stop predicates, and the rule "don't `complete` until verify passes or a stop fires."
-4. The **`Stop` hook** `~/workspace/skills/hooks/loop-stop-gate.sh` runs `check-stop` when you try to end the turn: if a stop predicate fired it lets you stop (and points you at `complete`); otherwise it blocks and feeds the next cycle back — so the loop *actually loops across turns*. Capped at `LOOP_STOP_MAX` (default 6) per session, fails open, kill switch `LOOP_STOP_MAX=0`.
+3. The **`UserPromptSubmit` hook** `~/workspace/custom-skills/hooks/loop-injector.sh` injects a `<system-reminder>` each turn: the loop prompt (as untrusted data), current iteration vs. max, no-progress streak, the exact verify step, the stop predicates, and the rule "don't `complete` until verify passes or a stop fires."
+4. The **`Stop` hook** `~/workspace/custom-skills/hooks/loop-stop-gate.sh` runs `check-stop` when you try to end the turn: if a stop predicate fired it lets you stop (and points you at `complete`); otherwise it blocks and feeds the next cycle back — so the loop *actually loops across turns*. Capped at `LOOP_STOP_MAX` (default 6) per session, fails open, kill switch `LOOP_STOP_MAX=0`.
 
 ## Verification is hybrid-but-honest
 
@@ -27,7 +27,7 @@ When you `start` a loop in a directory:
 Always invoke via Bash:
 
 ```bash
-bash ~/workspace/skills/loop-runner/scripts/loop.sh <subcommand> [args]
+bash ~/workspace/custom-skills/loop-runner/scripts/loop.sh <subcommand> [args]
 ```
 
 | Subcommand | Effect |

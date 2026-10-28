@@ -22,7 +22,7 @@ When a goal is set for the current directory:
 
 1. A JSON state file is written at `~/.claude/state/goal/<sha-of-cwd>--<sha-of-session>.json` — **scoped to BOTH the directory and the session** (see “Session scoping” below).
 2. A beads issue is created (`bd create --type=task --priority=1` with labels `workflow:goal` + `actor:agent`) and immediately claimed. The issue id is stored in the state file.
-3. The `UserPromptSubmit` hook at `~/workspace/skills/hooks/goal-injector.sh` injects a steering `<system-reminder>` before every subsequent user message. The steering tells the model:
+3. The `UserPromptSubmit` hook at `~/workspace/custom-skills/hooks/goal-injector.sh` injects a steering `<system-reminder>` before every subsequent user message. The steering tells the model:
    - The objective (wrapped as untrusted data).
    - Elapsed time and (if set) token budget.
    - Don't repeat work already done.
@@ -55,7 +55,7 @@ The verbatim steering text is unchanged — only the cadence changes, so a long 
 
 ## Ground-truth decomposition (research before you decompose)
 
-The decomposition steering (fired while the ledger is empty) now carries a **GROUND-TRUTH FIRST** clause: if the objective touches any code, API, SDK, library, provider, platform, framework, or CLI, the model must **not** decompose the deliverables from memory. It must first establish the *current* capability matrix — run `/deepsearch` (or the `websearch` CLI) on the topic **and** pull the provider's own current docs via **context7** (`resolve-library-id` → `query-docs`) or WebFetch the official docs — then write each deliverable grounded in the verified capabilities and cite the doc URL/version in the deliverable text or its evidence. This makes `/goal` decompose against real provider docs instead of assumptions, so it can't lock in a wrong premise (the premise-check + ground-truth standard, applied at goal-set time). The clause lives in `~/workspace/skills/hooks/goal-injector.sh` (the `DELIV_COUNT == 0` decompose branch).
+The decomposition steering (fired while the ledger is empty) now carries a **GROUND-TRUTH FIRST** clause: if the objective touches any code, API, SDK, library, provider, platform, framework, or CLI, the model must **not** decompose the deliverables from memory. It must first establish the *current* capability matrix — run `/deepsearch` (or the `websearch` CLI) on the topic **and** pull the provider's own current docs via **context7** (`resolve-library-id` → `query-docs`) or WebFetch the official docs — then write each deliverable grounded in the verified capabilities and cite the doc URL/version in the deliverable text or its evidence. This makes `/goal` decompose against real provider docs instead of assumptions, so it can't lock in a wrong premise (the premise-check + ground-truth standard, applied at goal-set time). The clause lives in `~/workspace/custom-skills/hooks/goal-injector.sh` (the `DELIV_COUNT == 0` decompose branch).
 
 ## Anti-abandonment gate + stall escalation (2026-07-29)
 
@@ -76,7 +76,7 @@ one avoidance move:
 | **Target substitution** — wanted to switch ciphers | *"no we don't want to change the targets [...] agian [sic] we need to find something that worth [sic] publishing"* |
 | Low-hanging fruit | *"again we are not looking for low hanging fruit, we want proper research to find genuinly [sic] hard findings."* |
 
-Two mechanisms now encode this, both in `~/workspace/skills/hooks/goal-injector.sh`:
+Two mechanisms now encode this, both in `~/workspace/custom-skills/hooks/goal-injector.sh`:
 
 **1. Abandonment gate (always in the FULL block).** Infeasibility is treated as a
 *claim requiring evidence*, at the same standard as completion — name what was
@@ -158,7 +158,7 @@ Two layers now guard it, both in `scripts/goal.sh` at the dispatch:
    a refused write). A matching expectation is exit 0.
 
 ```bash
-GOAL_EXPECT=IBA-pmp bash ~/workspace/skills/goal/scripts/goal.sh deliverable done 2 "<evidence>"
+GOAL_EXPECT=IBA-pmp bash ~/workspace/custom-skills/goal/scripts/goal.sh deliverable done 2 "<evidence>"
 ```
 
 **Use `GOAL_EXPECT` for every scripted or batched deliverable write.** The
@@ -193,7 +193,7 @@ running case/OVS work).
 
 Two habits until those are migrated:
 - **Assume other sessions are live.** Six Claude CLI processes were running during the
-  2026-08-05 incident. `~/workspace/skills/` and `~/.claude/state/goal/` have **no
+  2026-08-05 incident. `~/workspace/custom-skills/` and `~/.claude/state/goal/` have **no
   locking** — a co-edit is normal, not exceptional.
 - **Read the `[goal] target:` line before every write**, and pass `GOAL_EXPECT` in any
   batched/scripted write. A batch is the dangerous shape: four writes land before a
@@ -222,7 +222,7 @@ Full workflow: **`references/make-mode.md`** — read it when the user invokes m
 Always invoke via Bash:
 
 ```bash
-bash ~/workspace/skills/goal/scripts/goal.sh <subcommand> [args]
+bash ~/workspace/custom-skills/goal/scripts/goal.sh <subcommand> [args]
 ```
 
 | Subcommand | Effect | Beads side-effect |
@@ -251,15 +251,15 @@ When the user types `/goal <something>`:
 | User said | Run |
 |---|---|
 | `/goal make <task>` / `/goal build <task>` / `/goal parallel <task>` / `/makegoal <task>` | Read `references/make-mode.md` and follow it: fill the brief, `set` the goal with the filled brief, decompose into ledger deliverables, dispatch parallel agents **only if the user asked for them**, synthesize, record evidence. |
-| `/goal <objective>` (anything that isn't a subcommand keyword) | `bash ~/workspace/skills/goal/scripts/goal.sh set <objective>` — if a goal is already active it is **saved to the stack** and the new one becomes active (report both: the new objective + that the prior was stacked). |
-| `/goal status` or `/goal` (no args) | `bash ~/workspace/skills/goal/scripts/goal.sh status` |
-| `/goal list` | `bash ~/workspace/skills/goal/scripts/goal.sh list` |
-| `/goal pause` | `bash ~/workspace/skills/goal/scripts/goal.sh pause` |
-| `/goal resume` | `bash ~/workspace/skills/goal/scripts/goal.sh resume` |
-| `/goal clear` | `bash ~/workspace/skills/goal/scripts/goal.sh clear` |
-| `/goal complete` | **First** do the completion audit described in the steering prompt. **Only then** run `bash ~/workspace/skills/goal/scripts/goal.sh complete`. |
-| `/goal budget 50000` | `bash ~/workspace/skills/goal/scripts/goal.sh budget 50000` |
-| `/goal deliverable add …` / `done …` / `list` | `bash ~/workspace/skills/goal/scripts/goal.sh deliverable <add\|done\|list> …` |
+| `/goal <objective>` (anything that isn't a subcommand keyword) | `bash ~/workspace/custom-skills/goal/scripts/goal.sh set <objective>` — if a goal is already active it is **saved to the stack** and the new one becomes active (report both: the new objective + that the prior was stacked). |
+| `/goal status` or `/goal` (no args) | `bash ~/workspace/custom-skills/goal/scripts/goal.sh status` |
+| `/goal list` | `bash ~/workspace/custom-skills/goal/scripts/goal.sh list` |
+| `/goal pause` | `bash ~/workspace/custom-skills/goal/scripts/goal.sh pause` |
+| `/goal resume` | `bash ~/workspace/custom-skills/goal/scripts/goal.sh resume` |
+| `/goal clear` | `bash ~/workspace/custom-skills/goal/scripts/goal.sh clear` |
+| `/goal complete` | **First** do the completion audit described in the steering prompt. **Only then** run `bash ~/workspace/custom-skills/goal/scripts/goal.sh complete`. |
+| `/goal budget 50000` | `bash ~/workspace/custom-skills/goal/scripts/goal.sh budget 50000` |
+| `/goal deliverable add …` / `done …` / `list` | `bash ~/workspace/custom-skills/goal/scripts/goal.sh deliverable <add\|done\|list> …` |
 | `/goal follow the instructions in docs/goal.md` | This is the Codex idiom for "the goal is what's in this file". Set it as-is — the model will read the file when it sees the steering. |
 
 Then report the script's stdout to the user in 1–2 sentences. For `set`, mention the beads id.
@@ -268,7 +268,7 @@ Then report the script's stdout to the user in 1–2 sentences. For `set`, menti
 
 When the user (or the steering) asks "is the goal done?" or "/goal complete", DO NOT just run `goal complete`. The whole point of porting this from Codex is the audit step. Do this first:
 
-1. Restate the objective from `bash ~/workspace/skills/goal/scripts/goal.sh show` as a numbered list of concrete deliverables.
+1. Restate the objective from `bash ~/workspace/custom-skills/goal/scripts/goal.sh show` as a numbered list of concrete deliverables.
 2. For each deliverable, identify the artifact that proves it (file path + line, command exit code, test name, PR URL, etc.).
 3. Inspect each artifact with Read / Bash / Grep — don't trust your memory of earlier work.
 4. If any deliverable's evidence is missing, weak, or unverified: continue the work, do not mark complete.

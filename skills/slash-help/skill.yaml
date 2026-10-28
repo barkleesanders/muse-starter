@@ -1,0 +1,5 @@
+name: "slash_help"
+title: "Slash Help"
+description: "Reference for all slash commands and CLI tools available in the user's setup. Use when user asks \"what slash commands do I have\", \"list my CLI tools\", \"/help\", \"show me commands\", or wants a reference card of available automations."
+category: "Work and knowledge"
+include_in_prompt: false

@@ -1,0 +1,5 @@
+name: "carmack"
+title: "Carmack"
+description: "Universal engineering agent: build features, fix bugs, deep debugging, and secure authentication flows including passkeys, TOTP/2FA, passwordless accounts, and session freshness. Covers planning, code review, implementation, git safety, browser automation, task tracking, Codex review and rescue, and web research. Use for all engineering work."
+category: "Work and knowledge"
+include_in_prompt: false

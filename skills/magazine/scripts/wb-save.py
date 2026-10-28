@@ -6,7 +6,7 @@ on bulk submissions). For reliable bulk minting, set WB_S3_ACCESS and WB_S3_SECR
 env vars (free at https://archive.org/account/s3.php).
 
 Usage:
-    cd /path/to/repo && python3 ~/workspace/skills/magazine/scripts/wb-save.py
+    cd /path/to/repo && python3 ~/workspace/custom-skills/magazine/scripts/wb-save.py
     # with auth (recommended for bulk):
     WB_S3_ACCESS=... WB_S3_SECRET=... python3 wb-save.py
 

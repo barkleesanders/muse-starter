@@ -47,7 +47,7 @@ ENVEOF
 
 **Step 1: Run the research script**
 ```bash
-python3 ~/workspace/skills/last30days/scripts/last30days.py "$ARGUMENTS" --emit=compact 2>&1
+python3 ~/workspace/custom-skills/last30days/scripts/last30days.py "$ARGUMENTS" --emit=compact 2>&1
 ```
 
 The script auto-detects available API keys and signals mode:

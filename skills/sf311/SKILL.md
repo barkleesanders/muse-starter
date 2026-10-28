@@ -129,7 +129,7 @@ exiftool -GPSLatitude -GPSLongitude -n <image_path>
 Use the `links.json` database to find the specific enforcement mechanism.
 
 ```bash
-grep -i "<issue_type>" ~/workspace/skills/sf311/links.json
+grep -i "<issue_type>" ~/workspace/custom-skills/sf311/links.json
 ```
 
 #### Phase 3: Bureaucratic Insertion
@@ -160,7 +160,7 @@ When the user reports an issue, find the correct URL.
 Navigate the form and submit the request using the directives above.
 
 ## Data Source
-Service links are stored in `~/workspace/skills/sf311/links.json`.
+Service links are stored in `~/workspace/custom-skills/sf311/links.json`.
 
 ## Expected Outputs
 
@@ -240,7 +240,7 @@ SF 311 cannot act on federal land.
 
 ## Ground-truth gate (MANDATORY)
 
-Before this skill asserts a stakes-bearing fact or takes any outward/irreversible action, apply the global standard — verify against a **primary source fetched now**, never a cached/remembered value. Full standard: `~/workspace/skills/shared/ground-truth-standard.md`.
+Before this skill asserts a stakes-bearing fact or takes any outward/irreversible action, apply the global standard — verify against a **primary source fetched now**, never a cached/remembered value. Full standard: `~/workspace/custom-skills/shared/ground-truth-standard.md`.
 
 **Verify live before you act or assert (this skill):**
 - Pull the live Verint form/category + structured-location contract before building the payload (don't trust a cached form map).

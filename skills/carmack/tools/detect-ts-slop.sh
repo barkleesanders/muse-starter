@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # detect-ts-slop.sh — flag AI "vibe-coding" TypeScript slop:
 #   generic isRecord/isObject guards, launder-casts, (x as any).prop reach-casts.
-# Rule: ~/workspace/skills/shared/anti-slop-typescript.md
+# Rule: ~/workspace/custom-skills/shared/anti-slop-typescript.md
 #
 # Usage:
 #   detect-ts-slop.sh [path]              # scan a dir/file (default: .)
@@ -91,7 +91,7 @@ if [ "$TOTAL" -eq 0 ]; then
   echo "✅ no TypeScript slop patterns found."
   exit 0
 fi
-echo "Σ $TOTAL slop hit(s). Refactor per ~/workspace/skills/shared/anti-slop-typescript.md (specific types / discriminated unions / Zod)."
+echo "Σ $TOTAL slop hit(s). Refactor per ~/workspace/custom-skills/shared/anti-slop-typescript.md (specific types / discriminated unions / Zod)."
 if [ -n "$THRESH" ] && [ "$TOTAL" -gt "$THRESH" ]; then
   echo "BLOCK: $TOTAL > threshold $THRESH."
   exit 1

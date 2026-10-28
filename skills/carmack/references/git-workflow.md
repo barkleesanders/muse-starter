@@ -152,9 +152,9 @@ Use worktrees for isolated parallel development -- reviewing PRs, working on mul
 Why: trust pages worktree (3 ship-ready pages, 232 passing tests) was wiped before push reached origin. Branch was force-deleted, reflog gone, work unrecoverable. The single defense that would have saved it: `git push -u origin HEAD` after the first commit.
 
 What's automated (you don't have to remember):
-- **PostToolUse Bash hook** (`~/workspace/skills/hooks/post-bash-worktree-autopush.sh`): every `git commit` in a worktree triggers a background `git push -u origin HEAD` (30s timeout, logs to `~/.claude/logs/worktree-autopush.log`).
-- **PreToolUse Bash hook** (`~/workspace/skills/hooks/pre-bash-worktree-protect.sh`): blocks `git worktree remove`, `git worktree prune`, `rm -rf .claude/worktrees/...`, `git branch -D worktree-*` when the target has uncommitted/unpushed work. Override only with `CLAUDE_ALLOW_WORKTREE_LOSS=1`.
-- **Stop hook** (`~/workspace/skills/taskmaster/hooks/check-completion.sh`): refuses to let the session end if any worktree has unpushed commits.
+- **PostToolUse Bash hook** (`~/workspace/custom-skills/hooks/post-bash-worktree-autopush.sh`): every `git commit` in a worktree triggers a background `git push -u origin HEAD` (30s timeout, logs to `~/.claude/logs/worktree-autopush.log`).
+- **PreToolUse Bash hook** (`~/workspace/custom-skills/hooks/pre-bash-worktree-protect.sh`): blocks `git worktree remove`, `git worktree prune`, `rm -rf .claude/worktrees/...`, `git branch -D worktree-*` when the target has uncommitted/unpushed work. Override only with `CLAUDE_ALLOW_WORKTREE_LOSS=1`.
+- **Stop hook** (`~/workspace/custom-skills/taskmaster/hooks/check-completion.sh`): refuses to let the session end if any worktree has unpushed commits.
 
 What you must do:
 1. Create worktrees via the `EnterWorktree` tool, not `git worktree add` directly.
@@ -166,7 +166,7 @@ What you must do:
 
 ```bash
 # CORRECT - Always use the script
-bash ~/workspace/skills/git-worktree/scripts/worktree-manager.sh create feature-name
+bash ~/workspace/custom-skills/git-worktree/scripts/worktree-manager.sh create feature-name
 
 # WRONG - Never do this directly
 git worktree add .worktrees/feature-name -b feature-name main
@@ -178,19 +178,19 @@ The script handles critical setup: copies `.env` files, ensures `.worktrees` is 
 
 ```bash
 # Create a new worktree (copies .env files automatically)
-bash ~/workspace/skills/git-worktree/scripts/worktree-manager.sh create feature-login
+bash ~/workspace/custom-skills/git-worktree/scripts/worktree-manager.sh create feature-login
 
 # List all worktrees with status
-bash ~/workspace/skills/git-worktree/scripts/worktree-manager.sh list
+bash ~/workspace/custom-skills/git-worktree/scripts/worktree-manager.sh list
 
 # Switch to a worktree
-bash ~/workspace/skills/git-worktree/scripts/worktree-manager.sh switch feature-login
+bash ~/workspace/custom-skills/git-worktree/scripts/worktree-manager.sh switch feature-login
 
 # Copy .env files to an existing worktree
-bash ~/workspace/skills/git-worktree/scripts/worktree-manager.sh copy-env feature-login
+bash ~/workspace/custom-skills/git-worktree/scripts/worktree-manager.sh copy-env feature-login
 
 # Clean up completed worktrees
-bash ~/workspace/skills/git-worktree/scripts/worktree-manager.sh cleanup
+bash ~/workspace/custom-skills/git-worktree/scripts/worktree-manager.sh cleanup
 ```
 
 ### When to Use
@@ -203,19 +203,19 @@ bash ~/workspace/skills/git-worktree/scripts/worktree-manager.sh cleanup
 
 ```bash
 # Start first feature (copies .env files)
-bash ~/workspace/skills/git-worktree/scripts/worktree-manager.sh create feature-login
+bash ~/workspace/custom-skills/git-worktree/scripts/worktree-manager.sh create feature-login
 
 # Start second feature
-bash ~/workspace/skills/git-worktree/scripts/worktree-manager.sh create feature-notifications
+bash ~/workspace/custom-skills/git-worktree/scripts/worktree-manager.sh create feature-notifications
 
 # List what you have
-bash ~/workspace/skills/git-worktree/scripts/worktree-manager.sh list
+bash ~/workspace/custom-skills/git-worktree/scripts/worktree-manager.sh list
 
 # Switch between them
-bash ~/workspace/skills/git-worktree/scripts/worktree-manager.sh switch feature-login
+bash ~/workspace/custom-skills/git-worktree/scripts/worktree-manager.sh switch feature-login
 
 # Clean up when done
-bash ~/workspace/skills/git-worktree/scripts/worktree-manager.sh cleanup
+bash ~/workspace/custom-skills/git-worktree/scripts/worktree-manager.sh cleanup
 ```
 
 ### Directory Structure

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # init-plan.sh — Create exec-plan directory structure with template files
-# Usage: bash ~/workspace/skills/exec-plan/scripts/init-plan.sh "plan name"
+# Usage: bash ~/workspace/custom-skills/exec-plan/scripts/init-plan.sh "plan name"
 set -euo pipefail
 
 PLAN_NAME="${1:?Usage: init-plan.sh <plan-name>}"

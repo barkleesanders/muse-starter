@@ -6,7 +6,7 @@ Covers Phase 1 (build verification, smart test execution, targeted test suites) 
 
 ## Better Auth release contract (every Better Auth deploy)
 
-Load `~/workspace/skills/shared/betterauth-security-baseline.md`. Run
+Load `~/workspace/custom-skills/shared/betterauth-security-baseline.md`. Run
 `node "$HOME/tools/betterauth/betterauth" security --repo "$PWD" --json` as a separate
 blocking command. This runs the real-SDK baseline and isolated negative controls for delivery
 errors, protected OTP/magic-link storage, and complete enrolled-user 2FA enforcement.
@@ -180,7 +180,7 @@ if warnings:
     print(f'\nWARNINGS:')
     for w in warnings:
         print(w)
-    print(f'\nFix playbook: ~/workspace/skills/carmack/references/lighthouse-optimization.md #6')
+    print(f'\nFix playbook: ~/workspace/custom-skills/carmack/references/lighthouse-optimization.md #6')
     print(f'Pattern: lazy-load components that chain in the heavy dep.')
     print(f'Example: const AdminRoute = lazy(() => import("@/components/AdminRoute"))')
 else:

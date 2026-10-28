@@ -1,0 +1,5 @@
+name: "mo_clean"
+title: "Mo Clean"
+description: "Deep-clean and optimize this Mac with Mole (`mo`) — clean caches, purge project build artifacts (mo purge, often 40GB+), inventory unused apps by pref-mtime, sweep leftover browser junk (debug-Chrome clones, Kuri, orphaned Chromium) WITHOUT ever touching the real Chrome profiles, and clear dangling brew casks/EOL leaves. Always dry-runs first, shows a tiered findings report, and gets confirmation before deleting anything. Use when the user says \"mo clean\", \"clean up my computer/Mac\", \"optimize my computer\", \"free up disk space\", \"clear caches\", \"what can I remove\", \"old programs I don't use\", \"purge build artifacts\", \"remove leftover chrome/kuri/debug browser stuff\", \"mole\", \"/mo-clean\"."
+category: "Work and knowledge"
+include_in_prompt: false

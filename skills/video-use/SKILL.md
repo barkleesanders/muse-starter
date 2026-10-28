@@ -65,7 +65,7 @@ First-time install lives in `install.md` (clone, deps, ffmpeg, skill registratio
 - `yt-dlp`, `manim`, Remotion installed only on first use.
 - This skill vendors `skills/manim-video/`. Read its SKILL.md when building a Manim slot.
 
-Helpers (`helpers/transcribe.py`, `helpers/render.py`, etc.) live alongside this SKILL.md. Resolve their paths relative to the directory containing this file — the skill is typically symlinked at `~/workspace/skills/video-use/` or `~/.codex/skills/video-use/`.
+Helpers (`helpers/transcribe.py`, `helpers/render.py`, etc.) live alongside this SKILL.md. Resolve their paths relative to the directory containing this file — the skill is typically symlinked at `~/workspace/custom-skills/video-use/` or `~/.codex/skills/video-use/`.
 
 ## Helpers
 

@@ -1,0 +1,5 @@
+name: "chromeapi"
+title: "Chromeapi"
+description: "Capture a site's internal API routes from your REAL logged-in Chrome and replay them browserless (kuri/unbrowse-style, all local). The deeper-level API layer on top of fcdp. Invoke as /chromeapi when the user wants to record the XHR/fetch calls a page makes and re-fire them as plain HTTP with their real cookies — no browser, no telemetry. /chrome (fcdp) remains the tool for ordinary page driving."
+category: "Work and knowledge"
+include_in_prompt: false

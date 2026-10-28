@@ -65,7 +65,7 @@ done
 **One-command gate (run this — it encodes the two-layer check below):**
 
 ```bash
-~/workspace/skills/seo-audit/scripts/ai-crawl-reachability.sh <domain> [/a-deep-route]
+~/workspace/custom-skills/seo-audit/scripts/ai-crawl-reachability.sh <domain> [/a-deep-route]
 # exit 0 = pass; exit 1 = CRITICAL (fix before any other SEO work)
 ```
 

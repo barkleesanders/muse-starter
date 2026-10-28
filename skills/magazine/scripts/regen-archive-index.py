@@ -7,7 +7,7 @@ Usage:
     python3 regen-archive-index.py
 
 Or detect from git when run inside a repo:
-    cd /path/to/repo && python3 ~/workspace/skills/magazine/scripts/regen-archive-index.py
+    cd /path/to/repo && python3 ~/workspace/custom-skills/magazine/scripts/regen-archive-index.py
 
 Bakes in lessons from doge-phantom-winery (April 2026 fix):
 - Always use full GitHub blob URLs (no relative paths from inside archive/)

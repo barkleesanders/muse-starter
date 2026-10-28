@@ -1,0 +1,5 @@
+name: "printing_press_publish"
+title: "Printing Press Publish"
+description: "Publish a generated CLI to the printing-press-library repo"
+category: "Work and knowledge"
+include_in_prompt: false

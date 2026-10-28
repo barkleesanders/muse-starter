@@ -1,0 +1,5 @@
+name: "meta_ads_analyzer"
+title: "Meta Ads Analyzer"
+description: "Provides expert-level analysis and diagnosis for Meta Ads campaigns. Use this skill to interpret performance data, identify root causes of issues, and generate actionable recommendations, with a special focus on correctly handling the 'Breakdown Effect'. Use when the user mentions Meta Ads analysis, campaign diagnosis, ad performance, CPA analysis, ROAS analysis, or asks to analyze exported data from Meta Ads Manager."
+category: "Work and knowledge"
+include_in_prompt: false

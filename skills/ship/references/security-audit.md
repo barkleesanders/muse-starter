@@ -39,7 +39,7 @@ npm run build 2>&1
 
 **The goal is 0 vulnerabilities, not "acceptable risk".** Every vulnerability with an available fix MUST be patched before shipping. This includes LOW severity — they accumulate and signal neglect to security scanners.
 
-### Full playbook + the traps that bite (load `~/workspace/skills/shared/dependency-audit.md`)
+### Full playbook + the traps that bite (load `~/workspace/custom-skills/shared/dependency-audit.md`)
 
 The steps above are the happy path. Apply the shared **Dependency Audit Playbook** for the failure modes a naive `npm audit fix` misses (all observed 2026-06-15, improvebayarea):
 

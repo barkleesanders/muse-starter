@@ -268,9 +268,9 @@ AI_VERIFY_FILE="$HOME/.claude/ai-edits-pending-verification.jsonl"
 #      markdown mentioning "gemma" or "gpt-oss" — 2026-05-13 incident)
 #   2. entry is >24h old AND the file hasn't been touched since → user moved
 #      on; auto-verify with reason='auto-stale-24h'
-# The skiplist lives in ~/workspace/skills/hooks/lib/ai-verify-classify.sh so
+# The skiplist lives in ~/workspace/custom-skills/hooks/lib/ai-verify-classify.sh so
 # both the producer and this consumer share the same definition.
-if [ -f "$AI_VERIFY_FILE" ] && [ -f "~/workspace/skills/hooks/lib/ai-verify-classify.sh" ]; then
+if [ -f "$AI_VERIFY_FILE" ] && [ -f "~/workspace/custom-skills/hooks/lib/ai-verify-classify.sh" ]; then
   python3 - "$AI_VERIFY_FILE" <<'PY' 2>/dev/null
 import json, os, subprocess, sys, time
 path = sys.argv[1]
@@ -282,7 +282,7 @@ try:
 except Exception:
     sys.exit(0)
 
-lib = os.path.expandvars('~/workspace/skills/hooks/lib/ai-verify-classify.sh')
+lib = os.path.expandvars('~/workspace/custom-skills/hooks/lib/ai-verify-classify.sh')
 
 def is_doc(fp):
     if not fp:

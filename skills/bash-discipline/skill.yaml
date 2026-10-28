@@ -1,0 +1,5 @@
+name: "bash_discipline"
+title: "Bash Discipline"
+description: "Write bash that fails LOUDLY instead of returning a plausible wrong answer. Use when running sweeps/loops over many items, fetching files with curl, extracting fields from data files, or any time a command's output will become a factual claim. Provides the `bashguard` linter, a trap catalog, and the positive-control discipline."
+category: "Work and knowledge"
+include_in_prompt: false

@@ -35,7 +35,7 @@ stop a vague objective from becoming a vague ledger.
 ## Step 2 — Set the goal
 
 ```bash
-bash ~/workspace/skills/goal/scripts/goal.sh set "<filled brief>"
+bash ~/workspace/custom-skills/goal/scripts/goal.sh set "<filled brief>"
 ```
 
 Run `set` **from the directory the work actually lives in** (the cross-goal write guard
@@ -51,7 +51,7 @@ This is where the merge earns itself. The old `/makegoal` produced subgoals that
 only in the prompt and evaporated. Record them in the ledger instead:
 
 ```bash
-bash ~/workspace/skills/goal/scripts/goal.sh deliverable add "<subgoal>"
+bash ~/workspace/custom-skills/goal/scripts/goal.sh deliverable add "<subgoal>"
 ```
 
 2–6 items, each independently verifiable, non-overlapping. The injector already steers
@@ -114,7 +114,7 @@ As results come back:
 - Run the smallest reliable verification that proves the result works
 - Record proof per item:
   ```bash
-  GOAL_EXPECT=<beads-id> bash ~/workspace/skills/goal/scripts/goal.sh deliverable done <n> "<evidence>"
+  GOAL_EXPECT=<beads-id> bash ~/workspace/custom-skills/goal/scripts/goal.sh deliverable done <n> "<evidence>"
   ```
   Pass `GOAL_EXPECT` on every scripted or batched write.
 
@@ -125,7 +125,7 @@ Verify any unverified claim before relying on it. A subagent's report is a hypot
 Run the completion audit in SKILL.md, then:
 
 ```bash
-bash ~/workspace/skills/goal/scripts/goal.sh complete "<evidence>"
+bash ~/workspace/custom-skills/goal/scripts/goal.sh complete "<evidence>"
 ```
 
 It refuses while any ledger deliverable has empty evidence. That refusal is the feature —

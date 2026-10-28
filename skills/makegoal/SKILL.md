@@ -19,7 +19,7 @@ Everything it did now lives in the `/goal` skill:
 | Was | Now |
 |---|---|
 | `/makegoal <task>` | `/goal make <task>` (also `/goal build`, `/goal parallel`) |
-| The filled build brief template | `~/workspace/skills/goal/references/make-mode.md` § Step 1 |
+| The filled build brief template | `~/workspace/custom-skills/goal/references/make-mode.md` § Step 1 |
 | Parallel subgoal dispatch + agent prompt shape | same file, § Step 4 — now **opt-in**, see below |
 | Synthesis + final response | same file, §§ 5–6 |
 
@@ -32,7 +32,7 @@ default.
 
 ## What to do when this skill is invoked
 
-1. Read `~/workspace/skills/goal/references/make-mode.md`.
+1. Read `~/workspace/custom-skills/goal/references/make-mode.md`.
 2. Follow it, treating everything after `/makegoal` as the raw task.
 
 Do not re-implement the old flow from this file — it is a stub. The pre-merge original

@@ -1,0 +1,5 @@
+name: "ai_credit_watch"
+title: "Ai Credit Watch"
+description: "Find and claim free AI credits, free tokens, and free-plan offers from Anthropic/Claude, xAI/Grok, OpenAI, and Meta/Muse. Sweeps each provider's official X/Threads accounts, news pages, changelogs, and the freetokens aggregator; dedupes against a seen list; claims only offers that are fully free, need no payment method, and do not opt you into training-data sharing; verifies every claim on the provider's balance page before calling it claimed. Use when asked to find free AI credits, check for new credit offers or promos, or set up a recurring credit watch."
+category: "Work and knowledge"
+include_in_prompt: false

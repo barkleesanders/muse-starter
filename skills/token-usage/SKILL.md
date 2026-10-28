@@ -36,13 +36,13 @@ When this skill is invoked:
 
 ```bash
 # All time
-python3 ~/workspace/skills/token-usage/token-usage.py
+python3 ~/workspace/custom-skills/token-usage/token-usage.py
 
 # Last N days
-SINCE_DAYS=7 python3 ~/workspace/skills/token-usage/token-usage.py
+SINCE_DAYS=7 python3 ~/workspace/custom-skills/token-usage/token-usage.py
 
 # Since date
-SINCE_DATE=2025-01-15 python3 ~/workspace/skills/token-usage/token-usage.py
+SINCE_DATE=2025-01-15 python3 ~/workspace/custom-skills/token-usage/token-usage.py
 ```
 
 3. Read and present the report from `~/.claude/usage/token_report.md`

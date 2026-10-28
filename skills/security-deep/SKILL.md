@@ -53,7 +53,7 @@ skill by default. It is slower and writes files.
 ## Setup
 
 ```bash
-LEDGER=~/workspace/skills/security-deep/scripts/ledger.sh
+LEDGER=~/workspace/custom-skills/security-deep/scripts/ledger.sh
 BASE=$(git merge-base origin/HEAD HEAD)                  # or user-specified base
 SCAN_DIR=".security-scan/$(git rev-parse --short HEAD)"
 

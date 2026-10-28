@@ -1,0 +1,5 @@
+name: "goal"
+title: "Goal"
+description: ">- Set, pause, resume, complete, or clear a persistent per-directory objective (port of Codex `/goal`). Use when the user types `/goal …` or asks to set/check/pause/clear \"the goal\", \"my goal\", \"the objective\", or to wrap up a focused session of work. While a goal is active, a UserPromptSubmit hook injects an anti-completion-bias steering prompt before every turn, and a beads issue mirrors the goal so it shows up in `bd list`. Also absorbs the former /makegoal skill as `/goal make <task>` — fill a build brief, set the goal, decompose into deliverables, optionally fan out parallel agents, synthesize. Triggers: \"/goal\", \"/makegoal\", \"set a goal\", \"what's my goal\", \"pause the goal\", \"resume the goal\", \"clear the goal\", \"mark the goal complete\", \"is the goal done\", \"make a goal\", \"parallel goals\", \"parallel agents for this task\", \"build brief\"."
+category: "Work and knowledge"
+include_in_prompt: false

@@ -18,9 +18,11 @@ force push, or overwrite unrelated work without explicit approval.
 
 ## Muse layout
 
-- **Skills** live in `~/workspace/skills/` and are discovered by skill
-  search on their `name` and `description` frontmatter. Keep `SKILL.md`
-  focused; put bulky docs in `references/`.
+- **Skills** live in `~/workspace/custom-skills/` — the only folder Muse
+  scans for custom skills — and are discovered by skill search on the
+  `name` and `description` in each skill's `skill.yaml` descriptor (kept
+  beside its `SKILL.md`). Keep `SKILL.md` focused; put bulky docs in
+  `references/`.
 - **Agents** in `~/workspace/agents/` are specialist briefs. Spawn a
   subagent with the file's content as the task brief.
 - **Commands** in `~/workspace/commands/` are prompt templates. Paste one

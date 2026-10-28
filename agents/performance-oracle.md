@@ -38,8 +38,8 @@ For loops (Ralph/evo): a stalled benchmark is a *local* optimum — step back to
 re-derive the floor; do not report "best path" as done.
 
 Full discipline + the incident that motivated this:
-`~/workspace/skills/carmack/references/performance-ceiling.md` — itself the optimization instance of
-the general "Compared to What?" rule (`~/workspace/skills/shared/ground-truth-calibration.md`).
+`~/workspace/custom-skills/carmack/references/performance-ceiling.md` — itself the optimization instance of
+the general "Compared to What?" rule (`~/workspace/custom-skills/shared/ground-truth-calibration.md`).
 
 ## Core Analysis Framework
 

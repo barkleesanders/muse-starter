@@ -21,8 +21,8 @@ in any Muse chat — or on a 6-hour schedule — without installing anything.
 ## Install
 
 ```bash
-git clone https://github.com/barkleesanders/claude-code-starter.git
-cd claude-code-starter
+git clone https://github.com/barkleesanders/muse-starter.git
+cd muse-starter
 ./install.sh
 ```
 
@@ -31,7 +31,7 @@ never overwrites your existing files:
 
 | Repo path      | Install target                    | Notes                                  |
 |----------------|-----------------------------------|----------------------------------------|
-| `skills/`      | `~/workspace/skills/`             | Auto-discovered by Muse's skill search |
+| `skills/`      | `~/workspace/custom-skills/`             | Auto-discovered by Muse's skill search |
 | `agents/`      | `~/workspace/agents/`             | Specialist briefs (see `agents/`)      |
 | `commands/`    | `~/workspace/commands/`           | Prompt templates (see `commands/`)     |
 | `MUSE.md`      | `~/workspace/MUSE.md`             | Only if absent                         |
@@ -43,10 +43,11 @@ Set `MUSE_WORKSPACE` to install the workspace parts somewhere other than
 ## What's inside
 
 - **119 skills** — engineering workflows (`carmack`, `debug`, `ship`), research,
-  government accountability (`gov`), marketing, SEO, mobile, and more. Each skill is a `SKILL.md` with
-  frontmatter (`name`, `description`) that Muse's skill search discovers
-  automatically, plus supporting `references/`, `scripts/`, `tools/`, and
-  `bin/` files.
+  government accountability (`gov`), marketing, SEO, mobile, and more. Each skill is a `SKILL.md`
+  plus a `skill.yaml` descriptor (`name`, `title`, `description`) — the
+  descriptor is what Muse's skill search reads; the `SKILL.md` frontmatter
+  is kept for Claude Code compatibility. Supporting `references/`,
+  `scripts/`, `tools/`, and `bin/` files ride along.
 - **36 agents** — specialist briefs (code reviewer, security sentinel,
   architecture strategist, …). In Muse, spawn a subagent with the file's
   content as the task brief.

@@ -1,0 +1,5 @@
+name: "pake"
+title: "Pake"
+description: "> Turn any webpage into a lightweight desktop app (~5MB) using Rust/Tauri. Use when the user wants to create a desktop app from a URL, package a web app as a native app, or build a lightweight Electron alternative. Triggers on: \"make a desktop app from\", \"package this site\", \"pake\", \"/pake\", \"turn this into a desktop app\", \"wrap this URL\"."
+category: "Work and knowledge"
+include_in_prompt: false

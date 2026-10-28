@@ -127,4 +127,4 @@ Output:
 - **Punting to Claude** -- Scripts should handle errors
 - **Time-sensitive info** -- Use "old patterns" section instead
 
-For extended reference docs, see `~/workspace/skills/create-agent-skills/references/`.
+For extended reference docs, see `~/workspace/custom-skills/create-agent-skills/references/`.

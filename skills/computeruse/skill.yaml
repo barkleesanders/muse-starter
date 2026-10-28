@@ -1,0 +1,5 @@
+name: "computeruse"
+title: "Computeruse"
+description: "Drive the macOS GUI (click / type / scroll / drag / screenshot any native app) from Claude or any CLI via the open-source `cua` command — real hardware CGEvents (cliclick) + screenshots (screencapture) + Accessibility element finding (osascript). No Codex, no cloud vision, no reverse-engineering. Ships a Cobra CLI AND an MCP server (`cua_*` tools). Use when the user wants to operate a native Mac app, automate a desktop task, take over a GUI, click a control that ignores synthetic clicks (file pickers, Chrome/Polymer toggles, \"Load unpacked\"), or asks about \"computer use\", \"control my Mac\", \"drive an app\", \"click/type in <app>\", \"cua\". Pairs with the trycua `cua-driver` (/cua-driver skill) for AX-tree snapshots, set_value, and menu/geometry/verify tools. Replaces the old /computer-use-bridge skill."
+category: "Work and knowledge"
+include_in_prompt: false
