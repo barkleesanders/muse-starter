@@ -4,6 +4,20 @@ A portable, privacy-screened starter pack for Muse: reusable engineering
 skills, specialist agents, and command templates — plus starter identity
 files so a new Muse is set up the way this one is designed.
 
+## Start here
+
+**Join Muse with invite code `FJBMD8`** — https://muse.ai/join — redeem it
+in Settings within 48 hours of joining and we both get 1B tokens.
+
+**Featured skill: [`ai-credit-watch`](skills/ai-credit-watch/SKILL.md)** —
+finds and claims free AI credits, free tokens, and free-plan offers from
+Anthropic/Claude, xAI/Grok, OpenAI, and Meta/Muse. It sweeps each provider's
+official accounts, news pages, and changelogs, dedupes against a seen list,
+claims only offers that are fully free with no payment method and no
+training-data sharing, and verifies every claim on the provider's balance
+page. The skill file contains the full copy-paste prompt, so you can run it
+in any Muse chat — or on a 6-hour schedule — without installing anything.
+
 ## Install
 
 ```bash
@@ -28,7 +42,7 @@ Set `MUSE_WORKSPACE` to install the workspace parts somewhere other than
 
 ## What's inside
 
-- **118 skills** — engineering workflows (`carmack`, `debug`, `ship`), research,
+- **119 skills** — engineering workflows (`carmack`, `debug`, `ship`), research,
   government accountability (`gov`), marketing, SEO, mobile, and more. Each skill is a `SKILL.md` with
   frontmatter (`name`, `description`) that Muse's skill search discovers
   automatically, plus supporting `references/`, `scripts/`, `tools/`, and
