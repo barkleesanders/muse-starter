@@ -327,6 +327,8 @@
     "skills/decompile/skill.yaml",
     "skills/deepsearch/SKILL.md",
     "skills/deepsearch/references/company-dd-prompt.md",
+    "skills/deepsearch/references/muse-resumable-research.md",
+    "skills/deepsearch/references/operational-evidence-research.md",
     "skills/deepsearch/references/search-providers.md",
     "skills/deepsearch/skill.yaml",
     "skills/design/SKILL.md",
@@ -402,9 +404,13 @@
     "skills/goal/scripts/goal.sh",
     "skills/goal/skill.yaml",
     "skills/gov/SKILL.md",
+    "skills/gov/references/denial-playbook.md",
     "skills/gov/references/efnq-and-two-sides-pattern.md",
+    "skills/gov/references/escalation-playbook.md",
+    "skills/gov/references/operational-evidence.md",
     "skills/gov/references/records-request-as-roadmap.md",
     "skills/gov/references/reply-patterns.md",
+    "skills/gov/references/request-framing-playbook.md",
     "skills/gov/references/scrapers-by-wall.md",
     "skills/gov/skill.yaml",
     "skills/hallmark/LOCAL-DELTA.md",
@@ -925,5 +931,5 @@
     "templates/TOOLS.md",
     "templates/USER.md"
   ],
-  "file_count": 923
+  "file_count": 929
 }

@@ -1,6 +1,6 @@
 # Scrapers & Bypass Tools by Captcha/Auth Wall
 
-Reference inventory for government-accountability work that hits common bot-protection or paywalls. Each entry was tested against the Rose Lake Capital / Ivanhoe Atlantic investigation (May 2026); update if new tools appear or pricing changes.
+Reference inventory for government-accountability work that hits common bot-protection or paywalls. Each entry was field-tested against a corporate-ownership investigation; update if new tools appear or pricing changes.
 
 ## 1. OpenCorporates (HAProxy CAPTCHA Challenge)
 
@@ -11,9 +11,9 @@ Block: HAProxy "We need to verify you are human before you can continue" image-C
 | **[Nephylem/OpenCorporates-Scraper](https://github.com/Nephylem/OpenCorporates-Scraper)** | Selenium-driven, 10 logged-in accounts in parallel, signs in to bypass CAPTCHA, CSV output | Needs 10 OC accounts; 2022-vintage, 5 stars; works |
 | **[skickar/OpenCorporatesCLI](https://github.com/skickar/OpenCorporatesCLI)** | Python CLI hitting OC public API | Rate-limited without API key, pure-API path |
 | **OpenCorporates Pro API** (`api.opencorporates.com/v0.4/`) | Official paid endpoint | ~$50/mo, instant access |
-| **The REAL Chrome profile (fcdp) + manual CAPTCHA solve** | User solves the HAProxy challenge once; cookie persists ~1 hour; drive remaining queries via CDP WebSocket | Free, fastest one-off path; tested working May 2026 |
+| **The user's real browser profile + manual CAPTCHA solve** | User solves the HAProxy challenge once; cookie persists ~1 hour; drive remaining queries via CDP WebSocket | Free, fastest one-off path; tested working May 2026 |
 
-**Best move:** if you have the REAL Chrome profile driven by fcdp and the user can solve one CAPTCHA, drive subsequent queries via `~/tools/fcdp/fcdp js` with `Runtime.evaluate`. Otherwise pay one month of OC Pro and grep the API.
+**Best move:** if you have the user's real browser profile (driven over CDP) and the user can solve one CAPTCHA, drive subsequent queries via CDP `Runtime.evaluate`. Otherwise pay one month of OC Pro and grep the API.
 
 ## 2. Bizapedia (ABShield drag-and-drop human verification)
 
@@ -70,7 +70,7 @@ Block: HTTPS endpoint returns 503/cert error; HTTP returns 301→suspended-accou
 ## Field-tested combo for one-off entity lookups
 
 ```
-1. The REAL Chrome profile (fcdp) + user solves any first-page CAPTCHA
+1. The user's real browser profile + user solves any first-page CAPTCHA
 2. CDP WebSocket Runtime.evaluate to grab DOM/JSON from inside the session
 3. For data behind login: gov_websites_collector (DC), Jersey FSC myRegistry account (£0 PDFs), UK Companies House public web (free), DE ICIS direct form submit (free, no captcha after first page)
 4. For aggregator coverage: OpenCorporates (paid OR live-Chrome), OpenOwnership Register, EITI country pages

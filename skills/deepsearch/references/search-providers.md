@@ -1,15 +1,15 @@
 # Search providers — when to force which one
 
-**Primary stack** runs through the `websearch` CLI (`~/.local/bin/websearch`), which by default tries providers in order and **fails over on quota** (HTTP 402/429/432) or a transient error. Exa is also reachable through the richer **Exa MCP** tools. Confirm stacked config with `websearch keys`.
+**Primary stack** runs through the `websearch` CLI (on your PATH), which by default tries providers in order and **fails over on quota** (HTTP 402/429/432) or a transient error. Exa is also reachable through the richer **Exa MCP** tools. Confirm stacked config with `websearch keys`.
 
-## The stack (default priority: **searxng** → **linkup** → **parallel** → **youcom** → tavily → brave → jina → exa → tinyfish → **marginalia**)
+## The stack (default priority: **searxng** → **linkup** → **parallel** → **youcom** → tavily → brave → jina → exa → context → tinyfish → **marginalia**)
 
 ⚠️ **`websearch keys` reports CONFIGURED, not WORKING.** A key can be set and still be
 quota-dead. Metered tiers exhaust silently mid-month. Before trusting a "no results"
 conclusion, probe health per provider (Negative-Result Rule):
 
 ```bash
-for p in searxng linkup parallel youcom tavily brave jina exa tinyfish marginalia; do
+for p in searxng linkup parallel youcom tavily brave jina exa context tinyfish marginalia; do
   printf "%-11s " "$p"; websearch "probe" -p "$p" -n 1 --json >/dev/null 2>&1 && echo ok || echo DEAD
 done
 ```
@@ -31,14 +31,14 @@ reachable**, never **contract correct**, until a real key returns 200.
 - Meta-search: one query fans out to Google, Brave and DuckDuckGo and returns merged,
   de-duplicated results. Each hit carries an `engines` array naming which upstreams found
   it — a free **independent-corroboration signal** for Phase 4 verification.
-- **Local instance (native, no container):** a Python venv at `~/tools/searxng-native/`
-  (venv + a shallow `searxng-src` git checkout, ~140 MB total), launched by the LaunchAgent
-  `com.barklee.searxng-native` (`python -m searx.webapp`, RunAtLoad + KeepAlive). It binds a
+- **Local instance (native, no container):** a local Python venv install of SearXNG
+  (venv + a shallow source checkout), launched by a user LaunchAgent (a label of your
+  choosing; `python -m searx.webapp`, RunAtLoad + KeepAlive). It binds a
   **fixed** `127.0.0.1:8888`, so `SEARXNG_URL` in `~/.config/websearch/keys.json` never rots —
-  the container's per-restart IP churn is gone. Config lives at
-  `~/tools/searxng-native/settings.yml` (`SEARXNG_SETTINGS_PATH`), which MUST keep
-  `search.formats: [html, json]` or the JSON API dies. KeepAlive restarts it after a crash or
-  login; to force a restart: `launchctl kickstart -k gui/$(id -u)/com.barklee.searxng-native`.
+  the container's per-restart IP churn is gone. Its settings file
+  (`SEARXNG_SETTINGS_PATH`) MUST keep `search.formats: [html, json]` or the JSON API
+  dies. KeepAlive restarts it after a crash or login; to force a restart:
+  `launchctl kickstart -k gui/$(id -u)/<your-searxng-service-label>`.
 - **Public instances will not work:** `format=json` must be in `search.formats` in
   `settings.yml`, and public instances disable it. The docs say that returns `403`; in
   practice `searx.be` answers **`200` with HTML**, so the adapter treats an HTML body as the
@@ -51,7 +51,7 @@ reachable**, never **contract correct**, until a real key returns 200.
   $0.005/search on `depth:"standard"` ⇒ **~4,000 searches/month**
   ([pricing](https://www.linkup.so/pricing) + [docs pricing](https://docs.linkup.so/pages/documentation/platform/pricing), retrieved 2026-08-27).
 - **Sign up with a professional email** (`help@example.com`) — the monthly top-up is
-  conditioned on it. Then `~/tools/websearch/add-key.sh linkup`.
+  conditioned on it. Then `add-key.sh linkup` (the helper ships with the `websearch` CLI).
 - Contract from the vendor's own OpenAPI (`https://api.linkup.so/v1/openapi.json`):
   `POST /v1/search`, `Authorization: Bearer`, required `q` + `depth` + `outputType`.
   The adapter pins `depth:"standard"` — **never `"deep"`, which is 10x the price** ($0.05).
@@ -66,7 +66,7 @@ reachable**, never **contract correct**, until a real key returns 200.
   ARRAY**, joined by the adapter.
 - Key at https://platform.parallel.ai/settings?tab=api-keys — a **Default API Key already
   exists at signup**; click "View Default API Key" rather than creating one. Then
-  `~/tools/websearch/add-key.sh parallel`.
+  `add-key.sh parallel`.
 - ⚠️ **Body accepts ONLY `objective` / `search_queries` / `mode`.** Sending `max_results`
   returns **422 `extra_forbidden`** — trim the count client-side. A **422 means the key is
   fine and the body is wrong**; do not misread it as an auth failure.
@@ -74,6 +74,14 @@ reachable**, never **contract correct**, until a real key returns 200.
   searches) that EXPIRES IN 60 DAYS**, and the settings page states *"Add a payment method to
   become eligible for free monthly credits"* — so the recurring monthly credit **requires a
   card on file**, which is not set up.
+
+- **Direct-call alternative:** the same company's search is also reachable through a
+  Parallel Search MCP client (anonymous free tier, no key): `web_search` takes
+  `{objective, search_queries}`, `web_fetch` pulls markdown for up to 20 URLs. Use it
+  when you need Parallel search/fetch directly instead of through the `websearch`
+  failover stack. Server quirks: omit the `MCP-Protocol-Version` header on initialize
+  (it 403s) and send a browser-like UA (the edge WAF drops scripting UAs). Ask the user
+  before wiring any key.
 
 ### You.com — `websearch -p youcom` *(adapter live; needs a key)*
 - **The only DAILY recurring free tier here: 100 queries/day, no credit card**, plus
@@ -85,7 +93,7 @@ reachable**, never **contract correct**, until a real key returns 200.
   Env var is **`YDC_API_KEY`** (You.com's own canonical name, not `YOUCOM_*`).
 - **Response nests under `results.web[]`**, not a flat `results` array; each hit has
   `snippets[]` (an array) with `description` as the fallback. The adapter handles both.
-- Key at https://you.com/platform, then `~/tools/websearch/add-key.sh youcom`.
+- Key at https://you.com/platform, then `add-key.sh youcom`.
 - ⚠️ **Host is `api.you.com`, NOT `api.ydc-index.io`.** The docs still reference the latter;
   it is the legacy host and rejects current `ydc-sk-…` keys with 403 (same key: 403 there,
   200 on `api.you.com`).
@@ -113,6 +121,35 @@ reachable**, never **contract correct**, until a real key returns 200.
   - `mcp__exa__get_code_context_exa` — API/library/code questions.
   - `mcp__exa__company_research_exa` / `people_search_exa` — entity lookups.
   - Exa's retired Research/agentic pair is **410 Gone** — do not call it. Fan a large topic across parallel subagents + the search/crawl tools above.
+
+### Context.dev — `websearch -p context` *(provisional tier; contract proven)*
+
+- **Best for:** the closest thing to a Tavily replacement in the stack — web search with
+  an agent-ready content layer on top. Results carry the vendor's own `relevance`
+  (`high|medium|low`) signal, and the API can return query-relevant highlights / page
+  markdown inline, which collapses the search→fetch hop for shallow lookups.
+- **Company:** founded 2025, San Francisco, YC S26; "Web Data API for AI Agents"
+  (https://www.context.dev/). Bonus endpoints the stack lacks: news search, scrape,
+  crawl, brand/company + people enrichment.
+- **Free tier:** **1,000 credits/mo, no credit card** — 1 credit per 10 results, so
+  ≈ 1,000 searches/month at `-n 10`. Free tier caps at **10 req/min** (a paid
+  Developer tier removes it). Third-party roundups may show stale prices — verify
+  on the vendor's site.
+- **Auth: key resolution order** — `$CONTEXT_DEV_API_KEY` → the stack's local key
+  store (`~/.config/websearch/keys.json`, mode 600) → a credential-vault fallback.
+  The `websearch` adapter delegates to a local helper that resolves the key.
+- **Adapter contract** (`POST https://api.context.dev/v1/web/search`, `Authorization: Bearer`):
+  body `{query, numResults}`; results `{url, title, description→snippet, relevance}`.
+  ⚠️ **401 is ambiguous here** — bad key *or* `USAGE_EXCEEDED` (credits spent). The helper
+  sniffs the body for `usage_exceeded`/`credit` and classifies that as exhaustion
+  (failover), not a dead key. Inline markdown/highlights are deliberately NOT requested
+  by default (possible extra credit cost; revisit if a bake-off justifies it).
+- **Status:** key set; **contract proven** — a live call returned HTTP 200 with
+  results (title/url/relevance) and `credits_consumed: 1`. Placement after exa is
+  **provisional** — same ~1,000/mo free cohort as tavily/brave/exa, but quality is
+  unverified on a general query mix; a bake-off (vs brave/tavily/exa on overlap +
+  relevance) must pass before any promotion. Record `provider: context` in the
+  Sources table when `websearch` reports that provider.
 
 ### TinyFish — `websearch -p tinyfish` *(last in default failover)*
 - **Best for:** an **independent web index** for news/recency, contested topics that need a non-Tavily/non-Brave index, geo/language-biased results (`TINYFISH_LOCATION` / `TINYFISH_LANGUAGE`, default `US`/`en`).
@@ -144,7 +181,7 @@ reachable**, never **contract correct**, until a real key returns 200.
 
 | Task | Use |
 |---|---|
-| Add / replace a provider key (stores + live-verifies) | `~/tools/websearch/add-key.sh <provider>` |
+| Add / replace a provider key (stores + live-verifies) | `add-key.sh <provider>` (ships with the `websearch` CLI) |
 | Broad first sweep of a sub-question | `websearch "<q>" -n 8 --json` (stacked → searxng first, unmetered) |
 | Preserve metered quota on a long research run | `websearch "<q>" -p searxng -n 10 --json` |
 | Indie / small-web / non-SEO sources | `websearch "<q>" -p marginalia --json` |

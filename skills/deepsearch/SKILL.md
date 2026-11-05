@@ -1,7 +1,7 @@
 ---
 name: deepsearch
 user-invocable: true
-description: "Deep multi-source research on a topic across a 10-provider search stack via the `websearch` CLI with automatic quota failover — self-hosted SearXNG and Marginalia (both keyless/unmetered), Linkup, Parallel, You.com, Tavily, Brave, Jina, Exa, TinyFish — plus the Exa MCP for filtered/semantic search and full-page crawling. Fans out queries, reads sources, adversarially verifies every load-bearing claim, and synthesizes a cited HTML report. Use when the user says 'deep research', 'research <topic>', 'dig into <topic>', 'deepsearch', '/deepsearch', or wants a thorough, fact-checked, multi-source brief — NOT a single quick lookup (use the plain WebSearch tool for that)."
+description: "Deep multi-source research on a topic across an 11-provider search stack via the `websearch` CLI with automatic quota failover — self-hosted SearXNG and Marginalia (both keyless/unmetered), Linkup, Parallel, You.com, Tavily, Brave, Jina, Exa, TinyFish — plus the Exa MCP for filtered/semantic search and full-page crawling. Fans out queries, reads sources, adversarially verifies every load-bearing claim, and synthesizes a cited HTML report. Use when the user says 'deep research', 'research <topic>', 'dig into <topic>', 'deepsearch', '/deepsearch', or wants a thorough, fact-checked, multi-source brief — NOT a single quick lookup (use the plain WebSearch tool for that)."
 ---
 
 # Deep Search — multi-provider research harness
@@ -10,7 +10,7 @@ description: "Deep multi-source research on a topic across a 10-provider search 
 
 **Mission:** "Many providers, one verified answer." Breadth from the stacked free-tier/paid keys; depth from crawling; trust from adversarial verification.
 
-**The edge over the built-in WebSearch tool:** a **10-provider stack** through `websearch`, with automatic failover on quota (402/429/432). Two of the ten need no key at all — a **self-hosted SearXNG** (unmetered meta-search over Google+Brave+DDG, the default first hop) and **Marginalia** (independent small-web crawler). The metered lanes are ordered by *recurring free allowance*, largest first, so the small monthly caps are spent last. Exa adds semantic + date/domain-filtered search and full-page crawl.
+**The edge over the built-in WebSearch tool:** an **11-provider stack** through `websearch`, with automatic failover on quota (402/429/432). Two of the eleven need no key at all — a **self-hosted SearXNG** (unmetered meta-search over Google+Brave+DDG, the default first hop) and **Marginalia** (independent small-web crawler). The metered lanes are ordered by *recurring free allowance*, largest first, so the small monthly caps are spent last. Exa adds semantic + date/domain-filtered search and full-page crawl.
 
 ## When to use
 
@@ -29,7 +29,7 @@ description: "Deep multi-source research on a topic across a 10-provider search 
 ## Available providers (the user's keys — verified configured)
 
 Run `websearch keys` to confirm what is *configured* and `websearch quota` for use against each
-free allowance. The stack is **ten** providers, but the order is **not fixed** (since 2026-09-28):
+free allowance. The stack is **eleven** providers, but the order is **not fixed** (since 2026-09-28):
 each search is ranked by measured quality for the query's intent × a free-budget pace factor
 (see "How the order is chosen" below). **8 of 10 live on 2026-09-28**; Jina is out of credit
 (402) and Marginalia's shared public key hits its daily limit (429).
@@ -43,9 +43,9 @@ for p in searxng linkup parallel youcom tavily brave jina exa tinyfish marginali
 done
 ```
 If searxng is DEAD, kick the native service:
-`launchctl kickstart -k gui/$(id -u)/com.barklee.searxng-native` — it binds a fixed
+`launchctl kickstart -k gui/$(id -u)/<your-searxng-service-label>` — it binds a fixed
 `127.0.0.1:8888`, so `SEARXNG_URL` never needs re-resolving. To add or replace any provider key:
-`~/tools/websearch/add-key.sh <provider>` (hidden prompt; stores the key, then live-verifies it).
+`add-key.sh <provider>` (the helper ships with the `websearch` CLI; hidden prompt; stores the key, then live-verifies it).
 
 | Provider | Strength | Reach it via |
 |---|---|---|
@@ -57,10 +57,11 @@ If searxng is DEAD, kick the native service:
 | **Brave** | independent index, privacy, fresh news | `websearch -p brave` |
 | **Jina** | ~~reader-grade page extraction~~ — **DOWN** (402, balance empty; keyless access is blocked too). Redundant: use Exa crawl, Linkup `/fetch`, or You.com Contents | `websearch -p jina` |
 | **Exa** | **semantic/neural** search + date/domain filters + full crawl + agentic deep-research | `websearch -p exa` **or** the Exa MCP tools (richer) |
+| **Context.dev** | web search with an agent-ready content layer; results carry the vendor's own relevance signal; provisional tier pending a quality bake-off | `websearch -p context` |
 | **TinyFish** | independent web index; geo/lang; news/recency | `websearch -p tinyfish` **or** auto via stack (key via `tinyfish auth` / `TINYFISH_API_KEY`) |
 | **Marginalia** | **keyless**; independent crawler of the small/non-commercial web — real second source, not a mirror | `websearch -p marginalia` |
 
-**How the order is chosen** (measured 2026-09-28, 60 queries — `~/projects/searxng-research-harness/bench/bench2.py`):
+**How the order is chosen** (measured 2026-09-28, 60 queries — a local benchmark harness, `bench2.py`):
 
 1. **Intent is guessed** from the query: `fresh` (news/latest/today), `code` (errors, `foo()`),
    `facts` (what/who/when/how many), else `general`. Force it with `--intent`.
@@ -79,7 +80,7 @@ If searxng is DEAD, kick the native service:
 
 Full per-provider cheatsheet + when to force which one: `references/search-providers.md`.
 
-**Company due diligence?** When the target is a company/VC/firm whose legitimacy or claims need checking ("who are these guys", "did they really raise", "is this legit"), load `references/company-dd-prompt.md` — a field-tested 9-track prompt (identity/age, entity registry, SEC/FINRA/IAPD, money-claims math, people, portfolio forensics, ad-solicitation, adverse media, reporting map) with verified endpoints and fcdp recipes for the bot-walled sources.
+**Company due diligence?** When the target is a company/VC/firm whose legitimacy or claims need checking ("who are these guys", "did they really raise", "is this legit"), load `references/company-dd-prompt.md` — a field-tested 9-track prompt (identity/age, entity registry, SEC/FINRA/IAPD, money-claims math, people, portfolio forensics, ad-solicitation, adverse media, reporting map) with verified endpoints and real-browser recipes for the bot-walled sources.
 
 ## The Six-Phase Method
 
@@ -157,14 +158,15 @@ generic handler misfiring, **not** an auth problem (there is no auth).
 **Fires when the deliverable is people, not prose** — "who do I send this to", a press list, an
 agency distribution ladder, an oversight roster. Skip it for ordinary topic research.
 
-Load **`~/workspace/custom-skills/shared/verified-contact-network.md`** before searching. A contact list is
+Load **a companion `verified-contact-network.md` standards document** before searching. A contact list is
 the one artifact where a fabrication is invisible until it matters: `jsmith@cityofx.gov` looks
 exactly like a verified address, and "I notified the City" becomes false in a filing.
 
 The short form:
 1. **Resolve the domain first** — read `curl -w '%{url_effective}'`, not just the status. Orgs move
-   and squatters follow the abandoned domain (measured: `cortlandstandard.net` now serves
-   `mainsuper33.com`; `cortland.org` → `cortlandny.gov`). When two live domains publish the same
+   and squatters follow the abandoned domain (measured: a local newspaper's abandoned
+   domain now serves an unrelated squatter site; a county's old domain redirects to its new
+   one). When two live domains publish the same
    person, send to **both**.
 2. **Enumerate from the org's own inventory** (sitemap, Phase 1.5) — and prefer a structured staff
    directory over prose pages. ⚠️ On CivicPlus-style municipal CMSes the slug is **not validated
@@ -192,7 +194,7 @@ sticker price elsewhere once tax is added. Reference the user gave:
 
 1. Search the Exchange for the item alongside Amazon/B&H/etc. — never omit it from a price table.
    The product pages are a JS SPA: `curl` returns no product data. Use Exa crawl / `WebFetch`
-   on the search URL, or `/chrome` (`~/tools/fcdp/fcdp open`) for the rendered price.
+   on the search URL, or `/chrome` (the user's real browser) for the rendered price.
 2. Compare **landed price**: sticker + sales tax + shipping. Put a "Tax" column in the table;
    the Exchange row is \$0 tax by design.
 3. Also check **Exchange price-match** ("We'll match it") and MILITARY STAR promos before
@@ -229,6 +231,72 @@ Both halves of the ratio are claims, and each has its own failure mode:
    one; a draft is not a sent message; a staged order is not an order. Count only what the
    artifacts show, with the same confidence label the underlying work carries.
 
+### Phase 1.10 — Legal / regulatory question? Local statute index FIRST (conditional)
+
+**Fires when a sub-question's answer is *what the law, regulation, code, or opinion
+actually says*.** Skip it for ordinary topic research.
+
+Go through a **local statute index first**, before the general providers, if you
+maintain one (a local Gov Index CLI returning the primary source URL, a canonical
+citation ID such as `us:usc:42:1983`, and a cites graph). Use its filters when the
+jurisdiction, court, or citation is known (jurisdiction / court / cites / domain).
+Cite the index's source URL + citation ID in the report, and still open the source
+URL before treating a snippet as current governing law. An empty result means
+"not in the index", never "no law exists" — continue with the normal provider
+fan-out. (A maintained index may federate automatically to official sources such
+as the Federal Register, eCFR, and CourtListener on a local miss.)
+
+### Phase 1.11 — Free / open-source alternative? Free-alternatives database FIRST (conditional)
+
+**Fires when a sub-question is *is there a free or open-source replacement for
+paid tool X* — or any purchase/subscription evaluation where a free swap could
+change the answer.** Skip it otherwise.
+
+Check a **local free-alternatives database first** (a curated corpus scraped from
+a public free-alternatives catalog: hundreds of paid tools mapped to ranked free
+replacements, with license and free-allowance caveats). Carry its caveats into the
+report verbatim in substance — e.g., a non-commercial (CC-BY-NC) license is *not*
+a commercial replacement — cite the catalog entry plus the app's official URL,
+and verify a load-bearing switch against the app's own site. No match means "not
+in the catalog", never "no free alternative exists" — continue with the normal
+fan-out.
+
+**Do NOT add this database to the `websearch` provider stack** — same reasoning
+as the `/healthdata` tier (Phase 1.6): a curated structured corpus, used
+deliberately, not a general search provider.
+
+### Phase 1.12 — Official-contact verification (extends Phase 1.7)
+
+When research produces an email, phone, fax, or mailing address for a public
+official or professional **and anything will be sent to it**, directory and
+aggregator data is a lead, not a fact. Verify it against a **primary registry**
+before the address enters any brief, and write the corrected value **plus its
+registry source** into the task's records in the same run.
+
+- **Public officials / institutions:** the relevant official registry (e.g., a
+  state education department's reference registry for NY officials and
+  institutions). Field lesson, generalized: a campaign once carried an
+  official's email on a dead look-alike domain for weeks — every send bounced,
+  including a deadline-bearing letter — while the official registry carried the
+  correct (hyphenated) domain the whole time.
+- **Clinicians / providers:** the NPPES (NPI) registry — necessary but not
+  sufficient: an NPPES record can itself be stale (a fax record untouched for
+  well over a decade, on a line that no longer answers). Corroborate against the
+  person's **own website**: an address that bounces ("no such user") often came
+  from a third-party directory, while the subject's own site publishes no email
+  at all and the registry fax is the live channel.
+- **Expert / bar / assigned-counsel directories are the stalest tier.** A
+  directory entry can outlive the person by years. Any cold-approach target from
+  a directory gets a liveness cross-check (current registry record, own site,
+  recent activity) before outreach.
+
+Rules: (1) a bounce — especially NXDOMAIN or 550 no-such-user — triggers registry
+re-verification, never a guessed variant of the address; (2) only the subject's
+own site and the primary registry can *confirm* a contact channel — everything
+else merely suggests one; (3) if a deadline-bearing send already used an
+unverified address, presume that copy bounced and re-serve it on the corrected
+channel, with the cure documented.
+
 ### Phase 2 — Fan-out search (breadth, parallel)
 For each sub-question, issue **2–3 query variations** through the stacked CLI — it walks the stack in order (searxng first, unmetered) and fails over on quota automatically:
 
@@ -259,28 +327,30 @@ websearch "<query variation>" -p tinyfish -n 8 --json
 ```
 
 - Collect candidate URLs across all sub-questions before reading. De-dupe. Record which `provider` answered in the Sources table.
+- **Fetch integrity:** if your network path truncates larger response bodies in bad windows, failover mode with a small `-n` is the resilient call pattern — a truncated body (or a throttled empty result) is a transport artifact, not an empty result. Never record a 403/429 as "no such page": a throttled response can render as the site's homepage with a normal title and zero results (see the three-outcomes rule in Phase 3).
+- **Brand-new / low-web-footprint names are a weak lane.** For a just-launched project or tool name, general indexes can return pure noise (unrelated pages in other languages) while established names return clean results. Treat a noise result as an engine miss, not evidence about the tool — verify from primary sources (the project's own repo/site/docs) and label those claims primary-source-verified, never deepsearch-verified.
 
 ### Phase 3 — Fetch & read the actual sources (depth)
 Snippets lie and truncate. For every source that will back a claim, **read the real page**:
 
 - `mcp__exa__crawling_exa` with the URL(s) — clean markdown, batch multiple URLs in one call. **Preferred for depth.**
 - `WebFetch <url> "<question>"` — when you need one specific answer from a known page.
-- `agent-browser read <url>` — **the first rung after a WebFetch 403.** Fresh anonymous fetch, no Chrome launch, no consent prompt. Measured 2026-09-20: WebFetch on progenealogists.com/reference returned 403 "response body was not retrieved"; `agent-browser read` returned the full page, including the one sentence the report needed. Cheaper than fcdp and needs no tab; try it before the WAF ladder below. A real 404/410 is still gone.
+- `agent-browser read <url>` — **the first rung after a WebFetch 403.** Fresh anonymous fetch, no Chrome launch, no consent prompt. Measured 2026-09-20: WebFetch on progenealogists.com/reference returned 403 "response body was not retrieved"; `agent-browser read` returned the full page, including the one sentence the report needed. Cheaper than a full browser session and needs no tab; try it before the WAF ladder below. A real 404/410 is still gone.
 - `websearch "<url>" -p jina --json` — Jina reader fallback for a stubborn page (Jina was DOWN 2026-08-27; check first).
 - `tinyfish fetch content get <url> [url…]` — optional TinyFish content extract when Jina/Exa crawl are thin (still prefer Exa crawl as primary depth).
-- **⚠️ WebFetch `403 Forbidden` / "response body not retrieved" / auth-required is usually a WAF bot-block, NOT a dead page (verified 2026-07-07 on health.ny.gov).** The page renders fine in a real browser — datacenter/fetcher IPs get blocked, so `.gov`/`.state`/enterprise sites 403 the tool while a human sees it load. **Do NOT treat this as "couldn't get it" and stall.** If the block is **Cloudflare** (body contains "Just a moment" / "security verification"), try **`~/tools/cfget`** FIRST — browserless, at the network floor, parallelisable, and it works on sites that re-challenge every new URL where `/chrome` cannot at any speed (see the cfget rung below). Otherwise **fall through to `/chrome`** (real logged-in Chrome, bypasses the WAF): `~/tools/fcdp/fcdp open "<url>"` → `~/tools/fcdp/fcdp js "<extraction JS>"` (full path — fcdp isn't on PATH in the agent shell). fcdp also runs the page's JS, so it reads interactive/JS-rendered tools a raw fetch can't (e.g. selecting a county in NYSDOH's "Find A Health Home By County" map to pull the result). Try `websearch -p jina`/Exa crawl first (cheaper), but a 403/bot-block is a legitimate reason to jump straight to `/chrome`. Distinguish it from a real `404`/`410` (page genuinely gone — don't browser-retry that).
-- **⚡ A 403 on a Cloudflare-protected site — try `~/tools/cfget` BEFORE escalating to `/chrome`.** Once a human has cleared the interstitial *once* in real Chrome, Chrome holds a `cf_clearance` cookie. That cookie + the **exact** User-Agent that earned it + the same egress IP is all Cloudflare needs — so you can go back to plain HTTP and skip the browser entirely. `cfget` does the whole thing:
+- **⚠️ WebFetch `403 Forbidden` / "response body not retrieved" / auth-required is usually a WAF bot-block, NOT a dead page (verified 2026-07-07 on health.ny.gov).** The page renders fine in a real browser — datacenter/fetcher IPs get blocked, so `.gov`/`.state`/enterprise sites 403 the tool while a human sees it load. **Do NOT treat this as "couldn't get it" and stall.** If the block is **Cloudflare** (body contains "Just a moment" / "security verification"), try **a cookie-warmed fetch helper** FIRST — browserless, at the network floor, parallelisable, and it works on sites that re-challenge every new URL where `/chrome` cannot at any speed (see the fetch-helper rung below). Otherwise **fall through to `/chrome`** (the user's real logged-in browser, which bypasses the WAF): open the URL there, then run an extraction script in the page. The real browser also runs the page's JS, so it reads interactive/JS-rendered tools a raw fetch can't (e.g. selecting a county in a state health department's "Find A Health Home By County" map to pull the result). Try `websearch -p jina`/Exa crawl first (cheaper), but a 403/bot-block is a legitimate reason to jump straight to `/chrome`. Distinguish it from a real `404`/`410` (page genuinely gone — don't browser-retry that).
+- **⚡ A 403 on a Cloudflare-protected site — try a cookie-warmed fetch helper BEFORE escalating to `/chrome`.** Once a human has cleared the interstitial *once* in a real browser, the browser holds a `cf_clearance` cookie. That cookie + the **exact** User-Agent that earned it + the same egress IP is all Cloudflare needs — so you can go back to plain HTTP and skip the browser entirely. A cookie-warmed fetch helper does the whole thing:
   ```bash
-  ~/tools/cfget --refresh <domain>            # once, after the user clears the challenge in Chrome
-  ~/tools/cfget "<url>" -o out.html --expect-title "<substring the real page must have>"
+  <fetch-helper> --refresh <domain>          # once, after the user clears the challenge in the browser
+  <fetch-helper> "<url>" -o out.html --expect-title "<substring the real page must have>"
   ```
-  Exit codes: **0** ok · **3** blocked/rate-limited · **4** no `cf_clearance` (ask the user to clear it once) · **5** empty. Why this rung exists: **the win is CAPABILITY, not raw speed** — measured 2026-09-02, cfget 0.19s vs `fcdp open`+`js` 0.19s, identical command latency, because fcdp returns before the page loads. What differs is that fcdp then needs an 8-14s settle wait, and on a site that **re-challenges every new URL** (congress.gov does) a multi-query enumeration is impossible at any speed. cfget's 0.19s is one HTTPS round-trip — i.e. at the floor, no headroom left.
+  Exit codes: **0** ok · **3** blocked/rate-limited · **4** no `cf_clearance` (ask the user to clear it once) · **5** empty. Why this rung exists: **the win is CAPABILITY, not raw speed** — measured 2026-09-02, the fetch helper took 0.19s vs a browser open+extract at 0.19s, identical command latency, because the browser driver returns before the page loads. What differs is that the browser then needs an 8-14s settle wait, and on a site that **re-challenges every new URL** (congress.gov does) a multi-query enumeration is impossible at any speed. the helper's 0.19s is one HTTPS round-trip — i.e. at the floor, no headroom left.
 
-  **⚠️ THREE OUTCOMES, NEVER TWO — a throttle can render as a normal page.** congress.gov answers HTTP **429** with its **homepage**, 343 KB, a normal `<title>`, and zero results. That is byte-for-byte indistinguishable from "your search found nothing" unless you check. This is the Negative-Result Rule applied to a WAF: `ok` / `blocked-or-throttled` / `genuinely-empty`. Always pass `--expect-title` so `cfget` can catch the silent-throttle case and back off instead of handing you a false zero. Verified 2026-09-02: a phrase search that returned 16 results returned "0" eight seconds later, purely from rate-limiting.
+  **⚠️ THREE OUTCOMES, NEVER TWO — a throttle can render as a normal page.** congress.gov answers HTTP **429** with its **homepage**, 343 KB, a normal `<title>`, and zero results. That is byte-for-byte indistinguishable from "your search found nothing" unless you check. This is the Negative-Result Rule applied to a WAF: `ok` / `blocked-or-throttled` / `genuinely-empty`. Always pass `--expect-title` so the helper can catch the silent-throttle case and back off instead of handing you a false zero. Verified 2026-09-02: a phrase search that returned 16 results returned "0" eight seconds later, purely from rate-limiting.
 
-  Two things that silently break it: a **guessed User-Agent** (`cf_clearance` is bound to the exact UA — `cfget` refuses to guess rather than 403 mysteriously), and **firing queries back-to-back** (space them ~8-10s; `cfget` retries with exponential backoff).
+  Two things that silently break it: a **guessed User-Agent** (`cf_clearance` is bound to the exact UA — the helper refuses to guess rather than 403 mysteriously), and **firing queries back-to-back** (space them ~8-10s; the helper retries with exponential backoff).
 
-- Escalation ladder (global rule): `WebSearch`/`WebFetch` → `websearch`/Exa crawl (`mcp__exa__web_search_advanced_exa` + `mcp__exa__crawling_exa`) → (**on a 403/bot-block or JS-rendered page →** `/chrome` via `~/tools/fcdp/fcdp`, per the note above) → captured-API replay via `~/tools/fcdp-api/fapi` / `fhar` → (**walled/structured data none of those return →** `monid discover`, Phase 3.4 — paid, gap-filler only) → **STOP and ask** before driving a live browser for anything auth-walled or interactive-with-side-effects. Don't jump to a browser for an ordinary readable page. The unbrowse MCP is UNINSTALLED — do not route through it.
+- Escalation ladder (global rule): `WebSearch`/`WebFetch` → `websearch`/Exa crawl (`mcp__exa__web_search_advanced_exa` + `mcp__exa__crawling_exa`) → (**on a 403/bot-block or JS-rendered page →** `/chrome` via the user's real browser, per the note above) → captured-API replay via a local capture/replay helper → (**walled/structured data none of those return →** `monid discover`, Phase 3.4 — paid, gap-filler only) → **STOP and ask** before driving a live browser for anything auth-walled or interactive-with-side-effects. Don't jump to a browser for an ordinary readable page. The unbrowse MCP is UNINSTALLED — do not route through it.
 
 ### Phase 3.4 — Walled / structured data? `monid discover` BEFORE declaring it inaccessible (conditional)
 
@@ -295,8 +365,8 @@ hundreds of hosted scrapers/APIs (Apify actors and others) behind one `discover 
 run → poll` interface. Runs are **paid per result from the user's Monid balance**, so it is a
 *gap-filler*, never the default — Monid's own precedence rule, which we keep:
 
-1. **the user's own tools first, at \$0** — `/chrome` (`~/tools/fcdp/fcdp`, real logged-in
-   Chrome reads X/LinkedIn/Instagram directly), a logged-in browser CLI / `/chromeapi` (captured-API
+1. **the user's own tools first, at \$0** — `/chrome` (the user's real logged-in
+   browser reads X/LinkedIn/Instagram directly), a logged-in browser CLI / `/chromeapi` (captured-API
    replay), dedicated MCPs (`capitoltrades`, `robinhood`, `healthdata`, Exa), the ten
    `websearch` providers. If one of these can do it, do NOT spend Monid balance.
 2. **Then Monid**, and only for what those genuinely can't reach or can't reach at the needed
@@ -318,7 +388,7 @@ a `BLOCKED` run is terminal (workspace budget/run cap — tell the user, don't r
 `Health` column only to break ties (`unknown` is common, not a warning); read the **Hints**
 block before your next command; the CLI version and this skill's frontmatter `version` must
 match — `npm install -g @monid-ai/cli@latest` + re-save `https://monid.ai/SKILL.md` to
-`~/workspace/custom-skills/monid/SKILL.md` **and** `~/.agents/skills/monid/SKILL.md` when they drift.
+every installed copy of the monid skill when they drift.
 
 **Do NOT add Monid to the `websearch` provider stack** — same reasoning as the `/healthdata`
 tier: it is a structured-endpoint marketplace, not general web search, and every call costs
@@ -332,7 +402,7 @@ $cost)` / `no endpoint in catalog (discover returned nothing relevant)` / `could
 For **each load-bearing claim** (any number, date, capability, price, quote, "X is the best/first/only"):
 1. Find a **second independent source** (different domain, not a mirror/aggregator of the first).
 2. Actively try to **refute** it — search the contrary (`"<claim>" criticism`, `"<claim>" wrong`, `<competitor> vs <claim>`).
-3. Classify: **confirmed** (≥2 independent), **single-sourced** (flag it), **contradicted** (report both sides), **unverifiable** (say so).
+3. Classify: **confirmed** (≥2 independent), **single-sourced** (flag it), **contradicted** (report both sides), **unverifiable** (say so). For finer work use the six-way scale: **verified / corroborated / allegation / inference / contradicted / unknown**.
 4. Go to the **primary source** for stakes-bearing facts (the vendor's own pricing page, the statute, the filing) — not press/aggregators. Cite the primary.
 
 Never promote a single-sourced or contradicted claim to a stated fact. Calibrated uncertainty beats confident wrongness.
@@ -341,7 +411,30 @@ Never promote a single-sourced or contradicted claim to a stated fact. Calibrate
 Write the answer organized by the Phase-1 sub-questions. **Every claim carries an inline citation** — `[source](url)` + retrieved-date. Lead with the answer, then evidence, then open questions / what couldn't be verified. Distinguish *confirmed* from *reported* from *contested*. No fabricated stats, quotes, or sources (Exa Verify rule + global Ground-Truth standard).
 
 ### Phase 6 — Deliver
-**Default to a single self-contained HTML report** (global HTML-Default rule): save to `~/Downloads/deepsearch-<slug>-YYYY-MM-DD.html` and `open` it. Use the `/html-report` template (status grids, source tables, confidence badges render far better than Markdown). End with a **Sources** table: every URL used, provider that found it, retrieved-date, and confidence. For a quick conversational answer the user asked for inline, a Markdown reply with a Sources list is fine — but a *report/brief/audit/analysis* → HTML.
+**Default to a single self-contained HTML report** (global HTML-Default rule): save to a reports folder as `deepsearch-<slug>-YYYY-MM-DD.html` and `open` it. Use the `/html-report` template (status grids, source tables, confidence badges render far better than Markdown). End with a **Sources** table: every URL used, provider that found it, retrieved-date, and confidence. For a quick conversational answer the user asked for inline, a Markdown reply with a Sources list is fine — but a *report/brief/audit/analysis* → HTML.
+
+## Operational-evidence briefs (conditional)
+
+**Fires when the research brief comes from an operational investigation** —
+service delivery, billing, staffing, grants, or suspected operational failure
+(the `gov` skill's operational-evidence handoff is the usual source). Load
+`references/operational-evidence-research.md`: it fixes the brief's field names,
+the service-to-payment tracing procedure, the negative-result controls, and a
+seven-field return contract (findings, source_coverage, joins, authority_routes,
+competing_explanations, next_test, blocked_dependencies). Accept only claims
+with precise provenance; a directory match is not proof of payment, and a nearby
+prosecuted business is not evidence against the target.
+
+## Interrupted research & handoff
+
+Before a long research run, or a handoff to another session/client, read
+`references/muse-resumable-research.md`. Keep the existing issue, owner, and
+actual runtime handles; save bounded batches and verified source artifacts with
+an atomic workspace checkpoint. A dispatch acknowledgment is not a research
+result, and a dropped observation is not proof the task stopped. On reconnect,
+inspect the same handle and checkpoint, then continue only unfinished work —
+never duplicate the assignment or claim completion from a report filename or an
+unrelated chat reply.
 
 ## Optional: large-topic fan-out (Exa Research API is gone)
 Exa's retired Research/agentic tools returned **410 Gone** (2026-08). Do **not** call them. For a very large topic, fan Phase 2–3 across **parallel subagents** and keep using live Exa **search-or-crawl**: `mcp__exa__web_search_advanced_exa` (filters) + `mcp__exa__crawling_exa` (read pages), or `websearch -p exa`. Synthesize yourself — don't ship any one provider's output unverified.
@@ -358,7 +451,7 @@ For a broad topic, fan Phase 2–3 across **parallel subagents** (Agent tool / E
 - **Respect the escalation ladder** — don't open a live browser without asking; `websearch` + Exa crawl handle the vast majority.
 - **A speed or savings claim carries a measured numerator and a sourced denominator** (Phase 1.9). No human-baseline number that you did not find on a cited page; no elapsed time that you did not read off a timestamp.
 - **Primary custodians beat search for records.** A vital record, a court index, a census sheet, a DNA share percentage: read it from the custodian's own API or page image, not from an aggregator's index of it. Route through `/autoresearch-genealogy` for person/record questions.
-- **Provider failover is automatic** across all ten. Exit **3** = every provider failed → fall back to the built-in `WebSearch` tool rather than stalling. Exit **4** (no keys) is now effectively unreachable, since marginalia is keyless — so a bare exit 3 with searxng in the attempts list usually means *the native searxng service is down*, not that the web is unreachable. Kick it: `launchctl kickstart -k gui/$(id -u)/com.barklee.searxng-native`.
+- **Provider failover is automatic** across the whole stack. Exit **3** = every provider failed → fall back to the built-in `WebSearch` tool rather than stalling. Exit **4** (no keys) is now effectively unreachable, since marginalia is keyless — so a bare exit 3 with searxng in the attempts list usually means *the native searxng service is down*, not that the web is unreachable. Kick it: `launchctl kickstart -k gui/$(id -u)/<your-searxng-service-label>`.
 - **Never hardcode TinyFish (or any) API keys** in the skill, reports, or commits. Use `tinyfish auth` / `TINYFISH_API_KEY` / env only. Do **not** default to `tinyfish agent` browser automation for ordinary research — stay on the search/fetch ladder.
 
 ## Quick reference
@@ -368,9 +461,9 @@ For a broad topic, fan Phase 2–3 across **parallel subagents** (Agent tool / E
 curl -sL https://<host>/robots.txt | grep -i sitemap
 curl -sL https://<host>/sitemap.xml | grep -o '<loc>[^<]*' | sed 's|<loc>||' | head -50
 
-websearch keys                              # which of the 10 are configured (NOT which work)
-~/tools/websearch/add-key.sh <provider>     # paste a key (hidden), stores + LIVE-VERIFIES it
-launchctl kickstart -k gui/$(id -u)/com.barklee.searxng-native   # kick native searxng (fixed :8888)
+websearch keys                              # which providers are configured (NOT which work)
+add-key.sh <provider>                       # paste a key (hidden), stores + LIVE-VERIFIES it (ships with the websearch CLI)
+launchctl kickstart -k gui/$(id -u)/<your-searxng-service-label>   # kick native searxng (fixed :8888)
 websearch "<query>" -n 8 --json             # stacked search w/ failover (primary)
 websearch "<query>" -p tinyfish --json      # force TinyFish
 websearch "<query>" -p exa --json           # force one provider

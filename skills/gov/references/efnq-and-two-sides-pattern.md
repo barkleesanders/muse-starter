@@ -1,8 +1,8 @@
 # SF Sunshine § 67.21(c) EFNQ + Two-Sides-of-the-Conversation Parallel Filing
 
 Two related patterns for breaking blanket attorney-client privilege defenses
-in SF public-records work. Captured 2026-05-26 from the SOTF EOTC hearing on
-File 26073 (Sanders v. SF City Attorney).
+in SF public-records work. Captured from a Sunshine Task Force (SOTF) hearing
+on a privilege-withholding complaint against a city attorney's office.
 
 ## When to invoke this reference
 
@@ -46,9 +46,9 @@ Source: https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_admin/0-0-
   CPRA. It does not address § 67.21(c).
 - § 67.21(c) was authored to require an EFNQ description that does NOT
   break privilege but DOES tell the requester what universe of records
-  exists. This was confirmed on the record by SOTF EOTC Member David
-  Pilpel at the May 26, 2026 hearing on File 26073:
-   - Pilpel said he personally helped write § 67.21(c)
+  exists. This was confirmed on the record by a SOTF panel member who
+  personally helped write § 67.21(c), at a hearing on a privilege complaint:
+   - The member said they personally helped write § 67.21(c)
    - "This is a specific, special provision in the Sunshine Ordinance
      that is not in state law, that is beyond what's required in state law"
    - "Written carefully so as to not break any privilege, but to indicate
@@ -59,7 +59,7 @@ Source: https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_admin/0-0-
 
 1. **Subject line**: must include "§ 67.21(c) EFNQ request" or
    "existence/form/nature/quantity request" — magic words matter; the
-   panel in File 26073 ruled that without this framing the agency's
+   panel in the reference matter ruled that without this framing the agency's
    § 67.21(b) response was sufficient
 2. **Quote § 67.21(c) verbatim** with operative phrases emphasized
 3. **State explicitly that this is NOT a (b) request** — it is a separate
@@ -78,8 +78,8 @@ Source: https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_admin/0-0-
    not seeking privileged content, not a Vaughn index
 6. **State the 7-day deadline** with the exact calculated date
 
-A working template is at `~/Downloads/efnq-request-city-attorney-2026-05-26.txt`
-(the City Attorney version of this pattern).
+Keep a working template beside the skill (the attorney-custodian version
+of this pattern).
 
 ### Citation framework
 
@@ -157,8 +157,8 @@ side.**
 6. Standard SF Sunshine boilerplate (10-day deadline, fee waiver, § 67.27
    specificity for any withholdings)
 
-A working template is at `~/Downloads/cpra-request-mandelman-office-2026-05-26.txt`
-(the Mandelman / Board President side of File 260302 / § 99.5 records).
+Keep a working template beside the skill (the client side — a legislative
+sponsor's office — of the same matter).
 
 ### Routing channels for the two sides
 
@@ -186,14 +186,14 @@ privilege with no EFNQ statement), the next levers are:
 
 ## Reference incident
 
-**2026-05-26 — SOTF EOTC File 26073 (Sanders v. SF City Attorney):**
-SOTF panel ruled 3-0 no violation on a § 67.21(b) complaint because the
-City Attorney's office responded within 10 days and cited attorney-client
-and work-product privilege as the categorical basis for withholding.
-Member Pilpel introduced § 67.21(c) on the record, distinguished it from
-the agency's caselaw (most of which arises in litigation context, not
-legislative drafting), and noted that the requester had not invoked
-§ 67.21(c) in the underlying request.
+**A SOTF hearing (reference incident):** the panel ruled 3-0 no violation
+on a § 67.21(b) complaint because the attorney custodian's office
+responded within 10 days and cited attorney-client and work-product
+privilege as the categorical basis for withholding. A panel member
+introduced § 67.21(c) on the record, distinguished it from the agency's
+caselaw (most of which arises in litigation context, not legislative
+drafting), and noted that the requester had not invoked § 67.21(c) in
+the underlying request.
 
 The lesson: when the subject matter is legislative drafting or
 agency-to-agency coordination — where the privilege analysis is
@@ -205,6 +205,6 @@ weakest and the client-side records are richest — file BOTH:
 2. A § 67.21(b) records request to the client custodian, on the 10-day
    clock, designed to extract the client-side records directly.
 
-This sequence was articulated on the record by Pilpel as the proper
+This sequence was articulated on the record by the panel member as the proper
 procedural path; the SOTF ruling provides the precedent that the
 attorney-side records will not come out through (b) alone.
