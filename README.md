@@ -4,20 +4,6 @@ A portable, privacy-screened starter pack for Muse: reusable engineering
 skills, specialist agents, and command templates — plus starter identity
 files so a new Muse is set up the way this one is designed.
 
-## Start here
-
-**Join Muse with invite code `FJBMD8`** — https://muse.ai/join — redeem it
-in Settings within 48 hours of joining and we both get 1B tokens.
-
-**Featured skill: [`ai-credit-watch`](skills/ai-credit-watch/SKILL.md)** —
-finds and claims free AI credits, free tokens, and free-plan offers from
-Anthropic/Claude, xAI/Grok, OpenAI, and Meta/Muse. It sweeps each provider's
-official accounts, news pages, and changelogs, dedupes against a seen list,
-claims only offers that are fully free with no payment method and no
-training-data sharing, and verifies every claim on the provider's balance
-page. The skill file contains the full copy-paste prompt, so you can run it
-in any Muse chat — or on a 6-hour schedule — without installing anything.
-
 ## Install
 
 ```bash
@@ -31,7 +17,7 @@ never overwrites your existing files:
 
 | Repo path      | Install target                    | Notes                                  |
 |----------------|-----------------------------------|----------------------------------------|
-| `skills/`      | `~/workspace/custom-skills/`             | Auto-discovered by Muse's skill search |
+| `skills/`      | `~/workspace/skills/`             | Auto-discovered by Muse's skill search |
 | `agents/`      | `~/workspace/agents/`             | Specialist briefs (see `agents/`)      |
 | `commands/`    | `~/workspace/commands/`           | Prompt templates (see `commands/`)     |
 | `MUSE.md`      | `~/workspace/MUSE.md`             | Only if absent                         |
@@ -42,16 +28,15 @@ Set `MUSE_WORKSPACE` to install the workspace parts somewhere other than
 
 ## What's inside
 
-- **119 skills** — engineering workflows (`carmack`, `debug`, `ship`), research,
-  government accountability (`gov`), marketing, SEO, mobile, and more. Each skill is a `SKILL.md`
-  plus a `skill.yaml` descriptor (`name`, `title`, `description`) — the
-  descriptor is what Muse's skill search reads; the `SKILL.md` frontmatter
-  is kept for Claude Code compatibility. Supporting `references/`,
-  `scripts/`, `tools/`, and `bin/` files ride along.
-- **36 agents** — specialist briefs (code reviewer, security sentinel,
+- **139 skills** — engineering workflows (`carmack`, `debug`, `ship`), research,
+  government accountability (`gov`), marketing, SEO, mobile, and more. Each skill is a `SKILL.md` with
+  frontmatter (`name`, `description`) that Muse's skill search discovers
+  automatically, plus supporting `references/`, `scripts/`, `tools/`, and
+  `bin/` files.
+- **35 agents** — specialist briefs (code reviewer, security sentinel,
   architecture strategist, …). In Muse, spawn a subagent with the file's
   content as the task brief.
-- **22 commands** — prompt templates for recurring workflows (triage,
+- **21 commands** — prompt templates for recurring workflows (triage,
   release docs, bug reproduction, …). Paste one into chat or ask Muse to
   run it.
 - **Identity templates** — starter `SOUL.md`, `USER.md`, `MEMORY.md`,

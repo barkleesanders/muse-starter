@@ -1,12 +1,12 @@
 # Records Request as Reusable Roadmap
 
-**Origin:** a NY Correction Law § 508 custodial-to-hospital transfer campaign.
+**Born:** 2026-08-26, NY Correction Law § 508 jail-to-hospital psychiatric transfer campaign.
 **Objective that produced it:** *"send a record request out to those people about how they handle it
 so they have to expose how the process works for anyone they get approved and transfer under it —
 so they basically tell us everything we need to do to get a successful transfer for anyone in a
 similar situation."*
 
-The ask was not "get me a named individual's file." It was **"make the agency publish its own operating
+The ask was not "get me my brother's file." It was **"make the agency publish its own operating
 manual for a statute it is barely using."** That reframing is the whole method, and it generalizes
 to any statutory right that exists on paper but is administered invisibly.
 
@@ -60,7 +60,7 @@ negotiated. The request instead went to:
 
 **Why this is often *better* than hitting the primary:** peer counties have no reason to stonewall,
 so they answer faster and more completely — and their answers become the **benchmark you hold the
-primary to**. "A peer county produced its § 508 policy in nine days; you have certified you have none."
+primary to**. "Broome produced its § 508 policy in nine days; you have certified you have none."
 That comparison is worth more than the primary's own grudging production.
 
 **Corollary — target the custodians whose process is NOT already published.** The user's own
@@ -73,16 +73,16 @@ answer is new information.
 ## 3. ⛔ CHECK THE REQUESTER'S OWN SENT MAIL BEFORE YOU FILE
 
 **This is a hard gate, and it fired for real.** Two letters were fully built and about to go to a
-county custodian when a sent-mail search turned up that **the user had already filed the same ground
+county custodian when a Gmail search turned up that **the user had already filed the same ground
 three days earlier — and his version was broader.**
 
 Filing the duplicate would have: opened a second ticket on the same clock, handed the county a
 consolidation excuse, and made the requester look disorganized to the custodians who were cc'd on
 both.
 
-Search the requester's sent mail (mail client or CLI search) for the same
-subject and ground before filing — e.g., a search over sent messages for
-"FOIL OR records OR request" in the relevant account.
+```bash
+gog gmail messages search "FOIL OR records OR request" -a <acct> --max 25
+```
 
 Worse, the already-sent letter **contained the answer to a research question I had just told the
 user was unanswerable** (it cited the exact regulation I claimed "could not be located in any

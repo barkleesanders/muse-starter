@@ -1,0 +1,10 @@
+name: local_cn_ecommerce_search
+title: Local cn ecommerce search
+description: 'Search Temu and 1688 product data from the command line for sourcing research. Uses the unified `cnshop` wrapper: Temu and 1688 search run by default through the user''s own real Chrome on their machine (free, real listings, ads filtered, no API keys); Taobao uses the official Taobao Open Platform (TOP) client (user''s own app keys). Triggers on requests to search, compare, or pull product details across Chinese e-commerce platforms (search Temu listings, 1688 wholesale prices, Taobao items, "find suppliers on 1688", "check Temu prices for X"). Alibaba.com international has no self-serve API and is out of scope. Match the user''s language in replies (English or Chinese).'
+include_in_prompt: true
+availability:
+  confidential_vm: true
+  needs_speech: false
+skill_improvement:
+  managed: true
+  needs_review: true

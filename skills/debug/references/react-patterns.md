@@ -16,7 +16,7 @@ grep -rn "{[a-z][a-zA-Z]*\." --include="*.tsx" | grep -v "\?."
 - Pass the variable as a prop, or move the component outside the parent
 - Add `?.` optional chaining for all nullable access
 
-Full guide: `/carmack` React-Specific Checks section
+Full guide: `/code` React-Specific Checks section
 
 ---
 
@@ -39,7 +39,7 @@ grep -Bn5 "export default function\|export function App" src/react-app/App.tsx |
 ### Fix
 Pass fallbacks to `validateClientEnv()` for vars with hardcoded defaults.
 
-Full guide: `/carmack` Silent React Startup Failure section
+Full guide: `/code` Silent React Startup Failure section
 
 ---
 
@@ -85,7 +85,7 @@ grep -B2 -A2 "useEffect.*data" --include="*.tsx" src/react-app/ | grep "set[A-Z]
 - `document.title` update
 - `localStorage` read on mount (App.tsx root only)
 
-Full guide: `/carmack` useEffect Abuse section
+Full guide: `/code` useEffect Abuse section
 
 ---
 
@@ -210,7 +210,7 @@ grep -rn "document.documentElement.style" --include="*.tsx" src/react-app/ | gre
 **Fix**: Either the SSR layout's `body` background+color must win (`!important` — the leaked rules carry none), or the island CSS must not emit global `body` rules.
 
 **Detection — computed style in a real browser, never a source grep.** This is the whole difficulty: nothing in the source or the HTML reveals it. Two ways to get it:
-- **Pre-deploy (preferred)**: the CF integration harness + playwright — `~/workspace/custom-skills/shared/cf-integration-harness.md` (this is /ship Phase 1.3d).
+- **Pre-deploy (preferred)**: the CF integration harness + playwright — `~/workspace/skills/shared/cf-integration-harness.md` (this is /ship Phase 1.3d).
 - **Post-deploy**: drive the live browser and read `getComputedStyle`.
 
 ### ⚠️ The contrast check MUST alpha-composite, or it lies

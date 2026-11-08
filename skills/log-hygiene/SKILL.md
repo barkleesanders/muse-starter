@@ -17,7 +17,7 @@ model: inherit
 
 Turns a window of real logs into concrete code improvements: ambiguous errors → actionable, noise → quieter (recoverable), silent gaps → instrumented. The compounding investment that makes every *future* debugging session in the same subsystem faster.
 
-**Read `~/workspace/custom-skills/shared/observability-instrumentation.md` first** — it is the standard this skill enforces (boundary-logging, the 4-part error-message design, the downgrade-never-delete guardrail, the stack's log sources).
+**Read `~/workspace/skills/shared/observability-instrumentation.md` first** — it is the standard this skill enforces (boundary-logging, the 4-part error-message design, the downgrade-never-delete guardrail, the stack's log sources).
 
 ## Usage
 
@@ -62,4 +62,4 @@ When run headless on a schedule (Mac mini, host `mac-mini`):
 
 ## Why this exists
 
-Origin (2026-06-17, user meta-practice): the user's standing prompt — "assess logs from the last 24h, improve output for ambiguous errors, clean up superfluous entries, add attributes to help future debugging" — is a high-leverage recurring task. It belongs as a deliberate, schedulable loop (not buried inside reactive debugging), with the downgrade-never-delete and no-fabrication guardrails baked in so it's safe to run unattended. The `/carmack` and `/debug` skills carry the *reactive* half (instrument-on-build, instrument-on-fix); this skill is the *proactive* half.
+Origin (2026-06-17, user meta-practice): the user's standing prompt — "assess logs from the last 24h, improve output for ambiguous errors, clean up superfluous entries, add attributes to help future debugging" — is a high-leverage recurring task. It belongs as a deliberate, schedulable loop (not buried inside reactive debugging), with the downgrade-never-delete and no-fabrication guardrails baked in so it's safe to run unattended. The `/code` and `/debug` skills carry the *reactive* half (instrument-on-build, instrument-on-fix); this skill is the *proactive* half.

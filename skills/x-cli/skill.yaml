@@ -1,0 +1,10 @@
+name: local_x_cli
+title: Local x cli
+description: Deterministic Go CLI for X/Twitter API v2 with multi-account OAuth 2.0. Post, reply, delete, like, follow, block, mute, timeline, mentions, search, and DMs across multiple configured accounts. Triggers on "x post", "tweet this", "reply to tweet", "x cli", "post to X".
+include_in_prompt: true
+availability:
+  confidential_vm: true
+  needs_speech: false
+skill_improvement:
+  managed: true
+  needs_review: true

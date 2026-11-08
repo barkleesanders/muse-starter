@@ -1,0 +1,10 @@
+name: local_worker_queue_bridge
+title: Local worker queue bridge
+description: 'Run commands on a remote machine through a Cloudflare Worker KV queue — no inbound connectivity, SSH tunnel, or persistent connection required. The reusable pattern behind a proven remote command bridge: Worker /cmd/* routes (submit/pending/result/results/ack), a submitter adapter, and a remote executor with timeout+kill, output cap, denylist, and fail-open behavior. At-least-once execution, at-most-once results. Use when building connector-style integrations that must reach a machine or service behind NAT/firewall, or when replacing a fragile polling/SSH-relay transport.'
+include_in_prompt: true
+availability:
+  confidential_vm: true
+  needs_speech: false
+skill_improvement:
+  managed: true
+  needs_review: true

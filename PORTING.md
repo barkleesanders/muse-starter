@@ -1,34 +1,18 @@
 # Claude Code → Muse porting notes
 
-This starter was converted from the `claude-code-starter` pack. Two
-structural differences from Claude Code matter, and both are easy to get
-wrong because a wrong install *looks* installed:
-
-1. **Discovery folder.** Muse scans `~/workspace/custom-skills/` for
-   custom skills — not `~/workspace/skills/`. Skills copied anywhere else
-   are invisible to skill search. (`install.sh` targets
-   `~/workspace/custom-skills/`; the first port targeted
-   `~/workspace/skills/` and silently installed nothing discoverable.)
-2. **Skill descriptor.** Muse identifies a skill by the `skill.yaml`
-   beside its `SKILL.md` — `name` (snake_case, matching the folder),
-   `title`, `description`, `category`, `include_in_prompt` — not by the
-   Claude Code frontmatter inside `SKILL.md`. Every skill in this repo
-   ships a generated `skill.yaml` next to its `SKILL.md`; the frontmatter
-   is retained so the same files still work in Claude Code. Regenerate
-   the descriptors after adding or editing skills with
-   `python3 scripts/generate-skill-yaml.py`. Generated descriptors use
-   `include_in_prompt: false`: a starter library is found via skill
-   search, not injected into every conversation.
+This starter was converted from the `claude-code-starter` pack. The skill
+frontmatter format (`name`, `description`, plus `user-invocable` /
+`allowed-tools` where present) is already Muse-compatible, so skills needed
+no structural changes — only install-path rewrites.
 
 ## Mechanical rewrites (applied by `convert.py`)
 
 | Claude Code original | Muse starter |
 |---|---|
-| `~/.claude/skills/` | `~/workspace/custom-skills/` |
+| `~/.claude/skills/` | `~/workspace/skills/` |
 | `~/.claude/agents/` | `~/workspace/agents/` |
 | `~/.claude/CLAUDE.md` | `~/workspace/MUSE.md` |
 | `model: sonnet/haiku/inherit` in `agents/*.md` frontmatter | removed — Muse selects the model at subagent spawn time |
-| Claude Code `SKILL.md` frontmatter as the only descriptor | a `skill.yaml` generated beside every `SKILL.md` (`scripts/generate-skill-yaml.py`) |
 
 ## Intentionally unchanged
 
@@ -51,7 +35,7 @@ starter's install location:
   hook scripts are included for reference. Muse-native scheduling
   (crons) and event hooks are the replacement — wire them per your setup.
 - **`skills/shared/` references.** About two dozen cross-references point
-  at `~/workspace/custom-skills/shared/`, which ships only with the private
+  at `~/workspace/skills/shared/`, which ships only with the private
   companion kit and is intentionally excluded from this public repo. They
   resolve once the companion kit is installed; until then treat them as
   optional deep-reference links.
@@ -62,3 +46,22 @@ starter's install location:
 - **Agents as briefs.** Each file in `agents/` is a specialist system
   brief. In Muse there is no agents registry — spawn a subagent with the
   file's content as the task brief (see `agents/README.md`).
+
+## 2026-11 refresh
+
+- Re-converted from the then-current `claude-code-starter` source with the
+  same mechanical rules above; no skill was hand-edited in the conversion.
+- Added 20 skills that originated on the Muse side (they had no Claude
+  Code counterpart): animate, apple-design, expense-ledger,
+  command-builder-pro, csv-link-validator, debugging-genius, doc-maker,
+  glean-connector-reviewer, interview-prep, it-project-report-assistant,
+  json-structurer, professional-text-editor, prompt-architect,
+  career-interview-prep, career-resume-optimizer, career-success-coach,
+  html-report, cn-ecommerce-search, x-cli, and worker-queue-bridge.
+  Before publication these went through the same privacy screen as the
+  rest of the pack, plus a mechanical de-personalization pass: owner
+  names, personal handles and account IDs, personal email addresses, and
+  machine-specific "house rules" headers were replaced with generic
+  equivalents ("the user", "your machine"). No other content was changed.
+- Personal, case-specific, and infrastructure-bound skills remain in the
+  private repositories only, per the Boundary note in the README.

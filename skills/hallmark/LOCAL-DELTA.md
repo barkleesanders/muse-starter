@@ -45,7 +45,7 @@ and references/ and re-break these links.** After updating, re-apply the repoint
 or re-run the vendoring. Verify with:
 
 ```bash
-cd ~/workspace/custom-skills/hallmark
+cd ~/workspace/skills/hallmark
 grep -rno '](\(\.\./\)\{2,\}[a-zA-Z0-9/_.-]*)' SKILL.md references/   # should print nothing
 ```
 

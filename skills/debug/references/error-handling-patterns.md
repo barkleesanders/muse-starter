@@ -306,7 +306,7 @@ curl -s "<upstream read api>/<id>" | jq -r '.description | length, .description'
 ### Related patterns
 - `feedback_verify_with_actual_frontend_body_shape.md` (memory): closed-loop curl must mirror the EXACT frontend body — synthesized curls with cleaner descriptions wouldn't have caught this
 - `feedback_post_fix_curl_must_cache_bust.md` (memory): cache-bust the post-fix curl or you'll read stale cached responses
-- `~/workspace/custom-skills/shared/upstream-protocol-investigation.md`: when a third-party integration silently drops content, read the upstream's actual sanitizer logic — never trust a "should work" assumption
+- `~/workspace/skills/shared/upstream-protocol-investigation.md`: when a third-party integration silently drops content, read the upstream's actual sanitizer logic — never trust a "should work" assumption
 
 ---
 
@@ -372,7 +372,7 @@ The original Pattern #21 fix added `streetOnlyAddress()` to normalize Verint inp
 - Pattern 19 (Verint dform Request_description bracket truncation): same class — Verint sanitizers silently drop content based on character shape.
 - Pattern 36 (Experience Cloud catalog-and-submit): same class, different backend — address on the wrong object + skipped GIS bind; also listed≠fileable / unwrap / remint.
 - `feedback_verify_with_actual_frontend_body_shape.md`: closed-loop curl must mirror the actual frontend body, not a "cleaner" synthesized one.
-- `~/workspace/custom-skills/shared/upstream-protocol-investigation.md`: when third-party output disagrees with input, read the upstream's actual mapper — don't trust "verified YYYY-MM-DD" comments alone.
+- `~/workspace/skills/shared/upstream-protocol-investigation.md`: when third-party output disagrees with input, read the upstream's actual mapper — don't trust "verified YYYY-MM-DD" comments alone.
 
 ---
 
@@ -482,15 +482,15 @@ If any match in a diff that touches third-party-response parsing: **BLOCK** unti
 - **Pattern 19 (Verint bracket truncation)** — that's content the third party silently mutates; this is signal we incorrectly extract.
 
 **Related:**
-- `~/workspace/custom-skills/shared/third-party-signal-fixtures.md` — the generalized rule, fixture layout, audit greps.
-- `~/workspace/custom-skills/shared/upstream-protocol-investigation.md` — the broader "read upstream's actual client / capture real traffic" doctrine. This pattern is a specialization: same doctrine applied to **response parsing**, not just **request shaping**.
+- `~/workspace/skills/shared/third-party-signal-fixtures.md` — the generalized rule, fixture layout, audit greps.
+- `~/workspace/skills/shared/upstream-protocol-investigation.md` — the broader "read upstream's actual client / capture real traffic" doctrine. This pattern is a specialization: same doctrine applied to **response parsing**, not just **request shaping**.
 - `/feedback_dig_deep_on_site_fixes` (MEMORY.md) — token cost is irrelevant for ground-truth verification.
 
 ---
 
 ## Pattern 36: Experience Cloud catalog-and-submit envelope (MyLA311, 2026-08-15)
 
-**Class:** Salesforce Experience Cloud / Aura ApexAction civic portals — and any sibling whose "catalog" is a list of labels, whose IDs remint per session, and whose SUCCESS envelopes nest the real payload. The day-long Improve LA pass was this class, not a locator-only bug. `/carmack` builds against it; `/debug` diagnoses it; `/ship` refuses to deploy a catalog that faked it.
+**Class:** Salesforce Experience Cloud / Aura ApexAction civic portals — and any sibling whose "catalog" is a list of labels, whose IDs remint per session, and whose SUCCESS envelopes nest the real payload. The day-long Improve LA pass was this class, not a locator-only bug. `/code` builds against it; `/debug` diagnoses it; `/ship` refuses to deploy a catalog that faked it.
 
 ### A. Locator bind — address on the wrapper, not the Case
 
@@ -549,7 +549,7 @@ These rules are why the first "file every listed type" pass took a full day. Loa
 
 9. **KV/catalog version.** A schema change (ids, models, `captureFailure`) that does not bump the cache key keeps serving the CSRF-era snapshot. MyLA311: `la311:catalog:v4`.
 
-10. **Proof budget.** One representative live file **twice** of a pin-only type (Street Sweeping `C-04343038/039`, graffiti `C-04343078/079`). Not 77 tickets. Then `/ship` + cache-busted `GET /api/categories` matching the structural counts (ids / captured / captureFailure / dummy=0 / CSRF=0 / submittable). `/carmack` does not `wrangler deploy`.
+10. **Proof budget.** One representative live file **twice** of a pin-only type (Street Sweeping `C-04343038/039`, graffiti `C-04343078/079`). Not 77 tickets. Then `/ship` + cache-busted `GET /api/categories` matching the structural counts (ids / captured / captureFailure / dummy=0 / CSRF=0 / submittable). `/code` does not `wrangler deploy`.
 
 **Design-time order (so the next build does not relearn this):**
 1. Confirm Experience-shell (`facade.textproto`) → decompile site LWC.
@@ -558,7 +558,7 @@ These rules are why the first "file every listed type" pass took a full day. Loa
 4. Structural tests: toast fixture unwraps to locator keys; every id is real-model **or** `captureFailure`; refuse strings contain the field API name.
 5. Two live files of one type. Then `/ship`.
 
-**Don't:** treat a listed catalog as fileable; persist dummy flags; send `toastPayload` as `addressDetails`; invent IssueTypeIds; classify from question labels; refuse with a class stub; treat Apex NPE as the city saying no; file 77 tickets to "prove" the catalog; deploy the Worker from `/carmack`.
+**Don't:** treat a listed catalog as fileable; persist dummy flags; send `toastPayload` as `addressDetails`; invent IssueTypeIds; classify from question labels; refuse with a class stub; treat Apex NPE as the city saying no; file 77 tickets to "prove" the catalog; deploy the Worker from `/code`.
 
 **Local tools (installed 2026-08-14):**
 - `gron` — flatten a captured Aura/validateAddress JSON and grep the path. `toastPayload` present + `response.address` missing = you sent the toast wrapper.
@@ -616,7 +616,7 @@ cannot lose typed edits — proving that redirects the whole investigation.
 ### Detection
 
 ```bash
-~/workspace/custom-skills/shared/tools/single-winner-merge-check.sh <repo-root>
+~/workspace/skills/shared/tools/single-winner-merge-check.sh <repo-root>
 ```
 
 Flags collections filled from ≥2 sources and consumed at index 0 with **no
@@ -709,7 +709,7 @@ shipped instances** nobody was looking for — `isNumericTicketId` had been
 That is the shape of this bug: it degrades a success path into a silent
 failure, and every automated gate stays green.
 
-**Related:** the CALL-SITE CLASS rule (`/carmack` Hard Rules) — fix the class
+**Related:** the CALL-SITE CLASS rule (`/code` Hard Rules) — fix the class
 with a structural test, not the two instances you happened to break.
 
 ## Pattern 39: The authority relabels your artifact — match on YOUR echoed content, never on labels the authority owns (2026-08-26)
@@ -772,7 +772,7 @@ wrong intermediate conclusion in the incident):**
 to do when the async lifecycle signal exists but you can't recognise it), #23
 (synthetic fixtures encode the same wrong assumption the bug came from — the
 regression fixture must be the REAL captured row), and
-`~/workspace/custom-skills/shared/upstream-protocol-investigation.md` (read the
+`~/workspace/skills/shared/upstream-protocol-investigation.md` (read the
 upstream's own client before believing any "the API can't do X").
 
 ## Pattern 40: Your own cron is the caller — ATTRIBUTE the traffic before you debug the code (2026-08-29)
@@ -925,9 +925,9 @@ dangerous shape, because the copy keeps making claims the real site retracted.
 ### The check
 
 ```bash
-python3 ~/workspace/custom-skills/shared/tools/orphan-worker-content-check.py
+python3 ~/workspace/skills/shared/tools/orphan-worker-content-check.py
 #   exit 0 ok | 1 flagged | 2 UNMEASURED (never a pass) | 3 no creds
-python3 ~/workspace/custom-skills/shared/tools/test_orphan_worker_content_check.py
+python3 ~/workspace/skills/shared/tools/test_orphan_worker_content_check.py
 ```
 Wired as `/ship` Phase 4.09b, account-wide, unconditioned on the diff. Measured
 surface at the time: **53 workers, 25 with a public twin, 1 flagged.**
@@ -982,7 +982,7 @@ only from `resetReportState`. Tests in `src/submit_guard.test.ts` count
 `persistCalls`.
 
 **Ship:** Phase 1.45h BLOCKs a persist/queue/filing UI change without those
-persist-count tests. `/carmack` implements the lock; `/debug` routes here;
+persist-count tests. `/code` implements the lock; `/debug` routes here;
 `/ship` refuses to deploy without the tests.
 
 ## Pattern 43: Silent outcome — every tap on a primary action must end in a visible, adjacent, machine-readable result, and it must be proven in a constrained browser (2026-09-18)
@@ -1061,8 +1061,30 @@ Nominatim fallback, own-accuracy placements, generation abort + fingerprint
 re-read. Worker `024db873`. Post-fix repro: 0 dialogs, 0 holds, 4/4 taps POST in
 both arms.
 
-**Ship:** Phase 1.45i runs `~/workspace/custom-skills/ship/tools/silent-outcome-check.sh
+**Ship:** Phase 1.45i runs `~/workspace/skills/ship/tools/silent-outcome-check.sh
 <repo>` (BLOCK on a newly added native dialog in client code; runs the repo's
 `probe:constrained` script; UNMEASURED, never a pass, when a primary-action UI
-exists without a probe) and re-runs it `--live <url>` after deploy. `/carmack`
+exists without a probe) and re-runs it `--live <url>` after deploy. `/code`
 builds the funnel; `/debug` routes "tapped N times, nothing happened" here.
+
+---
+
+## Pattern 44: One response shape cannot serve two client generations — mirror the upstream server, emit BOTH (2026-10-06)
+
+**Symptom:** a self-hosted reimplementation of a vendor server (Bitwarden/Vaultwarden-style, Matrix, S3, an OAuth IdP) suddenly fails for SOME clients before the real operation is even attempted. Bitwarden case: browser extension never tried the master password and showed *"KDF config response does not contain a valid KDF type"*; other clients behaved differently.
+
+**Root cause (warden-worker on Cloudflare, `vault.example.com`):** commit `186a37e` "upgraded" `/identity/accounts/prelogin` to a guessed new format `{"kdf":{"KdfType":0,"Iterations":...}}`. That shape matched **neither** generation:
+- clients ≥ 2026.9 POST `/identity/accounts/prelogin/password` and parse `KdfSettings` + `Salt` (`bitwarden/clients` `password-prelogin.response.ts` → `KdfConfigResponse`, which throws when `KdfSettings` is missing);
+- older clients (bundled web vault, mobile) read the FLAT `kdf` / `kdfIterations` / `kdfMemory` / `kdfParallelism` numbers the commit removed.
+
+The official server (`bitwarden/server` `PasswordPreloginResponseModel`) returns **both** shapes from **both** routes during the migration window. Fix `871a49a`: flat legacy fields + `kdfSettings{kdfType,iterations,memory,parallelism}` + `salt` (= email trimmed + lower-cased), and normalize the email before the DB lookup (mixed case silently fell back to default KDF → wrong master key).
+
+**Discriminator:** `curl -s -X POST <host>/identity/accounts/prelogin/password -H 'content-type: application/json' -d '{"email":"x@example.com"}'` — must contain `kdf`, `kdfIterations`, `kdfSettings`, `salt`. Anything else = this bug.
+
+**Rule (generalizes beyond Bitwarden):**
+1. When reimplementing a vendor API, the contract is the **upstream server's response model** + the **upstream clients' parsers** — read both before changing a wire shape. Never design the "new format" from a changelog or memory.
+2. During a vendor's client migration, the server must speak **every live generation at once** (additive fields), never swap one shape for another. Old clients ignore unknown keys; new clients need the new keys.
+3. Pin it with a serialization test asserting BOTH shapes, and prove it armed (drop one field → test fails).
+4. Error text that names a field the server never sends (`KdfSettings`) points straight at the client parser — grep the upstream client for the message.
+
+**Deploy traps for this repo (`~/projects/warden-worker`):** always `wrangler ... -c ~/projects/warden-worker/wrangler.toml` (bare `wrangler` walks up to `~/wrangler.jsonc` = hospital-ledger). Homebrew rustc has no wasm32 target and wrangler's custom build ignores PATH: build by hand with `PATH=~/.rustup/toolchains/1.91.1-aarch64-apple-darwin/bin:~/.cargo/bin:$PATH worker-build --release --locked`, then deploy from a temp copy of `wrangler.toml` with the `[build]` block removed. GitHub Actions deploy is broken (no CLOUDFLARE_API_TOKEN secret) — prod deploys are manual.

@@ -1,8 +1,4 @@
----
-name: html-report
-user-invocable: true
-description: "Default output format for reports, summaries, analyses, dashboards, audits, comparisons, digests, briefings, and any deliverable with structured/spatial information. Generates a single self-contained HTML file (no external dependencies) the user can open in a browser, share, print to PDF, or paste into Notion. Lightweight cousin of /design and /magazine — no AI generation server, no editorial chrome, just clean Tailwind-via-CDN HTML that beats Markdown on scannability, comparison, and feel. Use whenever the user asks for a report, summary, breakdown, analysis, audit, dashboard, comparison, or any deliverable that previously would have been a .md file. Triggers: 'report', 'summary', 'audit', 'analysis', 'dashboard', 'compare', 'breakdown', 'rundown', 'brief', 'digest', 'overview', 'recap', 'write up', 'document', 'deliverable'. Reference: https://thariqs.github.io/html-effectiveness/"
----
+
 
 # /html-report — HTML by default, not Markdown
 
@@ -39,9 +35,9 @@ If unsure: ask the user where the output is going. Notion / Slack / "send to my 
 
 1. **Single self-contained `.html` file.** No external CSS files, no separate JS, no asset folders. Tailwind via CDN is allowed and encouraged.
 2. **Document order: `<body>` → `<script>` → `<style>`** (NOT the traditional `<head><style><script></head><body>`). Body content first, then scripts, then styles last. See the template below — this dramatically improves generation quality by forcing content-first output. Do not "correct" it back to standard head layout.
-3. **Save to `~/Claude-Reports/` by default**, named `<slug>-<YYYY-MM-DD>.html`, unless the user specifies a path. `~/Claude-Reports` is a symlink to the Google-Drive-synced folder `My Drive/Claude Reports` (Drive-for-Desktop mount `~/Library/CloudStorage/GoogleDrive-you@example.com/My Drive/Claude Reports`), so every report auto-syncs to Drive. Use the clean symlink path (no spaces) in `Write`/`open` commands. If the symlink is missing (e.g. a machine without the mount), fall back to `~/Downloads/`.
+3. **Save to `~/Claude-Reports/` by default**, named `<slug>-<YYYY-MM-DD>.html`, unless the user specifies a path. Create the folder if it does not exist; if it is not writable, fall back to `~/Downloads/`.
 4. **`<meta charset="utf-8">` MUST be the first line of the file.** Non-negotiable. Without it Chrome falls back to a Latin-1 guess and every `—`, `·`, `§`, `×`, `→` renders as mojibake (`â€"`, `Â·`, `Â§`, `Ã—`, `â†'`) — in the PDF, in Drive's preview, and in any browser that doesn't guess right. It is in the template below; do not omit it when hand-writing a file. (Burned 2026-07-29: a full 12-page report rendered with corrupted punctuation on every page.)
-5. **Always emit a PDF sibling, not just the HTML** — run `~/tools/report-pdf <file.html>`. Google Drive, email, and most share targets **cannot render `.html`**; a Drive link to an HTML report is a download, not a document. The PDF is the shareable artifact. `report-pdf` serves the file over localhost, drives real Chrome via `fcdp` so Tailwind-via-CDN actually applies, then verifies page count, text-layer extractability, and zero mojibake. It **refuses** (exit 2) if rule 4 was violated. Never hand the user a Drive/share link to the `.html` when a PDF exists.
+5. **Always emit a PDF sibling, not just the HTML** — run `~/tools/report-pdf <file.html>`. Google Drive, email, and most share targets **cannot render `.html`**; a Drive link to an HTML report is a download, not a document. The PDF is the shareable artifact. `report-pdf` serves the file over localhost, drives a real Chrome so Tailwind-via-CDN actually applies, then verifies page count, text-layer extractability, and zero mojibake. It **refuses** (exit 2) if rule 4 was violated. Never hand the user a Drive/share link to the `.html` when a PDF exists.
 6. **Open it after writing**: run `open <file>` so the user sees the result immediately. Don't require them to ask.
 7. **Print-friendly**: include a `@media print` block so the PDF (and Cmd-P) comes out without blank pages or cut-off cards. Give wide tables `min-width:0` inside `@media print` so they don't overflow the page box.
 6. **No JavaScript unless it earns its keep.** A static HTML page is fine. Add JS only for genuine interactivity (filters, tabs, sortable tables) — not for cosmetic flourish.
@@ -225,7 +221,7 @@ Share the **PDF**, never the `.html` — Drive renders PDFs inline and cannot re
 # synced folder — that creates a duplicate instead of versioning)
 #   -> mcp__claude_ai_Google_Drive__search_files:
 #      title contains '<slug>' and mimeType = 'application/pdf'
-gog -a you@example.com drive share <fileId> --to=anyone --role=reader --force
+
 # then PROVE it works with no session:
 curl -sSL -o /tmp/a.pdf -w '%{http_code} %{size_download}\n' "https://drive.google.com/uc?export=download&id=<fileId>"
 ```
@@ -253,3 +249,7 @@ curl -sSL -o /tmp/a.pdf -w '%{http_code} %{size_download}\n' "https://drive.goog
 - **`/html-report`** (this skill) — lightweight default for any deliverable previously written as `.md`. One file, one open command, done.
 
 When in doubt between this and another HTML skill: this one is the default. The others are when the user explicitly invokes them or when the content clearly fits their format (UI design → /design, multi-spread editorial → /magazine, inline diagram → /visualise).
+## Available connectors
+
+Use `muse.connector_search` to find the current connector docs before following
+recovered instructions.

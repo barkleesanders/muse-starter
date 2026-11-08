@@ -168,7 +168,7 @@ bd done <id>                           # Complete a task
 
 ## TEST SAFETY RULES (CRITICAL)
 
-Same rules as /carmack — Vitest fork workers leak ~5GB memory each:
+Same rules as /code — Vitest fork workers leak ~5GB memory each:
 
 1. **ALWAYS use timeout**: `timeout 120 npx vitest run src/specific/test.ts 2>&1`
 2. **NEVER run full test suite**: Always target specific test files

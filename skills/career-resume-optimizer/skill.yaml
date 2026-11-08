@@ -1,0 +1,10 @@
+name: local_career_resume_optimizer
+title: Local career resume optimizer
+description: 'Native Muse skill: tailors a user-supplied resume to a supplied job description with ATS-compatible formatting. Flags missing metrics instead of inventing them.'
+include_in_prompt: true
+availability:
+  confidential_vm: true
+  needs_speech: false
+skill_improvement:
+  managed: true
+  needs_review: true

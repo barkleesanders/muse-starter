@@ -104,8 +104,8 @@ echo "=== Setup Complete ==="
 echo ""
 echo "Usage:"
 echo "  # Full pipeline (text → video)"
-echo '  ~/workspace/custom-skills/avatar-video/scripts/generate-avatar.sh "Your script here"'
+echo '  ~/workspace/skills/avatar-video/scripts/generate-avatar.sh "Your script here"'
 echo ""
 echo "  # Individual steps"
-echo '  ~/workspace/custom-skills/avatar-video/scripts/minimax-tts.sh "Text to speak" --voice Friendly_Person'
-echo '  ~/workspace/custom-skills/avatar-video/scripts/omnihuman-lipsync.sh --image portrait.png --audio speech.mp3'
+echo '  ~/workspace/skills/avatar-video/scripts/minimax-tts.sh "Text to speak" --voice Friendly_Person'
+echo '  ~/workspace/skills/avatar-video/scripts/omnihuman-lipsync.sh --image portrait.png --audio speech.mp3'

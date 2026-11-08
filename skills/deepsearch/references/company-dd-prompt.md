@@ -1,6 +1,6 @@
 # Company Due-Diligence Prompt (`company-dd`)
 
-**What this is:** a reusable investigation prompt that drives `/deepsearch` (multi-provider research + adversarial verification) and `/gov` (authority mapping + exact reporting URLs), escalating to `/chrome` (the user's real browser) for bot-walled sources. Built from a venture-firm due-diligence investigation; grounded in how professionals do it: GIJN's corporate-research methodology, the ILPA DDQ domains LPs use on fund managers, ACFE fraud red-flag framing, and the FinCEN CDD beneficial-ownership standard (identify 25%+ owners + one control person).
+**What this is:** a reusable investigation prompt that drives `/deepsearch` (multi-provider research + adversarial verification) and `/doge-service` (authority mapping + exact reporting URLs), escalating to `/chrome` (fcdp) for bot-walled sources. Built 2026-07-10 from the Roundtable Ventures investigation; grounded in how professionals do it: GIJN's corporate-research methodology, the ILPA DDQ domains LPs use on fund managers, ACFE fraud red-flag framing, and the FinCEN CDD beneficial-ownership standard (identify 25%+ owners + one control person).
 
 **How to invoke:** `/deepsearch run company-dd on <company name or URL>` — or paste the prompt block below with TARGET filled in. Works on VC firms, startups, agencies, "investment clubs," coaching outfits — any company whose legitimacy/claims need checking.
 
@@ -8,7 +8,7 @@
 
 ## THE PROMPT
 
-> Investigate **TARGET = <company name + domain>** with full due-diligence rigor. Load `/deepsearch` and `/gov` methods. Run every track below; classify every finding as **CONFIRMED (≥2 independent sources)** / **SELF-REPORTED** / **SINGLE-SOURCED** / **CONTRADICTED** / **UNVERIFIABLE**. Never promote self-reported marketing to fact. Absence of a filing is not illegal per se — the finding is the *gap between marketing claims and the public record*. Deliver an HTML report (verdict grid → timeline → claims-vs-record → people table → red flags/mitigants → reporting authority map → sources table with confidence + retrieved dates). curl-verify every report URL (a WAF 403 with a real-browser load is OK — note it).
+> Investigate **TARGET = <company name + domain>** with full due-diligence rigor. Load `/deepsearch` and `/doge-service` methods. Run every track below; classify every finding as **CONFIRMED (≥2 independent sources)** / **SELF-REPORTED** / **SINGLE-SOURCED** / **CONTRADICTED** / **UNVERIFIABLE**. Never promote self-reported marketing to fact. Absence of a filing is not illegal per se — the finding is the *gap between marketing claims and the public record*. Deliver an HTML report (verdict grid → timeline → claims-vs-record → people table → red flags/mitigants → reporting authority map → sources table with confidence + retrieved dates). curl-verify every report URL (a WAF 403 with a real-browser load is OK — note it).
 
 ### Track 1 — Identity & age (cheap, do first)
 - `whois <domain>` — creation date, registrant org/state, registrar.
@@ -16,7 +16,7 @@
 - LinkedIn company page: "Founded" year, employee band, associated-member count (compare against team-size claims later).
 
 ### Track 2 — Legal entity & registered footprint
-- State SOS registry (CA: bizfileonline.sos.ca.gov — **API 403s even in-browser; drive the UI in the real browser**: open the search page in the real browser → set input via native setter + `dispatchEvent(new Event('input'))` → Enter → scrape `document.body.innerText`; click the row to expand: filing date, status, standings, principal address, agent). Other states: Delaware ICIS, OpenCorporates (needs API token; its pages are also indexed by search engines — `websearch "opencorporates \"<name>\""`).
+- State SOS registry (CA: bizfileonline.sos.ca.gov — **API 403s even in-browser; drive the UI via fcdp**: `fcdp open` the search page → set input via native setter + `dispatchEvent(new Event('input'))` → Enter → scrape `document.body.innerText`; click the row to expand: filing date, status, standings, principal address, agent). Other states: Delaware ICIS, OpenCorporates (needs API token; its pages are also indexed by search engines — `websearch "opencorporates \"<name>\""`).
 - **Exact entity name vs marketing name** ("The X LLC" vs "X"); note if a fictitious-business-name (county FBN) filing would be required and whether checked.
 - **Characterize the principal address**: Redfin/Zillow/Google. A single-family house ≠ fraud, but weighs against "institutional firm" branding. Note who the registered agent is (a founder at a home address = self-filed micro entity).
 - Related entities: search the SOS for sibling/fund entities (LP, GP, "Fund I", "Management", "SPV").
@@ -47,7 +47,7 @@ For each named portfolio company/customer/partner:
 - Name-dropped affiliates (accelerators, funds, universities): are they real, and does *their side* acknowledge TARGET anywhere? One-way affiliation = SELF-REPORTED only.
 
 ### Track 7 — Solicitation & marketing behavior
-- **Meta Ad Library** (JS-rendered → real browser): `https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=<handle>&search_type=keyword_unordered` — paid ads, spend, targeting. Zero ads + tiny following = organic reach only.
+- **Meta Ad Library** (JS-rendered → fcdp): `https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=ALL&q=<handle>&search_type=keyword_unordered` — paid ads, spend, targeting. Zero ads + tiny following = organic reach only.
 - Interpret inbound URLs: `fbclid` is appended to ALL in-app link clicks (organic too); `utm_content=link_in_bio` = bio-link click, not proof of a paid ad.
 - Who do they solicit? Founders (deal flow) vs investors (LP money). **Public solicitation of investment + no Form D = Rule 506(c)/§5 problem → reporting paths.** Fees charged to founders ("pay-to-pitch", "diligence fee", "listing fee") = walk-away flag.
 - Social footprint reality check: followers/posts vs claimed scale; AI-copy artifacts left in public text (a strong tell of thin operations).
@@ -57,11 +57,11 @@ For each named portfolio company/customer/partner:
 - If deeper ownership tracing is needed: OpenCorporates, OCCRP Aleph (aleph.occrp.org), ICIJ Offshore Leaks (offshoreleaks.icij.org), Open Ownership register (per GIJN guide).
 
 ### Track 9 — Synthesis & delivery (deepsearch Phase 5–6)
-- Verdict grid (age / raised money? / legal status), verified timeline, claims-vs-record two-column, people track-record table, red flags vs mitigants, and a **reporting authority map** (gov style — exact URLs, verified live): SEC TCR (sec.gov/tcr), state regulator complaint portal (CA: dfpi.ca.gov/submit-a-complaint/), FTC (reportfraud.ftc.gov), platform reporting.
+- Verdict grid (age / raised money? / legal status), verified timeline, claims-vs-record two-column, people track-record table, red flags vs mitigants, and a **reporting authority map** (doge-service style — exact URLs, verified live): SEC TCR (sec.gov/tcr), state regulator complaint portal (CA: dfpi.ca.gov/submit-a-complaint/), FTC (reportfraud.ftc.gov), platform reporting.
 - Sources table: URL, what it established, confidence class, retrieved date. State what was NOT checked (county FBN, paywalled DBs) — calibrated uncertainty over silent gaps.
 
 ### Escalation rules (bot-walls)
-`WebSearch/WebFetch → websearch CLI / Exa crawl → the real browser (via `/chrome`) on any 403/JS-wall. Known bot-walled-but-fine-in-browser: sec.gov, dfpi.ca.gov, bizfileonline.sos.ca.gov, Crunchbase, PitchBook, Meta/Instagram, most news WAFs. A real 404/410 = actually gone; don't browser-retry.
+`WebSearch/WebFetch → websearch CLI / Exa crawl → fcdp real Chrome` on any 403/JS-wall. Known bot-walled-but-fine-in-browser: sec.gov, dfpi.ca.gov, bizfileonline.sos.ca.gov, Crunchbase, PitchBook, Meta/Instagram, most news WAFs. A real 404/410 = actually gone; don't browser-retry.
 
 ### Hard rules
 - Cite or don't claim; every stakes-bearing assertion = live URL + retrieved date.
@@ -73,7 +73,7 @@ For each named portfolio company/customer/partner:
 ---
 
 ## Field notes (verified 2026-07-10, Roundtable Ventures run)
-- CA SOS `businesssearch` API returns 403 even from a logged-in browser fetch — only the SPA's own token works; **driving the UI in the real browser works** (native value setter + input event + Enter, then innerText scrape; row-click expands full record incl. standings + agent).
+- CA SOS `businesssearch` API returns 403 even from a logged-in browser fetch — only the SPA's own token works; **driving the UI via fcdp works** (native value setter + input event + Enter, then innerText scrape; row-click expands full record incl. standings + agent).
 - EDGAR full-text (`efts.sec.gov/LATEST/search-index?q="phrase"`) covers 2001+ and includes Form D bodies; needs a `User-Agent: <contact>` header.
 - IAPD firm API field: `firm_ia_scope` ACTIVE/INACTIVE; `firm_other_names` catches DBAs.
 - BrokerCheck API needs `Referer: https://brokercheck.finra.org/` and returns fuzzy hits — verify exact names.

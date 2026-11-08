@@ -181,6 +181,6 @@ After applying a fix:
 
 ## Adjacent reading
 
-- `~/workspace/custom-skills/carmack/references/ux-patterns.md` — UX pre-checks
-- `~/workspace/custom-skills/carmack/references/css-layout-patterns.md` — layout traps
-- `~/workspace/custom-skills/carmack/references/responsive-design.md` — responsive rules
+- `~/workspace/skills/code/references/ux-patterns.md` — UX pre-checks
+- `~/workspace/skills/code/references/css-layout-patterns.md` — layout traps
+- `~/workspace/skills/code/references/responsive-design.md` — responsive rules

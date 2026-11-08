@@ -1,0 +1,10 @@
+name: local_career_success_coach
+title: Local career success coach
+description: 'Native Muse skill: career goal framing and accountability through six decision lenses, separating facts, assumptions, and tradeoffs. No recurring reminders.'
+include_in_prompt: true
+availability:
+  confidential_vm: true
+  needs_speech: false
+skill_improvement:
+  managed: true
+  needs_review: true

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# bin/cnshop - shim into the ecommerce-search unified CLI.
+exec ~/workspace/ecommerce-search/cli/cnshop "$@"

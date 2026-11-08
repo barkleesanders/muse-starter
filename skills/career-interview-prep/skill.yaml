@@ -1,0 +1,10 @@
+name: local_career_interview_prep
+title: Local career interview prep
+description: 'Native Muse skill: interview preparation from a company, job description, and resume, using only real company sources and user-supplied evidence. Never simulates research.'
+include_in_prompt: true
+availability:
+  confidential_vm: true
+  needs_speech: false
+skill_improvement:
+  managed: true
+  needs_review: true

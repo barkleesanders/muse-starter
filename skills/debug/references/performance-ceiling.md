@@ -1,9 +1,9 @@
 # Performance Ceiling Discipline — "compared to what?"
 
 > Loaded by the `performance-oracle` agent (ceiling-first gate), the `perf-ceiling-check.sh`
-> Stop hook, and any `/carmack` perf work. The one rule: **a delta-from-start is not a result.
+> Stop hook, and any `/code` perf work. The one rule: **a delta-from-start is not a result.
 > A gap-to-floor is.** This is the **optimization instance** of the general "Compared to What?"
-> principle — `~/workspace/custom-skills/shared/ground-truth-calibration.md`.
+> principle — `~/workspace/skills/shared/ground-truth-calibration.md`.
 
 ## Why this exists (the renderer-psychosis incident)
 

@@ -2,7 +2,7 @@
 
 Load this file BEFORE drafting any agency reply or follow-up. These are
 techniques from live work, not one-off stories. Combine with the last-letter
-check in a companion ground-truth standards document.
+check in `shared/ground-truth-standard.md`.
 
 ## When to invoke
 
@@ -31,7 +31,7 @@ Do:
 - File the same items on the other side of the conversation (DEM/HSOC, DPH
   Street Team, HSH, SFPD, Supervisor). A Mayor close is not citywide
   non-existence.
-- SOTF only after the local request-state tracker's gate check passes AND they blow the EFNQ 7-day or
+- SOTF only after `~/tools/nr-state --gate` AND they blow the EFNQ 7-day or
   repeat the bare close.
 
 Do not:
@@ -70,8 +70,8 @@ check).
 
 ## 5. Sent-folder check before any follow-up
 
-Before sending, search your sent mail on that exact thread. Other agents
-or staff may already have sent accountability drafts on it. Do not stack a second letter on the same
+Before sending, search Gmail Sent on that exact thread. Chief of Staff and
+other agents send accountability drafts. Do not stack a second letter on the same
 thread unless the user explicitly wants the second one.
 
 ## 6. Never invent identifiers
