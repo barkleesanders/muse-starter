@@ -1,0 +1,5 @@
+name: "professional_text_editor"
+title: "Professional Text Editor"
+description: ">- Use when polishing the user's prose for email, docs, or posts into clear professional writing (migrated from Custom GPT)."
+category: "Work and knowledge"
+include_in_prompt: false

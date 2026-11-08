@@ -1,0 +1,5 @@
+name: "security_deep"
+title: "Security Deep"
+description: "Deep security review of a git diff with proof-of-exploitability and auditable coverage. Use when the built-in /security-review is not enough — when you need evidence a vulnerability is real (PoC, not vibes), proof that EVERY changed file was reviewed, or expansion to sibling instances of the same flawed pattern. Triggers on \"deep security review\", \"security audit this branch\", \"prove this vuln is exploitable\", \"did you check every file\", \"security-deep\", \"/security-deep\". For a fast PR-noise-filtered pass, use the built-in /security-review instead."
+category: "Work and knowledge"
+include_in_prompt: false

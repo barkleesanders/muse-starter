@@ -1,0 +1,5 @@
+name: "printing_press"
+title: "Printing Press"
+description: "Generate a ship-ready CLI for an API with a lean research -> generate -> build -> shipcheck loop."
+category: "Work and knowledge"
+include_in_prompt: false

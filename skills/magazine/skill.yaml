@@ -1,0 +1,5 @@
+name: "magazine"
+title: "Magazine"
+description: "Render any content as a magazine-style HTML editorial — single self-contained file, Fraunces + Inter typography, each section gets its own distinct full-viewport spread (hero, dark midnight, rose alert stamp, terminal, academic drop-cap, big-stat, vinyl vintage, poster, scientific, etc.). Use when the user asks to 'magazine-style', 'editorial layout', 'morning edition', 'render as a zine', or wants any list / digest / report / minutes / curated content rendered as a designed publication instead of raw text. Triggers: 'magazine', 'morning edition', 'editorial', 'newsletter', 'zine', 'magazine-style', 'render this as a magazine', 'make it look like a magazine', 'beautiful html', 'designed digest'. Especially good for: HN/RSS feeds, meeting minutes, research summaries, project status reports, op-ed drafts, link roundups, daily briefings."
+category: "Work and knowledge"
+include_in_prompt: false

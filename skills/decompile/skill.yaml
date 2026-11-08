@@ -1,0 +1,5 @@
+name: "decompile"
+title: "Decompile"
+description: "Reverse-engineer ANY binary, bundle, distributable, OR the private API of a website you're logged into. Binaries — compiled native (.exe/.dll/.so/.dylib/Mach-O), JVM (.jar/.apk/.dex), .NET (.dll/.exe IL), iOS (.ipa), browser extensions (.crx/.xpi), WebAssembly (.wasm), Python bytecode (.pyc), React Native Hermes (.hbc), JS bundles, firmware blobs, installers (.deb/.rpm/.dmg/.msi). Websites — record a real logged-in session to HAR (incl. the log-out/log-in auth handshake), distill it, and generate a typed TypeScript client + MCP server. Routes to the correct tool per artifact class — Ghidra is just one tool in the kit. Use when the user says decompile, disassemble, reverse-engineer, RE, \"look inside this binary/app/extension/firmware\", \"make an API/MCP server for this website\", \"capture the network calls this site makes\", HAR, triage malware, audit a binary for vulns, diff functions across versions, or port a closed-source thing to a CLI. Does NOT debug or pentest live websites — for debugging route to /debug or /chrome."
+category: "Work and knowledge"
+include_in_prompt: false

@@ -1,0 +1,5 @@
+name: "zi_search"
+title: "Zi Search"
+description: "Free-only ZoomInfo company search via zi-search CLI (lookup IDs, search companies, find similar). Use for AIVA GTM company lists, ICP sizing, TAM counts, industry/metro/tech filter resolution. Commands: zi-search lookup / search / similar. Never enrich. Never contacts, intent, scoops, news, research, or raw. Trigger on ZoomInfo company search, GTM company lists, ICP, firmographics, \"how many companies like X\"."
+category: "Work and knowledge"
+include_in_prompt: false

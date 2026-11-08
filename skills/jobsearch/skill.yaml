@@ -1,0 +1,5 @@
+name: "jobsearch"
+title: "Jobsearch"
+description: "Search job listings in the US (USAJOBS federal, Adzuna private market, and Greenhouse/Lever/Ashby company boards) and Denmark (Jobindex, Jobnet, Akademikernes Jobbank, Jobdanmark), then run the AI job-application workflow from the ai-job-search repo. Use when the user says \"/jobsearch\", \"find jobs\", \"search jobs\", \"jobs in USA / [US city]\", \"federal jobs\", \"USAJOBS\", \"Adzuna\", \"jobs at [company]\", \"Danish jobs\", \"jobindex/jobnet/jobbank/jobdanmark\", wants to look up listings, job categories, occupation codes, or salary benchmarks, or wants to evaluate fit / tailor a CV / write a cover letter for a posting. Wraps nine Bun CLIs (5 US sources + 4 Danish portals) plus the repo's /setup, /scrape, /apply commands."
+category: "Work and knowledge"
+include_in_prompt: false

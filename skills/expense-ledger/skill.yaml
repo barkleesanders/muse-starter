@@ -1,0 +1,5 @@
+name: "expense_ledger"
+title: "Expense Ledger"
+description: "> Turn a receipt / invoice / bill (image or PDF) into a structured, Schedule-C-categorized ledger entry — Claude reads the document with its own vision, extracts merchant/date/total/tax/ line-items, picks the right US Schedule C category, and stores it in a local SQLite ledger via the `ledger` CLI. A self-hosted, no-web-app, no-external-LLM reimplementation of what TaxHacker does. Use when the user shares a receipt/invoice/bill and wants it logged, says \"log this receipt\", \"add this expense\", \"track this for taxes\", \"what are my deductions\", \"schedule c\", \"export my expenses\", \"taxhacker\", or wants a year-end deductible-expense worksheet. NOT for filing a return (that's aiwyn-tax / nonprofit-tax) — this is the bookkeeping/extraction layer that feeds it."
+category: "Work and knowledge"
+include_in_prompt: false

@@ -1,0 +1,5 @@
+name: "printing_press_catalog"
+title: "Printing Press Catalog"
+description: "Browse and install pre-built Go CLIs for popular APIs from the catalog"
+category: "Work and knowledge"
+include_in_prompt: false

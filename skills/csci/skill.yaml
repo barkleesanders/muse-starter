@@ -1,0 +1,5 @@
+name: "csci"
+title: "Csci"
+description: ">- Control the user's local Claude for Life Sciences (\"Claude Science\" / operon) app from the Claude Code CLI via the `csci` command. Use when the user wants to drive the science app — ask/continue a research conversation with the OPERON agent, list or read projects, pull artifacts/results, inspect the 33 wired connectors (Google Drive, Gmail, Calendar + 24 bio databases like BioMart/PubMed/ChEMBL/ClinVar), check agents/skills/kernels, or search synced data. Triggers: \"csci\", \"claude science\", \"the science app\", \"my life sciences app\", \"ask OPERON\", \"science project\", \"localhost:8765\", \"operon\", \"run this on my genomics/DNA data\". Not for general bioinformatics Q&A (use the app's own agent for that) — this is the control layer."
+category: "Work and knowledge"
+include_in_prompt: false

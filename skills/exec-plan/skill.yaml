@@ -1,0 +1,5 @@
+name: "exec_plan"
+title: "Exec Plan"
+description: "Execution plan management for long-running coding sessions. Combines self-contained living plans (restartable from file alone) with generator-evaluator separation, sprint contracts, and structured context handoffs. Use when: building a multi-milestone feature, running a multi-session refactor, any task too large for one context window, or when the user says 'exec-plan', 'execution plan', 'create a plan', 'resume plan', 'eval my work', or 'plan status'. Commands: /exec-plan create, /exec-plan resume, /exec-plan status, /exec-plan eval, /exec-plan close, /exec-plan list."
+category: "Work and knowledge"
+include_in_prompt: false

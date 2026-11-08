@@ -1,0 +1,5 @@
+name: "avatar_video"
+title: "Avatar Video"
+description: "Generates talking avatar videos by chaining image generation (nano-banana), voice synthesis (MiniMax Speech via fal.ai), and lip-sync animation (OmniHuman 1.5 or Infinite Talk via fal.ai). Use when asked to \"create a talking avatar\", \"generate a video with speech\", \"make an avatar say something\", \"lip-sync\", or any video generation task combining portrait + voice + animation."
+category: "Work and knowledge"
+include_in_prompt: false

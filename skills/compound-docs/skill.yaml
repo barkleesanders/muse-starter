@@ -1,0 +1,5 @@
+name: "compound_docs"
+title: "Compound Docs"
+description: "Capture solved problems as categorized documentation with YAML frontmatter for fast lookup"
+category: "Work and knowledge"
+include_in_prompt: false

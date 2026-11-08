@@ -1,0 +1,5 @@
+name: "glean_connector_reviewer"
+title: "Glean Connector Reviewer"
+description: ">- Use when reviewing or refining Glean connector JSON configs (migrated from Custom GPT)."
+category: "Work and knowledge"
+include_in_prompt: false

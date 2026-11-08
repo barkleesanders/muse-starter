@@ -1,0 +1,5 @@
+name: "token_usage"
+title: "Token Usage"
+description: "Analyze Claude Code token usage across all projects and sessions"
+category: "Work and knowledge"
+include_in_prompt: false

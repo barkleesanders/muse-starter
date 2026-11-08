@@ -1,0 +1,5 @@
+name: "json_structurer"
+title: "Json Structurer"
+description: ">- Use when shaping messy data into strict JSON schemas or cleaned structures (migrated from Custom GPT)."
+category: "Work and knowledge"
+include_in_prompt: false

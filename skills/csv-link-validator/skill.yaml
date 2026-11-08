@@ -1,0 +1,5 @@
+name: "csv_link_validator"
+title: "Csv Link Validator"
+description: ">- Use when validating links inside CSV/spreadsheet exports (migrated from Custom GPT)."
+category: "Work and knowledge"
+include_in_prompt: false

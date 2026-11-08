@@ -1,0 +1,5 @@
+name: "docuseal_cli"
+title: "Docuseal Cli"
+description: "Use `dscli` for ALL DocuSeal work — uploading templates, placing fields, creating submissions, sharing signing URLs. The CLI bakes in workarounds for DocuSeal's quirks (silent page-drop on /templates/pdf, submission field-state caching at create time, immediate-email-on-create traps, default_value bleed). Triggers on \"docuseal\", \"dscli\", \"send a signature request\", \"create a signing form\", anything involving DocuSeal templates or submissions."
+category: "Work and knowledge"
+include_in_prompt: false

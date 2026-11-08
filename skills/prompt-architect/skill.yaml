@@ -1,0 +1,5 @@
+name: "prompt_architect"
+title: "Prompt Architect"
+description: ">- Use when analyzing or rewriting prompts using strong prompt-engineering patterns (migrated from Custom GPT)."
+category: "Work and knowledge"
+include_in_prompt: false

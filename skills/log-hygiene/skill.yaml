@@ -1,0 +1,5 @@
+name: "log_hygiene"
+title: "Log Hygiene"
+description: "Proactive log/observability hygiene loop. Assesses recent logs from a real source (wrangler tail, CF Logpush, cron/watcher logfiles, D1), clusters errors, then improves ambiguous error messages, downgrades noise (never deletes), and adds debugging attributes at silent failure points. Runs manually or as a scheduled cron (the Phase-2 Hermes job). Triggers: 'assess the logs', 'clean up the logs', 'improve log output', 'log hygiene', 'why are these errors so vague', '/log-hygiene'."
+category: "Work and knowledge"
+include_in_prompt: false

@@ -1,0 +1,5 @@
+name: "ui_improver"
+title: "Ui Improver"
+description: "Complete UI improvement workflow combining design intelligence, micro-polish, and code simplification. Use when building, reviewing, or improving any UI — new pages, components, style decisions, accessibility reviews, animation polish, code cleanup after writing frontend code. Triggers on any frontend work: \"make this look better\", \"polish the UI\", \"review this component\", \"improve the interface\", \"simplify this code\", building dashboards, landing pages, forms, modals, buttons, or any visual element."
+category: "Work and knowledge"
+include_in_prompt: false

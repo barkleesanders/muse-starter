@@ -1,0 +1,5 @@
+name: "api2cli"
+title: "Api2cli"
+description: "Generate a working CLI from any API, then wrap it in a Claude Code skill. Point it at API docs, a live URL, or a peek-api capture and get a dual-mode Commander.js CLI (human + agent output) plus a ready-to-use skill folder. Use when user wants to wrap an API in a CLI, generate a CLI from API docs, turn an API into a command-line tool, scaffold a CLI from discovered endpoints, or create a skill for an API."
+category: "Work and knowledge"
+include_in_prompt: false

@@ -1,0 +1,5 @@
+name: "install_anti_slop"
+title: "Install Anti Slop"
+description: "Install, configure, update, or upgrade the vendored anti-slop Oxlint plugins (dmmulroy/anti-slop) in a local TypeScript or JavaScript repository. Use when adding anti-slop lint rules, picking up upstream rules or fixes, migrating an existing installation while preserving local customizations, or when an oxlint anti-slop gate reports UNMEASURED and the setup needs repair."
+category: "Work and knowledge"
+include_in_prompt: false

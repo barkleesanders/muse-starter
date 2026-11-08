@@ -1,0 +1,5 @@
+name: "deepsearch"
+title: "Deepsearch"
+description: "Deep multi-source research on a topic across a 10-provider search stack via the `websearch` CLI with automatic quota failover — self-hosted SearXNG and Marginalia (both keyless/unmetered), Linkup, Parallel, You.com, Tavily, Brave, Jina, Exa, TinyFish — plus the Exa MCP for filtered/semantic search and full-page crawling. Fans out queries, reads sources, adversarially verifies every load-bearing claim, and synthesizes a cited HTML report. Use when the user says 'deep research', 'research <topic>', 'dig into <topic>', 'deepsearch', '/deepsearch', or wants a thorough, fact-checked, multi-source brief — NOT a single quick lookup (use the plain WebSearch tool for that)."
+category: "Work and knowledge"
+include_in_prompt: false

@@ -1,0 +1,5 @@
+name: "printing_press_polish"
+title: "Printing Press Polish"
+description: "> Polish a generated CLI to pass verification and become publish-ready. Runs diagnostics (dogfood, verify, scorecard, go vet, gosec), automatically fixes all issues (verify failures, static-analysis findings, dead code, descriptions, README, MCP tool quality), reports the before/after delta, and offers to publish. Use after any /printing-press run, or on any CLI in $PRESS_LIBRARY/. Trigger phrases: \"polish\", \"improve the CLI\", \"fix verify\", \"make it publish-ready\", \"clean up the CLI\", \"get this ready to ship\"."
+category: "Work and knowledge"
+include_in_prompt: false

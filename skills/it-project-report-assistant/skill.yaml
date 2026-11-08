@@ -1,0 +1,5 @@
+name: "it_project_report_assistant"
+title: "It Project Report Assistant"
+description: ">- Use when drafting IT project status/report writeups (migrated from Custom GPT)."
+category: "Work and knowledge"
+include_in_prompt: false

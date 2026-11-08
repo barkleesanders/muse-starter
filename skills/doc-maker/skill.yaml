@@ -1,0 +1,5 @@
+name: "doc_maker"
+title: "Doc Maker"
+description: ">- Use when creating developer documentation people can actually use (migrated from Custom GPT)."
+category: "Work and knowledge"
+include_in_prompt: false

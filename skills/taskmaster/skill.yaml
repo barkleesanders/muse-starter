@@ -1,0 +1,5 @@
+name: "taskmaster"
+title: "Taskmaster"
+description: "| Stop hook that keeps the agent working until all plans and user requests are 100% complete. Fires when the agent tries to stop, re-examines the plan and task list, and forces continuation if anything is unfinished. Prevents premature stopping on multi-step tasks."
+category: "Work and knowledge"
+include_in_prompt: false

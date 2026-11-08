@@ -1,0 +1,5 @@
+name: "infinite_faq"
+title: "Infinite Faq"
+description: ">- Add an \"infinite FAQ\" to any Hono-on-Cloudflare-Workers site: a normal accordion FAQ whose last row is \"Ask anything else\" — focusing it turns it into an input, submitting streams a Workers AI answer grounded in the site's own content inline below the row, with a \"Reading the docs\" shimmer before the first token and a Stop button while streaming. Use when the user says \"infinite faq\", \"ask anything else\", \"AI FAQ\", \"add an FAQ that answers anything\", \"FAQ with a chat row\", \"foglamp-style FAQ\", or wants an accordion FAQ backed by Workers AI. Ships a verified 4-file drop-in (SSR section, client island, streaming route, CSS) plus a runnable example Worker and per-site integration steps."
+category: "Work and knowledge"
+include_in_prompt: false

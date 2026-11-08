@@ -1,0 +1,5 @@
+name: "notion_link_triage"
+title: "Notion Link Triage"
+description: "Auto-fetch titles, classify, and dedupe links saved to the user's Notion link-inbox database. Use when the user asks to triage their Notion links, inbox-zero a Notion link database, process saved tweets/posts/articles, or auto-action a Notion page they pasted. Triggers on \"triage notion links\", \"inbox-zero notion\", \"process notion links\", \"dedupe notion\", or pasting a Notion DB URL with v= query param."
+category: "Work and knowledge"
+include_in_prompt: false

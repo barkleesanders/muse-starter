@@ -1,0 +1,5 @@
+name: "climaker"
+title: "Climaker"
+description: "Generate a token-efficient Go CLI + MCP server for ANY API or website using the CLI Printing Press (mvanhorn/cli-printing-press). Use when the user wants to \"make a CLI\", \"print a CLI\", \"wrap an API in a CLI\", \"generate an MCP server for an API\", build an agent-native CLI, reprint/polish/publish a generated CLI, or score/dogfood/verify one. Triggers: \"climaker\", \"printing press\", \"/printing-press\", \"make a CLI for <API>\", \"build a CLI from these docs\", \"wrap <service> as a CLI\", \"generate an MCP server\"."
+category: "Work and knowledge"
+include_in_prompt: false

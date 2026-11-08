@@ -1,0 +1,5 @@
+name: "debugging_genius"
+title: "Debugging Genius"
+description: ">- Use when stuck debugging a systems/software issue and need a rigorous debug loop (migrated from Custom GPT)."
+category: "Work and knowledge"
+include_in_prompt: false

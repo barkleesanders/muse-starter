@@ -1,0 +1,5 @@
+name: "makegoal"
+title: "Makegoal"
+description: ">- MERGED into /goal (2026-08-26) — kept as a redirect for muscle memory and for the openai.yaml implicit invocation. The brief-fill + parallel-subgoal + synthesis workflow is now `/goal make <task>` (aliases `/goal build`, `/goal parallel`). Invoking /makegoal routes there. Use when the user types /makegoal, asks for parallel goals for a task, asks to fill the build-task template, or asks to solve a task with parallel goals or parallel agents."
+category: "Work and knowledge"
+include_in_prompt: false

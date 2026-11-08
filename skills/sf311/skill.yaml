@@ -1,0 +1,5 @@
+name: "sf311"
+title: "Sf311"
+description: "| DOGE Service (Digital Operations for Government Enforcement) for San Francisco 311. Relentlessly identifies, reports, and forces action on city issues. Use when: - User wants to report a city issue in San Francisco (pothole, graffiti, dumping, etc.) - User mentions SF311, 311, or asks about city services in SF - User provides a photo of an issue and wants it reported - User asks about abandoned vehicles, blight, or code violations in SF - Keywords: \"report pothole\", \"sf311\", \"graffiti\", \"illegal dumping\", \"abandoned car SF\" Don't use when: - Issue is on private property → Different jurisdiction, may need building dept or police - Issue is on federal land (Presidio, Golden Gate) → Use National Park Service - Emergency situation → Call 911, not 311 - Issue is outside San Francisco → Use that city's 311 or doge-records for general gov - User wants FOIA/records request → Use doge-records skill instead"
+category: "Work and knowledge"
+include_in_prompt: false

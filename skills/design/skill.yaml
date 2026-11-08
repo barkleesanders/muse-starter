@@ -1,0 +1,5 @@
+name: "design"
+title: "Design"
+description: "Design and build frontend interfaces with high design quality. Picks a bold aesthetic direction, then hands the brief to the Hallmark anti-AI-slop engine (default) to design/build/audit/redesign — or generates screens via Google Stitch MCP when the user explicitly asks for Stitch. Use for UI design, screen mockups, design systems, building components / pages / apps, or any \"design\" / \"build a [component/page/UI]\" request."
+category: "Work and knowledge"
+include_in_prompt: false

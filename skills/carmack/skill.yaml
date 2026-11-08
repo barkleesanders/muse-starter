@@ -1,0 +1,5 @@
+name: "carmack"
+title: "Carmack"
+description: "Alias for /code (the engineering agent was renamed from /carmack to /code on 2026-10-12). Use /code."
+category: "Work and knowledge"
+include_in_prompt: false
