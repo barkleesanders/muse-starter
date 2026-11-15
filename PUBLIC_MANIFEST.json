@@ -12,6 +12,7 @@
     "PORTING.md",
     "PUBLIC_MANIFEST.json",
     "README.md",
+    "SETUP.md",
     "SHARE.md",
     "agents/README.md",
     "agents/agent-native-reviewer.md",
@@ -75,6 +76,7 @@
     "scripts/check-installer.sh",
     "scripts/generate-manifest.py",
     "scripts/generate-skill-yaml.py",
+    "scripts/install-tools.sh",
     "scripts/test-install.sh",
     "skills/ab-test-setup/SKILL.md",
     "skills/ab-test-setup/evals/evals.json",
@@ -975,5 +977,5 @@
     "templates/TOOLS.md",
     "templates/USER.md"
   ],
-  "file_count": 973
+  "file_count": 975
 }

@@ -1,13 +1,16 @@
-# Beads — task tracking (OPTIONAL, off by default)
+# Beads — task tracking for this setup
 
-> **Read this first if you already track work somewhere.** Beads is one
-> of three trackers referenced by this pack (beads, the `goal` ledger,
-> and `taskmaster`). If you already run a task system — a shared work
-> record, shared reminders, another tracker — **do not enable beads on
-> top of it.** Two trackers means a second source of truth, and work
-> will silently split across them. The installer holds the
-> tracker-bearing skills back as opt-in for exactly this reason.
-> Pick ONE tracker: yours, or this one.
+Beads is the tracker the reference setup runs on, and this starter is a
+copy of that setup: **install beads as part of [SETUP.md](SETUP.md)**
+unless the exception below applies to you.
+
+> **The one exception — read this if you already track work somewhere.**
+> If you already run a task system — a shared work record, shared
+> reminders, another tracker — **do not enable beads on top of it.**
+> Two trackers means a second source of truth, and work will silently
+> split across them. Pick ONE tracker: yours, or this one. (The `goal`
+> ledger and `taskmaster` in this pack mirror into beads; they are not
+> separate trackers to run in parallel with yours either.)
 
 [Beads](https://github.com/steveyegge/beads) (`bd`) is a Dolt-powered issue
 tracker built for AI coding agents. It gives your assistant persistent,

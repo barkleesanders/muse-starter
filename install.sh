@@ -221,3 +221,4 @@ if [ -n "${HELD_BACK// }" ]; then
 fi
 echo "tools installed:       none — this installer copies files only; external tools a skill references are NOT installed (per-skill list: MANIFEST.json)"
 echo "activated state:       none — no tracker, schedule, service, or account was created or modified"
+echo "next steps:            install beads (this setup's tracker) + the core tools — see SETUP.md, or run: bash scripts/install-tools.sh"

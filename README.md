@@ -50,6 +50,15 @@ creates no tracker, schedule, or service.
 Set `MUSE_WORKSPACE` to install the workspace parts somewhere other than
 `~/workspace`.
 
+### Then: install the tracker and the tools
+
+The files alone are not the setup — the skills assume **beads (`bd`)**
+and a small core tool belt (`git`, `node`, `python3`, `jq`, `gh`,
+`wrangler`, …) are installed. [SETUP.md](SETUP.md) is the full flow:
+beads install, the tool table with macOS/Linux commands, an install
+helper (`scripts/install-tools.sh`, dry-run by default), and the
+per-skill extras list in MANIFEST.json.
+
 ### What each skill needs: MANIFEST.json
 
 [`MANIFEST.json`](MANIFEST.json) is a generated per-skill manifest —
@@ -79,13 +88,14 @@ installer contract with `bash scripts/check-installer.sh` and
 - **Identity templates** — starter `SOUL.md`, `USER.md`, `MEMORY.md`,
   `AGENTS.md`, `TOOLS.md`, and `IDENTITY.md`: the standing files this
   setup is designed around.
-- **Optional beads task tracking** — [`BEADS.md`](BEADS.md) describes
-  `bd`, the Dolt-backed tracker a few skills reference. It is **opt-in
-  and off by default**: if you already run a task system (a work record,
-  shared reminders, another tracker), do not enable a second one — a
-  pack that assumes it is your only tracker will silently create a
-  second source of truth. [`SHARE.md`](SHARE.md) is a short copy-paste
-  blurb for handing this starter to someone.
+- **Beads task tracking** — [`BEADS.md`](BEADS.md) sets up `bd`, the
+  Dolt-backed tracker this setup runs on; the workflow skills assume
+  it. **Install it as part of [SETUP.md](SETUP.md)** — the starter is a
+  working copy of the reference setup, tracker and tools included. The
+  one exception: if you already run a task system (a work record,
+  shared reminders, another tracker), keep yours and skip beads — a
+  second tracker is a second source of truth. [`SHARE.md`](SHARE.md)
+  is a short copy-paste blurb for handing this starter to someone.
 
 ## Roles, hooks, and other honest deltas
 

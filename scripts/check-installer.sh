@@ -23,6 +23,9 @@ if grep -E 'workspace/skills.*[Aa]uto-discovered' README.md >/dev/null; then
   err "README claims ~/workspace/skills/ is auto-discovered"
 fi
 grep -q 'custom-skills' MUSE.md || err "MUSE.md does not name the custom-skills discovery path"
+[ -f SETUP.md ] || err "SETUP.md missing (beads + tools setup flow)"
+grep -q 'bd init' SETUP.md 2>/dev/null || err "SETUP.md does not cover beads install/init"
+grep -q 'SETUP.md' README.md || err "README does not link SETUP.md"
 
 python3 - <<'PY' || exit 1
 import json, sys
