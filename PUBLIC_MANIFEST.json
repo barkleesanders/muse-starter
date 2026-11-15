@@ -77,6 +77,7 @@
     "scripts/generate-manifest.py",
     "scripts/generate-skill-yaml.py",
     "scripts/install-tools.sh",
+    "scripts/publish-check.sh",
     "scripts/test-install.sh",
     "skills/ab-test-setup/SKILL.md",
     "skills/ab-test-setup/evals/evals.json",
@@ -977,5 +978,5 @@
     "templates/TOOLS.md",
     "templates/USER.md"
   ],
-  "file_count": 975
+  "file_count": 976
 }
