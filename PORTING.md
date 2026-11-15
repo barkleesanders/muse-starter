@@ -5,14 +5,33 @@ frontmatter format (`name`, `description`, plus `user-invocable` /
 `allowed-tools` where present) is already Muse-compatible, so skills needed
 no structural changes — only install-path rewrites.
 
+## Discovery: the two rules that decide whether anything works
+
+1. **Discovery folder.** Muse scans `~/workspace/custom-skills/` for
+   custom skills — not `~/workspace/skills/`. Skills copied anywhere else
+   are invisible to skill search, however complete the copy looks.
+   (`~/workspace/skills/` is used by the installer only as a files-only
+   library for opt-in skills that were not activated.)
+2. **Skill descriptor.** Muse identifies a skill by the `skill.yaml`
+   beside its `SKILL.md` (`name`, `title`, `description`, `category`,
+   `include_in_prompt`) — not by the Claude Code frontmatter inside
+   `SKILL.md`. Every skill ships a generated `skill.yaml`; regenerate
+   with `python3 scripts/generate-skill-yaml.py`.
+
+An earlier port got rule 1 wrong, a later refresh accidentally restored
+the wrong target, and both times the pack "installed" silently. The
+regression guard `scripts/check-installer.sh` and the sandbox test
+`scripts/test-install.sh` now pin the contract.
+
 ## Mechanical rewrites (applied by `convert.py`)
 
 | Claude Code original | Muse starter |
 |---|---|
-| `~/.claude/skills/` | `~/workspace/skills/` |
+| `~/.claude/skills/` | `~/workspace/custom-skills/` |
 | `~/.claude/agents/` | `~/workspace/agents/` |
 | `~/.claude/CLAUDE.md` | `~/workspace/MUSE.md` |
 | `model: sonnet/haiku/inherit` in `agents/*.md` frontmatter | removed — Muse selects the model at subagent spawn time |
+| Claude Code `SKILL.md` frontmatter as the only descriptor | a `skill.yaml` generated beside every `SKILL.md` |
 
 ## Intentionally unchanged
 
@@ -30,15 +49,27 @@ starter's install location:
 
 ## Known deltas
 
-- **Lifecycle hooks.** Claude Code `UserPromptSubmit` / `Stop` hooks
-  (`taskmaster`, `loop-runner`) have no equivalent in this starter; the
-  hook scripts are included for reference. Muse-native scheduling
-  (crons) and event hooks are the replacement — wire them per your setup.
-- **`skills/shared/` references.** About two dozen cross-references point
-  at `~/workspace/skills/shared/`, which ships only with the private
-  companion kit and is intentionally excluded from this public repo. They
-  resolve once the companion kit is installed; until then treat them as
-  optional deep-reference links.
+- **Lifecycle hooks do not port.** Claude Code `UserPromptSubmit` /
+  `Stop` hooks have no Muse equivalent in this pack. Concretely: the
+  `goal` skill's ledger and scripts ship, but the `goal-injector.sh`
+  hook that steers every message in Claude Code is **not included** —
+  on Muse the ledger works and the per-message steering does not.
+  `taskmaster` and `loop-runner` hook scripts are included for
+  reference only. Muse-native scheduling (crons) and event hooks are
+  the replacement — wire them per your setup, and register any standing
+  loop in your own jobs list: this pack creates no schedules.
+- **Trackers do not stack.** `goal`, `taskmaster`, and beads (`bd`) each
+  bring their own task state. If you already run a tracker or a shared
+  work record, leave all three off (the installer holds them back as
+  opt-in) — running two trackers creates a second source of truth.
+- **`skills/shared/` references.** 19 skills cross-reference
+  `~/workspace/skills/shared/`, which ships only with the private
+  companion kit and is intentionally excluded from this public repo.
+  They resolve once the companion kit is installed; until then they are
+  dead ends. MANIFEST.json (`shared_layer_skills`) names all 19.
+- **`~/.claude/` references.** 63 skills reference Claude Code paths
+  (transcripts, settings, state). On a Muse-only system those are dead
+  ends too; MANIFEST.json (`claude_code_ref_skills`) names them.
 - **Plugin-scoped commands.** A few command templates reference plugin
   commands not included here (e.g. `lfg.md` references `ralph-loop` and
   `workflows:` / `compound-engineering:` plugins). They are kept as

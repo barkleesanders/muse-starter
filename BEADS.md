@@ -1,10 +1,20 @@
-# Beads — task tracking for this setup
+# Beads — task tracking (OPTIONAL, off by default)
+
+> **Read this first if you already track work somewhere.** Beads is one
+> of three trackers referenced by this pack (beads, the `goal` ledger,
+> and `taskmaster`). If you already run a task system — a shared work
+> record, shared reminders, another tracker — **do not enable beads on
+> top of it.** Two trackers means a second source of truth, and work
+> will silently split across them. The installer holds the
+> tracker-bearing skills back as opt-in for exactly this reason.
+> Pick ONE tracker: yours, or this one.
 
 [Beads](https://github.com/steveyegge/beads) (`bd`) is a Dolt-powered issue
 tracker built for AI coding agents. It gives your assistant persistent,
 structured memory of every task — no more losing track of work between
-sessions. This starter assumes beads: several skills (`code`, `ship`,
-`loop-runner`, `taskmaster`) reference `bd` commands.
+sessions. Several skills (`code`, `ship`, `loop-runner`, `taskmaster`)
+reference `bd` commands; those references are inert until you install
+and initialize beads yourself — the starter installer never does.
 
 ## Install
 
@@ -35,8 +45,9 @@ bd update <id> --status in_progress                   # claim it
 bd close <id> --reason "what was done"               # close with evidence
 ```
 
-## The standing rule
+## If you adopt beads: the standing rule
 
 **Every task gets a bead, and a bead closes only with cited evidence.**
-No exemptions — quick questions included. This is what turns the starter
-from a pile of skills into a system that never drops anything.
+This rule applies only inside a beads-based setup. If your existing
+system has its own rule for what earns a record, that rule wins and
+this section does not apply.

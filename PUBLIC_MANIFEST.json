@@ -2,10 +2,12 @@
   "schema_version": 1,
   "files": [
     ".github/workflows/faq-example.yml",
+    ".github/workflows/installer-check.yml",
     ".gitignore",
     "BEADS.md",
     "CONTRIBUTING.md",
     "LICENSE",
+    "MANIFEST.json",
     "MUSE.md",
     "PORTING.md",
     "PUBLIC_MANIFEST.json",
@@ -70,7 +72,10 @@
     "commands/triage.md",
     "commands/xcode-test.md",
     "install.sh",
+    "scripts/check-installer.sh",
+    "scripts/generate-manifest.py",
     "scripts/generate-skill-yaml.py",
+    "scripts/test-install.sh",
     "skills/ab-test-setup/SKILL.md",
     "skills/ab-test-setup/evals/evals.json",
     "skills/ab-test-setup/references/sample-size-guide.md",
@@ -969,5 +974,6 @@
     "templates/SOUL.md",
     "templates/TOOLS.md",
     "templates/USER.md"
-  ]
+  ],
+  "file_count": 973
 }

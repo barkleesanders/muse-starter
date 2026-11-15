@@ -1,0 +1,4357 @@
+{
+  "claude_code_ref_skills": [
+    "ab-test-setup",
+    "ad-creative",
+    "ai-seo",
+    "analytics-tracking",
+    "api2cli",
+    "app-onboarding-questionnaire",
+    "aso-audit",
+    "capacitor-ios",
+    "churn-prevention",
+    "clerk-cli",
+    "climaker",
+    "code",
+    "cold-email",
+    "community-marketing",
+    "competitor-alternatives",
+    "competitor-profiling",
+    "compound-docs",
+    "computeruse",
+    "content-strategy",
+    "copy-editing",
+    "copywriting",
+    "customer-research",
+    "debug",
+    "design",
+    "directory-submissions",
+    "email-sequence",
+    "form-cro",
+    "free-tool-strategy",
+    "goal",
+    "image",
+    "install-anti-slop",
+    "jobsearch",
+    "launch-strategy",
+    "lead-magnets",
+    "log-hygiene",
+    "loop-runner",
+    "marketing-ideas",
+    "marketing-psychology",
+    "mo-clean",
+    "onboarding-cro",
+    "page-cro",
+    "paid-ads",
+    "paywall-upgrade-cro",
+    "popup-cro",
+    "pricing-strategy",
+    "printing-press-amend",
+    "printing-press-polish",
+    "product-marketing-context",
+    "programmatic-seo",
+    "referral-program",
+    "revops",
+    "sales-enablement",
+    "schema-markup",
+    "seo-audit",
+    "sf311",
+    "ship",
+    "signup-flow-cro",
+    "site-architecture",
+    "social-content",
+    "taskmaster",
+    "token-usage",
+    "video",
+    "video-use"
+  ],
+  "generated_by": "scripts/generate-manifest.py \u2014 do not hand-edit",
+  "opt_in_count": 51,
+  "review_count": 26,
+  "schema_version": 1,
+  "shared_layer_skills": [
+    "betterauth",
+    "capacitor-ios",
+    "clerk",
+    "clerk-cli",
+    "code",
+    "debug",
+    "deepsearch",
+    "design",
+    "directory-submissions",
+    "docuseal-cli",
+    "gov",
+    "install-anti-slop",
+    "ios",
+    "log-hygiene",
+    "notion-link-triage",
+    "rclone",
+    "sf311",
+    "ship",
+    "skill-creator-official"
+  ],
+  "skill_count": 139,
+  "skills": {
+    "ab-test-setup": {
+      "activation": "opt-in",
+      "claude_code_refs": 1,
+      "description": "When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program. Also use when the user mentions \\\"A/B test,\\\" \\\"split test,\\\" \\\"experiment,\\\" \\\"test this change,\\\" \\\"variant copy,\\\" \\\"multivariate test,\\\" \\\"hypothesis,\\\" \\\"should I test this,\\\" \\\"which version is better,\\\" \\\"test two versions,\\\" \\\"statistical significance,\\\" \\\"how long should I run this test,\\\" \\\"growth experiments,\\\" \\\"experiment velocity,\\\" \\\"experiment backlog,\\\" \\\"ICE score,\\\" \\\"experimentation program,\\\" or \\\"experiment playbook.\\\" Use this whenever someone is comparing two approaches and wants to measure which performs better, or when they want to build a systematic experimentation practice. For tracking implementation, see analytics-tracking. For page-level conversion optimization, see page-cro.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 5,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": true
+      },
+      "gate_reasons": [
+        "scheduled"
+      ],
+      "macos_signals": [
+        "launchd"
+      ],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "ad-creative": {
+      "activation": "opt-in",
+      "claude_code_refs": 1,
+      "description": "When the user wants to generate, iterate, or scale ad creative \u2014 headlines, descriptions, primary text, or full ad variations \u2014 for any paid advertising platform. Also use when the user mentions 'ad copy variations,' 'ad creative,' 'generate headlines,' 'RSA headlines,' 'bulk ad copy,' 'ad iterations,' 'creative testing,' 'ad performance optimization,' 'write me some ads,' 'Facebook ad copy,' 'Google ad headlines,' 'LinkedIn ad text,' or 'I need more ad variations.' Use this whenever someone needs to produce ad copy at scale or iterate on existing ads. For campaign strategy and targeting, see paid-ads. For landing page copy, see copywriting.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 5,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_spend"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "ffmpeg",
+        "git",
+        "node",
+        "npx"
+      ]
+    },
+    "agent-native-architecture": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "Build applications where agents are first-class citizens. Use this skill when designing autonomous agents, creating MCP tools, implementing self-modifying systems, or building apps where features are outcomes achieved by agents operating in a loop.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 16,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "git",
+        "npm"
+      ]
+    },
+    "ai-credit-watch": {
+      "activation": "opt-in",
+      "claude_code_refs": 0,
+      "description": "Find and claim free AI credits, free tokens, and free-plan offers from Anthropic/Claude, xAI/Grok, OpenAI, and Meta/Muse. Sweeps each provider's official X/Threads accounts, news pages, changelogs, and the freetokens aggregator; dedupes against a seen list; claims only offers that are fully free, need no payment method, and do not opt you into training-data sharing; verifies every claim on the provider's balance page before calling it claimed. Use when asked to find free AI credits, check for new credit offers or promos, or set up a recurring credit watch.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": true
+      },
+      "gate_reasons": [
+        "scheduled"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "ai-seo": {
+      "activation": "safe",
+      "claude_code_refs": 1,
+      "description": "When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the user mentions 'AI SEO,' 'AEO,' 'GEO,' 'LLMO,' 'answer engine optimization,' 'generative engine optimization,' 'LLM optimization,' 'AI Overviews,' 'optimize for ChatGPT,' 'optimize for Perplexity,' 'AI citations,' 'AI visibility,' 'zero-click search,' 'how do I show up in AI answers,' 'LLM mentions,' or 'optimize for Claude/Gemini.' Use this whenever someone wants their content to be cited or surfaced by AI assistants and AI search engines. For traditional technical and on-page SEO audits, see seo-audit. For structured data implementation, see schema-markup.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 5,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "analytics-tracking": {
+      "activation": "opt-in",
+      "claude_code_refs": 1,
+      "description": "When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions \\\"set up tracking,\\\" \\\"GA4,\\\" \\\"Google Analytics,\\\" \\\"conversion tracking,\\\" \\\"event tracking,\\\" \\\"UTM parameters,\\\" \\\"tag manager,\\\" \\\"GTM,\\\" \\\"analytics implementation,\\\" \\\"tracking plan,\\\" \\\"how do I measure this,\\\" \\\"track conversions,\\\" \\\"attribution,\\\" \\\"Mixpanel,\\\" \\\"Segment,\\\" \\\"are my events firing,\\\" or \\\"analytics isn't working.\\\" Use this whenever someone asks how to know if something is working or wants to measure marketing results. For A/B test measurement, see ab-test-setup.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 6,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_spend"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "andrew-kane-gem-writer": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "This skill should be used when writing Ruby gems following Andrew Kane's proven patterns and philosophy. It applies when creating new Ruby gems, refactoring existing gems, designing gem APIs, or when clean, minimal, production-ready Ruby library code is needed. Triggers on requests like \\\"create a gem\\\", \\\"write a Ruby library\\\", \\\"design a gem API\\\", or mentions of Andrew Kane's style.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 7,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "animate": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "Build an animation from scratch, making the decisions in the order that determines whether it feels right \u2014 should it animate at all, what purpose, which tool, which properties, which curve and duration, how it interrupts, how it exits. Writes the implementation. Use when asked to animate something, add motion, make a component feel alive, or build a transition. For critiquing existing motion use review-animations; for auditing a whole codebase use improve-animations.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 3,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "api2cli": {
+      "activation": "review",
+      "claude_code_refs": 2,
+      "description": "Generate a working CLI from any API, then wrap it in a Claude Code skill. Point it at API docs, a live URL, or a peek-api capture and get a dual-mode Commander.js CLI (human + agent output) plus a ready-to-use skill folder. Use when user wants to wrap an API in a CLI, generate a CLI from API docs, turn an API into a command-line tool, scaffold a CLI from discovered endpoints, or create a skill for an API.",
+      "env_or_keys": [
+        "STRIPE_API_KEY"
+      ],
+      "files": {
+        "file_count": 6,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": true,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "bd",
+        "git",
+        "jq",
+        "node",
+        "npm",
+        "npx",
+        "stripe"
+      ]
+    },
+    "app-onboarding-questionnaire": {
+      "activation": "opt-in",
+      "claude_code_refs": 1,
+      "description": "Design and build a high-converting questionnaire-style onboarding flow for your app, modelled on proven conversion patterns from top subscription apps.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 5,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_spend"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "git"
+      ]
+    },
+    "app-store-screenshots": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "Use when building App Store or Google Play screenshot pages, generating exportable marketing screenshots for iOS and/or Android apps, or creating programmatic screenshot generators with Next.js. Triggers on app store, play store, screenshots, marketing assets, html-to-image, phone mockup, android screenshots, feature graphic.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "npm",
+        "npx"
+      ]
+    },
+    "apple-design": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "Apple's approach to interface design and fluid, physical motion, translated for the web. Use when building or reviewing gesture-driven UI, spring animations, drag/swipe/sheet interactions, momentum and interruptible transitions, translucent materials and depth, typography (optical sizing, tracking, leading), reduced-motion, or the design foundations (feedback, spatial consistency, restraint) behind Apple-style interfaces.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [
+        "macos"
+      ],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "aso-audit": {
+      "activation": "safe",
+      "claude_code_refs": 1,
+      "description": "When the user wants to audit or optimize an App Store or Google Play listing. Also use when the user mentions 'ASO audit,' 'app store optimization,' 'optimize my app listing,' 'improve app visibility,' 'app store ranking,' 'audit my listing,' 'why aren't people downloading my app,' 'improve my app conversion,' 'keyword optimization for app,' or 'compare my app to competitors.' Use when the user shares an App Store or Google Play URL and wants to improve it.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 7,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "avatar-video": {
+      "activation": "review",
+      "claude_code_refs": 0,
+      "description": "Generates talking avatar videos by chaining image generation (nano-banana), voice synthesis (MiniMax Speech via fal.ai), and lip-sync animation (OmniHuman 1.5 or Infinite Talk via fal.ai). Use when asked to \\\"create a talking avatar\\\", \\\"generate a video with speech\\\", \\\"make an avatar say something\\\", \\\"lip-sync\\\", or any video generation task combining portrait + voice + animation.",
+      "env_or_keys": [
+        "GEMINI_API_KEY"
+      ],
+      "files": {
+        "file_count": 7,
+        "ships_executable_files": true,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": true,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "jq"
+      ]
+    },
+    "bash-discipline": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "Write bash that fails LOUDLY instead of returning a plausible wrong answer. Use when running sweeps/loops over many items, fetching files with curl, extracting fields from data files, or any time a command's output will become a factual claim. Provides the `bashguard` linter, a trap catalog, and the positive-control discipline.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 3,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "jq",
+        "python3"
+      ]
+    },
+    "betterauth": {
+      "activation": "opt-in",
+      "claude_code_refs": 0,
+      "description": ">- Stand up, migrate to, or debug Better Auth on Cloudflare Workers + D1 \u2014 the auth stack behind improvebayarea.com and example.com. Use when building auth into a NEW site from scratch (ordered greenfield path + the verified core D1 schema), when adding auth to an existing Worker, migrating off a hosted provider, wiring Google/Apple social sign-in, adding passkeys/2FA/magic-link/email-OTP, writing a plugin's D1 migration, or debugging \\\"Invalid token\\\", \\\"account_not_linked\\\", a native iOS sign-in that fails after the OAuth sheet succeeds, a social button that won't appear inside a Capacitor webview, a \\\"Turn on two-factor\\\" button that does nothing, a passkey ceremony that reports \\\"cancelled or timed out\\\", or a CORRECT password that reports the session did not stick. Encodes the traps that cost real deploy cycles on both sites, each with the probe that proves it.",
+      "env_or_keys": [
+        "APPLE_CLIENT_SECRET",
+        "BETTER_AUTH_SECRET",
+        "GOOGLE_CLIENT_SECRET",
+        "INVALID_TOKEN"
+      ],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": true,
+        "can_send": true,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": true,
+        "scheduled": true
+      },
+      "gate_reasons": [
+        "scheduled",
+        "can_deploy"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 1,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "node",
+        "npm",
+        "npx",
+        "python3",
+        "wrangler"
+      ]
+    },
+    "browse": {
+      "activation": "review",
+      "claude_code_refs": 0,
+      "description": "Use the browse CLI for Browserbase browser automation, Browserbase cloud APIs, Browserbase Functions, templates, web fetch/search, diagnostics, and Browse.sh skill discovery/installation. Use when the user asks to navigate pages, inspect browser state, run local or remote browser sessions, manage Browserbase resources, call Browserbase Functions, browse or scaffold Browserbase templates, fetch or search web content, diagnose browse setup, discover site-specific Browse.sh skills, or install/refresh this browse skill.",
+      "env_or_keys": [
+        "BROWSERBASE_API_KEY"
+      ],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": true,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "node",
+        "npm"
+      ]
+    },
+    "capacitor-ios": {
+      "activation": "opt-in",
+      "claude_code_refs": 1,
+      "description": ">- Phased super-skill that turns a web app (improvebayarea.com or any Cloudflare Workers / SPA / PWA site) into a store-ready native iOS app with Capacitor \u2014 end to end. Use when the user wants to \\\"make this an iOS app\\\", \\\"wrap the site\\\", \\\"ship improvebayarea to the App Store\\\", add camera/geolocation/push to a web app, set up live web updates without App Store resubmission, build/run/test the app on the iOS Simulator, or asks how the web\u2194app update loop works. Detects the active phase and loads only that phase's reference file, the way /code loads only the relevant mode. Orchestrates the installed Capgo 48 capacitor-skills, awesome-ionic-mcp, XcodeBuildMCP + /xcode-test, /ios-ship (greenlight + privacy manifest), context7, sosumi, app-store-screenshots and aso-audit. Triggers: \\\"capacitor\\\", \\\"wrap web app\\\", \\\"make it an iOS app\\\", \\\"ship to app store\\\", \\\"live updates / OTA\\\", \\\"Capgo\\\".",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 7,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": true,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_deploy"
+      ],
+      "macos_signals": [
+        "xcodebuild"
+      ],
+      "shared_layer_refs": 1,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "npm",
+        "npx",
+        "wrangler",
+        "xcodebuild"
+      ]
+    },
+    "career-interview-prep": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "'Native Muse skill: interview preparation from a company, job description, and resume, using only real company sources and user-supplied evidence. Never simulates research.'",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "career-resume-optimizer": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "'Native Muse skill: tailors a user-supplied resume to a supplied job description with ATS-compatible formatting. Flags missing metrics instead of inventing them.'",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "career-success-coach": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "'Native Muse skill: career goal framing and accountability through six decision lenses, separating facts, assumptions, and tradeoffs. No recurring reminders.'",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "carmack": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "Alias for /code (the engineering agent was renamed from /carmack to /code on 2026-10-12). Use /code.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "chromeapi": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "Capture a site's internal API routes from your REAL logged-in Chrome and replay them browserless (kuri/unbrowse-style, all local). The deeper-level API layer on top of fcdp. Invoke as /chromeapi when the user wants to record the XHR/fetch calls a page makes and re-fire them as plain HTTP with their real cookies \u2014 no browser, no telemetry. /chrome (fcdp) remains the tool for ordinary page driving.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl"
+      ]
+    },
+    "churn-prevention": {
+      "activation": "opt-in",
+      "claude_code_refs": 1,
+      "description": "When the user wants to reduce churn, build cancellation flows, set up save offers, recover failed payments, or implement retention strategies. Also use when the user mentions 'churn,' 'cancel flow,' 'offboarding,' 'save offer,' 'dunning,' 'failed payment recovery,' 'win-back,' 'retention,' 'exit survey,' 'pause subscription,' 'involuntary churn,' 'people keep canceling,' 'churn rate is too high,' 'how do I keep users,' or 'customers are leaving.' Use this whenever someone is losing subscribers or wants to build systems to prevent it. For post-cancel win-back email sequences, see email-sequence. For in-app upgrade paywalls, see paywall-upgrade-cro.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 5,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_spend"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "stripe"
+      ]
+    },
+    "clerk": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": ">- Operate the Clerk CLI (`clerk` binary) for authentication, user/org/session management, instance config, env keys, and any Clerk Backend or Platform API call. Use when the user mentions Clerk management tasks, \\\"list clerk users\\\", \\\"create a clerk user\\\", \\\"update organization\\\", \\\"pull clerk config\\\", \\\"clerk env pull\\\", \\\"clerk doctor\\\", \\\"clerk api\\\", or any ad-hoc Clerk API request. Prefer the CLI over raw HTTP: it handles auth, key resolution, app/instance targeting, and formatting automatically.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 1,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "git",
+        "jq",
+        "npm",
+        "npx"
+      ]
+    },
+    "clerk-cli": {
+      "activation": "review",
+      "claude_code_refs": 1,
+      "description": ">- Operate the Clerk CLI (`clerk` binary) for authentication, user/org/session management, instance config, env keys, and any Clerk Backend or Platform API call. Use when the user mentions Clerk management tasks, \\\"list clerk users\\\", \\\"create a clerk user\\\", \\\"update organization\\\", \\\"pull clerk config\\\", \\\"clerk env pull\\\", \\\"clerk doctor\\\", \\\"clerk api\\\", or any ad-hoc Clerk API request. Prefer the CLI over raw HTTP: it handles auth, key resolution, app/instance targeting, and formatting automatically.",
+      "env_or_keys": [
+        "CLERK_PLATFORM_API_KEY"
+      ],
+      "files": {
+        "file_count": 5,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": true,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 1,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "git",
+        "jq",
+        "node",
+        "npm",
+        "npx",
+        "python3"
+      ]
+    },
+    "climaker": {
+      "activation": "opt-in",
+      "claude_code_refs": 1,
+      "description": "Generate a token-efficient Go CLI + MCP server for ANY API or website using the CLI Printing Press (mvanhorn/cli-printing-press). Use when the user wants to \\\"make a CLI\\\", \\\"print a CLI\\\", \\\"wrap an API in a CLI\\\", \\\"generate an MCP server for an API\\\", build an agent-native CLI, reprint/polish/publish a generated CLI, or score/dogfood/verify one. Triggers: \\\"climaker\\\", \\\"printing press\\\", \\\"/printing-press\\\", \\\"make a CLI for <API>\\\", \\\"build a CLI from these docs\\\", \\\"wrap <service> as a CLI\\\", \\\"generate an MCP server\\\".",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 5,
+        "ships_executable_files": true,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_spend"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "gh",
+        "git",
+        "node",
+        "npm",
+        "npx"
+      ]
+    },
+    "cn-ecommerce-search": {
+      "activation": "review",
+      "claude_code_refs": 0,
+      "description": "'Search Temu and 1688 product data from the command line for sourcing research. Uses the unified `cnshop` wrapper: Temu and 1688 search run by default through the user''s own real Chrome on their machine (free, real listings, ads filtered, no API keys); Taobao uses the official Taobao Open Platform (TOP) client (user''s own app keys). Triggers on requests to search, compare, or pull product details across Chinese e-commerce platforms (search Temu listings, 1688 wholesale prices, Taobao items, \"find suppliers on 1688\", \"check Temu prices for X\"). Alibaba.com international has no self-serve API and is out of scope. Match the user''s language in replies (English or Chinese).'",
+      "env_or_keys": [
+        "TAOBAO_APP_SECRET"
+      ],
+      "files": {
+        "file_count": 4,
+        "ships_executable_files": true,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": true,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "jq"
+      ]
+    },
+    "code": {
+      "activation": "opt-in",
+      "claude_code_refs": 28,
+      "description": "Universal engineering agent: build features, fix bugs, deep debugging, and secure authentication flows including passkeys, TOTP/2FA, passwordless accounts, and session freshness. Covers planning, code review, implementation, git safety, browser automation, task tracking, Codex review and rescue, and web research. Invoke with /code for all engineering work (/carmack is an alias).",
+      "env_or_keys": [
+        "CLOUDFLARE_API_TOKEN"
+      ],
+      "files": {
+        "file_count": 50,
+        "ships_executable_files": true,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": true,
+        "can_send": true,
+        "can_spend": true,
+        "controls_machine": true,
+        "creates_state": true,
+        "needs_key": true,
+        "scheduled": true
+      },
+      "gate_reasons": [
+        "creates_state",
+        "scheduled",
+        "can_spend",
+        "can_deploy",
+        "controls_machine"
+      ],
+      "macos_signals": [
+        "applescript",
+        "brew",
+        "homebrew",
+        "launchd",
+        "macos",
+        "osascript",
+        "xcodebuild"
+      ],
+      "shared_layer_refs": 125,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "bd",
+        "crane",
+        "crontab",
+        "curl",
+        "docker",
+        "gh",
+        "ghidra",
+        "git",
+        "jq",
+        "launchctl",
+        "node",
+        "npm",
+        "npx",
+        "osascript",
+        "python3",
+        "rclone",
+        "stripe",
+        "vercel",
+        "wrangler",
+        "xcodebuild"
+      ]
+    },
+    "cold-email": {
+      "activation": "safe",
+      "claude_code_refs": 1,
+      "description": "Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails, cold email campaigns, sales development emails, or SDR emails. Also use when the user mentions \\\"cold outreach,\\\" \\\"prospecting email,\\\" \\\"outbound email,\\\" \\\"email to leads,\\\" \\\"reach out to prospects,\\\" \\\"sales email,\\\" \\\"follow-up email sequence,\\\" \\\"nobody's replying to my emails,\\\" or \\\"how do I write a cold email.\\\" Covers subject lines, opening lines, body copy, CTAs, personalization, and multi-touch follow-up sequences. For warm/lifecycle email sequences, see email-sequence. For sales collateral beyond emails, see sales-enablement.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 8,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "command-builder-pro": {
+      "activation": "review",
+      "claude_code_refs": 0,
+      "description": ">- Use when designing safe, correct shell/CLI command sequences (migrated from Custom GPT).",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": true,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [
+        "macos"
+      ],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "git"
+      ]
+    },
+    "community-marketing": {
+      "activation": "safe",
+      "claude_code_refs": 1,
+      "description": "Build and leverage online communities to drive product growth and brand loyalty. Use when the user wants to create a community strategy, grow a Discord or Slack community, manage a forum or subreddit, build brand advocates, increase word-of-mouth, drive community-led growth, engage users post-signup, or turn customers into evangelists. Trigger phrases: \\\\\\\"build a community,\\\\\\\" \\\\\\\"community strategy,\\\\\\\" \\\\\\\"Discord community,\\\\\\\" \\\\\\\"Slack community,\\\\\\\" \\\\\\\"community-led growth,\\\\\\\" \\\\\\\"brand advocates,\\\\\\\" \\\\\\\"user community,\\\\\\\" \\\\\\\"forum strategy,\\\\\\\" \\\\\\\"community engagement,\\\\\\\" \\\\\\\"grow our community,\\\\\\\" \\\\\\\"ambassador program,\\\\\\\" \\\\\\\"community flywheel.\\\\\\",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "competitor-alternatives": {
+      "activation": "safe",
+      "claude_code_refs": 1,
+      "description": "When the user wants to create competitor comparison or alternative pages for SEO and sales enablement. Also use when the user mentions 'alternative page,' 'vs page,' 'competitor comparison,' 'comparison page,' '[Product] vs [Product],' '[Product] alternative,' 'competitive landing pages,' 'how do we compare to X,' 'battle card,' or 'competitor teardown.' Use this for any content that positions your product against competitors. Covers four formats: singular alternative, plural alternatives, you vs competitor, and competitor vs competitor. For sales-specific competitor docs, see sales-enablement.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 5,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "competitor-profiling": {
+      "activation": "safe",
+      "claude_code_refs": 1,
+      "description": "When the user wants to research, profile, or analyze competitors from their URLs. Also use when the user mentions 'competitor profile,' 'competitor research,' 'competitor analysis,' 'profile this competitor,' 'analyze competitor,' 'competitive intelligence,' 'competitor deep dive,' 'who are my competitors,' 'competitor landscape,' 'competitor dossier,' 'competitive audit,' or 'research these competitors.' Input is a list of competitor URLs. Output is structured competitor profile markdown files. For creating comparison/alternative pages from profiles, see competitor-alternatives. For sales-specific battle cards, see sales-enablement.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 4,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl"
+      ]
+    },
+    "compound-docs": {
+      "activation": "safe",
+      "claude_code_refs": 2,
+      "description": "Capture solved problems as categorized documentation with YAML frontmatter for fast lookup",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 9,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "python3"
+      ]
+    },
+    "compound-prd": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "Generate a Product Requirements Document (PRD) for a new feature. Use when planning a feature, starting a new project, or when asked to create a PRD. Triggers on: create a prd, write prd for, plan this feature, requirements for, spec out.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "computeruse": {
+      "activation": "opt-in",
+      "claude_code_refs": 1,
+      "description": "Drive the macOS GUI (click / type / scroll / drag / screenshot any native app) from Claude or any CLI via the open-source `cua` command \u2014 real hardware CGEvents (cliclick) + screenshots (screencapture) + Accessibility element finding (osascript). No Codex, no cloud vision, no reverse-engineering. Ships a Cobra CLI AND an MCP server (`cua_*` tools). Use when the user wants to operate a native Mac app, automate a desktop task, take over a GUI, click a control that ignores synthetic clicks (file pickers, Chrome/Polymer toggles, \\\"Load unpacked\\\"), or asks about \\\"computer use\\\", \\\"control my Mac\\\", \\\"drive an app\\\", \\\"click/type in <app>\\\", \\\"cua\\\". Pairs with the trycua `cua-driver` (/cua-driver skill) for AX-tree snapshots, set_value, and menu/geometry/verify tools. Replaces the old /computer-use-bridge skill.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": true,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": true
+      },
+      "gate_reasons": [
+        "scheduled",
+        "controls_machine"
+      ],
+      "macos_signals": [
+        "applescript",
+        "brew",
+        "homebrew",
+        "launchagent",
+        "launchd",
+        "macos",
+        "osascript"
+      ],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "cliclick",
+        "cua",
+        "launchctl",
+        "osascript",
+        "peekaboo"
+      ]
+    },
+    "content-strategy": {
+      "activation": "safe",
+      "claude_code_refs": 1,
+      "description": "When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions \\\"content strategy,\\\" \\\"what should I write about,\\\" \\\"content ideas,\\\" \\\"blog strategy,\\\" \\\"topic clusters,\\\" \\\"content planning,\\\" \\\"editorial calendar,\\\" \\\"content marketing,\\\" \\\"content roadmap,\\\" \\\"what content should I create,\\\" \\\"blog topics,\\\" \\\"content pillars,\\\" or \\\"I don't know what to write.\\\" Use this whenever someone needs help deciding what content to produce, not just writing it. For writing individual pieces, see copywriting. For SEO-specific audits, see seo-audit. For social media content specifically, see social-content.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 4,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "context-optimization": {
+      "activation": "opt-in",
+      "claude_code_refs": 0,
+      "description": "This skill should be used when the user asks to \\\"optimize context\\\", \\\"reduce token costs\\\", \\\"improve context efficiency\\\", \\\"implement KV-cache optimization\\\", \\\"partition context\\\", or mentions context limits, observation masking, context budgeting, or extending effective context capacity.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 3,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": true,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_deploy"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "git"
+      ]
+    },
+    "copy-editing": {
+      "activation": "opt-in",
+      "claude_code_refs": 1,
+      "description": "When the user wants to edit, review, or improve existing marketing copy, or refresh outdated content. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,' 'make this better,' 'copy sweep,' 'tighten this up,' 'this reads awkwardly,' 'clean up this text,' 'too wordy,' 'sharpen the messaging,' 'refresh this content,' 'update this page,' 'this content is outdated,' or 'content audit.' Use this when the user already has copy and wants it improved or refreshed rather than rewritten from scratch. For writing new copy, see copywriting.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 5,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_spend"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "copywriting": {
+      "activation": "safe",
+      "claude_code_refs": 1,
+      "description": "When the user wants to write, rewrite, or improve marketing copy for any page \u2014 including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says \\\"write copy for,\\\" \\\"improve this copy,\\\" \\\"rewrite this page,\\\" \\\"marketing copy,\\\" \\\"headline help,\\\" \\\"CTA copy,\\\" \\\"value proposition,\\\" \\\"tagline,\\\" \\\"subheadline,\\\" \\\"hero section copy,\\\" \\\"above the fold,\\\" \\\"this copy is weak,\\\" \\\"make this more compelling,\\\" or \\\"help me describe my product.\\\" Use this whenever someone is working on website text that needs to persuade or convert. For email copy, see email-sequence. For popup copy, see popup-cro. For editing existing copy, see copy-editing.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 5,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "csci": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": ">- Control the user's local Claude for Life Sciences (\\\"Claude Science\\\" / operon) app from the Claude Code CLI via the `csci` command. Use when the user wants to drive the science app \u2014 ask/continue a research conversation with the OPERON agent, list or read projects, pull artifacts/results, inspect the 33 wired connectors (Google Drive, Gmail, Calendar + 24 bio databases like BioMart/PubMed/ChEMBL/ClinVar), check agents/skills/kernels, or search synced data. Triggers: \\\"csci\\\", \\\"claude science\\\", \\\"the science app\\\", \\\"my life sciences app\\\", \\\"ask OPERON\\\", \\\"science project\\\", \\\"localhost:8765\\\", \\\"operon\\\", \\\"run this on my genomics/DNA data\\\". Not for general bioinformatics Q&A (use the app's own agent for that) \u2014 this is the control layer.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "csv-link-validator": {
+      "activation": "review",
+      "claude_code_refs": 0,
+      "description": ">- Use when validating links inside CSV/spreadsheet exports (migrated from Custom GPT).",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": true,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "customer-research": {
+      "activation": "opt-in",
+      "claude_code_refs": 1,
+      "description": "When the user wants to conduct, analyze, or synthesize customer research. Use when the user mentions \\\"customer research,\\\" \\\"ICP research,\\\" \\\"talk to customers,\\\" \\\"analyze transcripts,\\\" \\\"customer interviews,\\\" \\\"survey analysis,\\\" \\\"support ticket analysis,\\\" \\\"voice of customer,\\\" \\\"VOC,\\\" \\\"build personas,\\\" \\\"customer personas,\\\" \\\"jobs to be done,\\\" \\\"JTBD,\\\" \\\"what do customers say,\\\" \\\"what are customers struggling with,\\\" \\\"Reddit mining,\\\" \\\"G2 reviews,\\\" \\\"review mining,\\\" \\\"digital watering holes,\\\" \\\"community research,\\\" \\\"forum research,\\\" \\\"competitor reviews,\\\" \\\"customer sentiment,\\\" or \\\"find out why customers churn/convert/buy.\\\" Use for both analyzing existing research assets AND gathering new research from online sources. For writing copy informed by research, see copywriting. For acting on research to improve pages, see page-cro.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 4,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_spend"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "debug": {
+      "activation": "opt-in",
+      "claude_code_refs": 8,
+      "description": "Quick debugging patterns and known production failure traps, including passkey, TOTP/2FA, passwordless-account, session-freshness, reauthentication, and recovery-code failures. Use for common production and account-security issues.",
+      "env_or_keys": [
+        "BREVO_API_KEY"
+      ],
+      "files": {
+        "file_count": 34,
+        "ships_executable_files": true,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": true,
+        "can_send": true,
+        "can_spend": false,
+        "controls_machine": true,
+        "creates_state": true,
+        "needs_key": true,
+        "scheduled": true
+      },
+      "gate_reasons": [
+        "creates_state",
+        "scheduled",
+        "can_deploy",
+        "controls_machine"
+      ],
+      "macos_signals": [
+        "applescript",
+        "brew",
+        "homebrew",
+        "launchd",
+        "macos",
+        "osascript",
+        "xcodebuild"
+      ],
+      "shared_layer_refs": 109,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "bd",
+        "crane",
+        "crontab",
+        "curl",
+        "docker",
+        "gh",
+        "ghidra",
+        "git",
+        "jq",
+        "launchctl",
+        "node",
+        "npm",
+        "npx",
+        "osascript",
+        "python3",
+        "stripe",
+        "vercel",
+        "wrangler",
+        "xcodebuild"
+      ]
+    },
+    "debugging-genius": {
+      "activation": "review",
+      "claude_code_refs": 0,
+      "description": ">- Use when stuck debugging a systems/software issue and need a rigorous debug loop (migrated from Custom GPT).",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": true,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "decompile": {
+      "activation": "opt-in",
+      "claude_code_refs": 0,
+      "description": "Reverse-engineer ANY binary, bundle, distributable, OR the private API of a website you're logged into. Binaries \u2014 compiled native (.exe/.dll/.so/.dylib/Mach-O), JVM (.jar/.apk/.dex), .NET (.dll/.exe IL), iOS (.ipa), browser extensions (.crx/.xpi), WebAssembly (.wasm), Python bytecode (.pyc), React Native Hermes (.hbc), JS bundles, firmware blobs, installers (.deb/.rpm/.dmg/.msi). Websites \u2014 record a real logged-in session to HAR (incl. the log-out/log-in auth handshake), distill it, and generate a typed TypeScript client + MCP server. Routes to the correct tool per artifact class \u2014 Ghidra is just one tool in the kit. Use when the user says decompile, disassemble, reverse-engineer, RE, \\\"look inside this binary/app/extension/firmware\\\", \\\"make an API/MCP server for this website\\\", \\\"capture the network calls this site makes\\\", HAR, triage malware, audit a binary for vulns, diff functions across versions, or port a closed-source thing to a CLI. Does NOT debug or pentest live websites \u2014 for debugging route to /debug or /chrome.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 10,
+        "ships_executable_files": true,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": true,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "creates_state",
+        "can_spend"
+      ],
+      "macos_signals": [
+        "brew",
+        "homebrew",
+        "macos",
+        "xcodebuild"
+      ],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "bd",
+        "bindiff",
+        "curl",
+        "cutter",
+        "docker",
+        "gh",
+        "ghidra",
+        "git",
+        "jq",
+        "npm",
+        "python3",
+        "retdec",
+        "rizin",
+        "upx",
+        "xcodebuild"
+      ]
+    },
+    "deepsearch": {
+      "activation": "opt-in",
+      "claude_code_refs": 0,
+      "description": "Deep multi-source research on a topic across a 10-provider search stack via the `websearch` CLI with automatic quota failover \u2014 self-hosted SearXNG and Marginalia (both keyless/unmetered), Linkup, Parallel, You.com, Tavily, Brave, Jina, Exa, TinyFish \u2014 plus the Exa MCP for filtered/semantic search and full-page crawling. Fans out queries, reads sources, adversarially verifies every load-bearing claim, and synthesizes a cited HTML report. Use when the user says 'deep research', 'research <topic>', 'dig into <topic>', 'deepsearch', '/deepsearch', or wants a thorough, fact-checked, multi-source brief \u2014 NOT a single quick lookup (use the plain WebSearch tool for that).",
+      "env_or_keys": [
+        "BRAVE_API_KEY",
+        "EXA_API_KEY",
+        "JINA_API_KEY",
+        "LINKUP_API_KEY",
+        "PARALLEL_API_KEY",
+        "TAVILY_API_KEY",
+        "TINYFISH_API_KEY",
+        "YDC_API_KEY"
+      ],
+      "files": {
+        "file_count": 4,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": true,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_spend"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 1,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "git",
+        "jq",
+        "launchctl",
+        "npm"
+      ]
+    },
+    "design": {
+      "activation": "opt-in",
+      "claude_code_refs": 2,
+      "description": "Design and build frontend interfaces with high design quality. Picks a bold aesthetic direction, then hands the brief to the Hallmark anti-AI-slop engine (default) to design/build/audit/redesign \u2014 or generates screens via Google Stitch MCP when the user explicitly asks for Stitch. Use for UI design, screen mockups, design systems, building components / pages / apps, or any \\\"design\\\" / \\\"build a [component/page/UI]\\\" request.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 6,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": true,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_deploy"
+      ],
+      "macos_signals": [
+        "macos"
+      ],
+      "shared_layer_refs": 1,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "jq",
+        "npx"
+      ]
+    },
+    "dhh-rails-style": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "This skill should be used when writing Ruby and Rails code in DHH's distinctive 37signals style. It applies when writing Ruby code, Rails applications, creating models, controllers, or any Ruby file. Triggers on Ruby/Rails code generation, refactoring requests, code review, or when the user mentions DHH, 37signals, Basecamp, HEY, or Campfire style. Embodies REST purity, fat models, thin controllers, Current attributes, Hotwire patterns, and the \\\"clarity over cleverness\\\" philosophy.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 8,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "stripe"
+      ]
+    },
+    "directory-submissions": {
+      "activation": "review",
+      "claude_code_refs": 1,
+      "description": "When the user wants to submit their product to startup, SaaS, AI, agent, MCP, no-code, or review directories for backlinks, domain rating, and discovery. Also use when the user mentions \\\"directory submissions,\\\" \\\"submit to directories,\\\" \\\"backlinks from directories,\\\" \\\"list my product,\\\" \\\"submit to Product Hunt,\\\" \\\"BetaList,\\\" \\\"TAAFT,\\\" \\\"Futurepedia,\\\" \\\"G2 listing,\\\" \\\"Capterra listing,\\\" \\\"AlternativeTo,\\\" \\\"SaaSHub,\\\" \\\"AI directories,\\\" \\\"MCP registry,\\\" \\\"agent directory,\\\" \\\"dofollow backlinks,\\\" \\\"launch directories,\\\" or \\\"directory tracker.\\\" Use this whenever someone is planning the directory layer of a product launch or an ongoing backlink campaign. For the broader launch moment, see launch-strategy. For programmatic SEO pages that should live behind these backlinks, see programmatic-seo. For AI citation optimization, see ai-seo.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 5,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": true,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 1,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl"
+      ]
+    },
+    "doc-maker": {
+      "activation": "review",
+      "claude_code_refs": 0,
+      "description": ">- Use when creating developer documentation people can actually use (migrated from Custom GPT).",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": true,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "docuseal-cli": {
+      "activation": "review",
+      "claude_code_refs": 0,
+      "description": "Use `dscli` for ALL DocuSeal work \u2014 uploading templates, placing fields, creating submissions, sharing signing URLs. The CLI bakes in workarounds for DocuSeal's quirks (silent page-drop on /templates/pdf, submission field-state caching at create time, immediate-email-on-create traps, default_value bleed). Triggers on \\\"docuseal\\\", \\\"dscli\\\", \\\"send a signature request\\\", \\\"create a signing form\\\", anything involving DocuSeal templates or submissions.",
+      "env_or_keys": [
+        "DOCUSEAL_API_KEY"
+      ],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": true,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": true,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 1,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "jq",
+        "wrangler"
+      ]
+    },
+    "dspy-ruby": {
+      "activation": "review",
+      "claude_code_refs": 0,
+      "description": "This skill should be used when working with DSPy.rb, a Ruby framework for building type-safe, composable LLM applications. Use this when implementing predictable AI features, creating LLM signatures and modules, configuring language model providers (OpenAI, Anthropic, Gemini, Ollama), building agent systems with tools, optimizing prompts, or testing LLM-powered functionality in Ruby applications.",
+      "env_or_keys": [
+        "ANTHROPIC_API_KEY",
+        "GOOGLE_API_KEY",
+        "OPENAI_API_KEY"
+      ],
+      "files": {
+        "file_count": 10,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": true,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "elon": {
+      "activation": "opt-in",
+      "claude_code_refs": 0,
+      "description": "Elon-mode engineering: question every requirement, delete before optimizing, push past the first no. Forces breakthroughs through discomfort.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": true,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "creates_state"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "bd",
+        "npx"
+      ]
+    },
+    "email-sequence": {
+      "activation": "opt-in",
+      "claude_code_refs": 1,
+      "description": "When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions \\\"email sequence,\\\" \\\"drip campaign,\\\" \\\"nurture sequence,\\\" \\\"onboarding emails,\\\" \\\"welcome sequence,\\\" \\\"re-engagement emails,\\\" \\\"email automation,\\\" \\\"lifecycle emails,\\\" \\\"trigger-based emails,\\\" \\\"email funnel,\\\" \\\"email workflow,\\\" \\\"what emails should I send,\\\" \\\"welcome series,\\\" or \\\"email cadence.\\\" Use this for any multi-email automated flow. For cold outreach emails, see cold-email. For in-app onboarding, see onboarding-cro.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 6,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_spend"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "every-style-editor": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "This skill should be used when reviewing or editing copy to ensure adherence to Every's style guide. It provides a systematic line-by-line review process for grammar, punctuation, mechanics, and style guide compliance.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 3,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "exec-plan": {
+      "activation": "opt-in",
+      "claude_code_refs": 0,
+      "description": "Execution plan management for long-running coding sessions. Combines self-contained living plans (restartable from file alone) with generator-evaluator separation, sprint contracts, and structured context handoffs. Use when: building a multi-milestone feature, running a multi-session refactor, any task too large for one context window, or when the user says 'exec-plan', 'execution plan', 'create a plan', 'resume plan', 'eval my work', or 'plan status'. Commands: /exec-plan create, /exec-plan resume, /exec-plan status, /exec-plan eval, /exec-plan close, /exec-plan list.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 5,
+        "ships_executable_files": true,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": true,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "creates_state",
+        "can_spend"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "bd",
+        "curl",
+        "git",
+        "python3"
+      ]
+    },
+    "expense-ledger": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "> Turn a receipt / invoice / bill (image or PDF) into a structured, Schedule-C-categorized ledger entry \u2014 Claude reads the document with its own vision, extracts merchant/date/total/tax/ line-items, picks the right US Schedule C category, and stores it in a local SQLite ledger via the `ledger` CLI. A self-hosted, no-web-app, no-external-LLM reimplementation of what TaxHacker does. Use when the user shares a receipt/invoice/bill and wants it logged, says \\\"log this receipt\\\", \\\"add this expense\\\", \\\"track this for taxes\\\", \\\"what are my deductions\\\", \\\"schedule c\\\", \\\"export my expenses\\\", \\\"taxhacker\\\", or wants a year-end deductible-expense worksheet. NOT for filing a return (that's aiwyn-tax / nonprofit-tax) \u2014 this is the bookkeeping/extraction layer that feeds it.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "file-search": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "This skill should be used when agents need to search codebases for text patterns or structural code patterns. Provides fast search using ripgrep for text and ast-grep for syntax-aware code search.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "git",
+        "node"
+      ]
+    },
+    "file-todos": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "This skill should be used when managing the file-based todo tracking system in the todos/ directory. It provides workflows for creating todos, managing status and dependencies, conducting triage, and integrating with slash commands and code review processes.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 3,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "gh"
+      ]
+    },
+    "form-cro": {
+      "activation": "opt-in",
+      "claude_code_refs": 1,
+      "description": "When the user wants to optimize any form that is NOT signup/registration \u2014 including lead capture forms, contact forms, demo request forms, application forms, survey forms, or checkout forms. Also use when the user mentions \\\"form optimization,\\\" \\\"lead form conversions,\\\" \\\"form friction,\\\" \\\"form fields,\\\" \\\"form completion rate,\\\" \\\"contact form,\\\" \\\"nobody fills out our form,\\\" \\\"form abandonment,\\\" \\\"too many fields,\\\" \\\"demo request form,\\\" or \\\"lead form isn't converting.\\\" Use this for any non-signup form that captures information. For signup/registration forms, see signup-flow-cro. For popups containing forms, see popup-cro.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 3,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": true,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_spend"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "free-tool-strategy": {
+      "activation": "safe",
+      "claude_code_refs": 1,
+      "description": "When the user wants to plan, evaluate, or build a free tool for marketing purposes \u2014 lead generation, SEO value, or brand awareness. Also use when the user mentions \\\"engineering as marketing,\\\" \\\"free tool,\\\" \\\"marketing tool,\\\" \\\"calculator,\\\" \\\"generator,\\\" \\\"interactive tool,\\\" \\\"lead gen tool,\\\" \\\"build a tool for leads,\\\" \\\"free resource,\\\" \\\"ROI calculator,\\\" \\\"grader tool,\\\" \\\"audit tool,\\\" \\\"should I build a free tool,\\\" or \\\"tools for lead gen.\\\" Use this whenever someone wants to build something useful and give it away to attract leads or earn links. For downloadable content lead magnets (ebooks, checklists, templates), see lead-magnets.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 4,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "gemini-imagegen": {
+      "activation": "review",
+      "claude_code_refs": 0,
+      "description": "This skill should be used when generating and editing images using the Gemini API (Nano Banana Pro). It applies when creating images from text prompts, editing existing images, applying style transfers, generating logos with text, creating stickers, product mockups, or any image generation/manipulation task. Supports text-to-image, image editing, multi-turn refinement, and composition from multiple reference images.",
+      "env_or_keys": [
+        "GEMINI_API_KEY"
+      ],
+      "files": {
+        "file_count": 8,
+        "ships_executable_files": true,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": true,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "python3"
+      ]
+    },
+    "glean-connector-reviewer": {
+      "activation": "review",
+      "claude_code_refs": 0,
+      "description": ">- Use when reviewing or refining Glean connector JSON configs (migrated from Custom GPT).",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": true,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "goal": {
+      "activation": "opt-in",
+      "claude_code_refs": 15,
+      "description": ">- Set, pause, resume, complete, or clear a persistent per-directory objective (port of Codex `/goal`). Use when the user types `/goal \u2026` or asks to set/check/pause/clear \\\"the goal\\\", \\\"my goal\\\", \\\"the objective\\\", or to wrap up a focused session of work. While a goal is active, a UserPromptSubmit hook injects an anti-completion-bias steering prompt before every turn, and a beads issue mirrors the goal so it shows up in `bd list`. Also absorbs the former /makegoal skill as `/goal make <task>` \u2014 fill a build brief, set the goal, decompose into deliverables, optionally fan out parallel agents, synthesize. Triggers: \\\"/goal\\\", \\\"/makegoal\\\", \\\"set a goal\\\", \\\"what's my goal\\\", \\\"pause the goal\\\", \\\"resume the goal\\\", \\\"clear the goal\\\", \\\"mark the goal complete\\\", \\\"is the goal done\\\", \\\"make a goal\\\", \\\"parallel goals\\\", \\\"parallel agents for this task\\\", \\\"build brief\\\".",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 5,
+        "ships_executable_files": true,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": true,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "creates_state"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "bd",
+        "python3"
+      ]
+    },
+    "gov": {
+      "activation": "opt-in",
+      "claude_code_refs": 0,
+      "description": "Use for stalled bureaucratic problems that need authority mapping, regulatory citations, exact forms, and escalation paths across local, state, or federal agencies. Do not use for simple SF311, public records, VA claim, Medicaid audit, emergency, or pure legal-advice requests.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 6,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": true,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "creates_state"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 2,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "bd",
+        "curl",
+        "pip3",
+        "python3"
+      ]
+    },
+    "hallmark": {
+      "activation": "review",
+      "claude_code_refs": 0,
+      "description": "Anti-AI-slop design skill for greenfield pages, audits, redesigns, and design extraction from URLs or screenshots. Use when the user asks to build a new app or landing page, wants to redesign something, invokes Hallmark by name, or uses audit/redesign/study.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 121,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": true,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "ffmpeg",
+        "jq",
+        "kubectl",
+        "node",
+        "npm",
+        "npx",
+        "stripe",
+        "vercel"
+      ]
+    },
+    "hono": {
+      "activation": "opt-in",
+      "claude_code_refs": 0,
+      "description": ">- Build, structure, and ship web apps/sites with the Hono framework \u2014 the the user default for new sites and for converting React SPAs to SSR. Use when the user wants to create a Hono app, convert/remake a site in Hono, add SSR + islands on Cloudflare Workers, set up Hono routing/middleware/JSX, choose between hono/jsx (server) and hono/jsx/dom (client), wire the Vite build, or asks \\\"is this Hono\\\", \\\"make it Hono\\\", \\\"Hono SSR\\\", \\\"Hono on Workers\\\", \\\"@hono/jsx\\\", \\\"islands\\\", \\\"hono framework\\\". Loads current, verified Hono API patterns so you leverage the framework fully instead of guessing from memory.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 7,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": true,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_deploy"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "node",
+        "wrangler"
+      ]
+    },
+    "html-report": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "'Default output format for reports, summaries, analyses, dashboards, audits, comparisons, digests, briefings, and any deliverable with structured/spatial information. Generates a single self-contained HTML file (no external dependencies) the user can open in a browser, share, print to PDF, or paste into Notion. Lightweight cousin of /design and /magazine \u2014 no AI generation server, no editorial chrome, just clean Tailwind-via-CDN HTML that beats Markdown on scannability, comparison, and feel. Use whenever the user asks for a report, summary, breakdown, analysis, audit, dashboard, comparison, or any deliverable that previously would have been a .md file. Triggers: ''report'', ''summary'', ''audit'', ''analysis'', ''dashboard'', ''compare'', ''breakdown'', ''rundown'', ''brief'', ''digest'', ''overview'', ''recap'', ''write up'', ''document'', ''deliverable''. Reference: https://thariqs.github.io/html-effectiveness/'",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "git"
+      ]
+    },
+    "image": {
+      "activation": "safe",
+      "claude_code_refs": 1,
+      "description": "When the user wants to create, generate, edit, or optimize images for marketing \u2014 blog heroes, social graphics, product mockups, profile banners, listing visuals, or brand assets. Also use when the user mentions 'AI image generation,' 'generate an image,' 'create a graphic,' 'product mockup,' 'hero image,' 'social media graphic,' 'banner image,' 'cover photo,' 'profile banner,' 'listing screenshot,' 'Flux,' 'Midjourney,' 'DALL-E,' 'GPT Image,' 'Ideogram,' 'Gemini image,' 'Canva,' 'Figma,' 'image optimization,' 'compress images,' 'WebP,' or 'OG image.' Use this for general-purpose marketing image creation and optimization. For paid ad image creative and platform-specific ad specs, see ad-creative. For video production, see video.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 3,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "vercel"
+      ]
+    },
+    "infinite-faq": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": ">- Add an \\\"infinite FAQ\\\" to any Hono-on-Cloudflare-Workers site: a normal accordion FAQ whose last row is \\\"Ask anything else\\\" \u2014 focusing it turns it into an input, submitting streams a Workers AI answer grounded in the site's own content inline below the row, with a \\\"Reading the docs\\\" shimmer before the first token and a Stop button while streaming. Use when the user says \\\"infinite faq\\\", \\\"ask anything else\\\", \\\"AI FAQ\\\", \\\"add an FAQ that answers anything\\\", \\\"FAQ with a chat row\\\", \\\"foglamp-style FAQ\\\", or wants an accordion FAQ backed by Workers AI. Ships a verified 4-file drop-in (SSR section, client island, streaming route, CSS) plus a runnable example Worker and per-site integration steps.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 21,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "node",
+        "npm",
+        "npx",
+        "wrangler"
+      ]
+    },
+    "install-anti-slop": {
+      "activation": "safe",
+      "claude_code_refs": 1,
+      "description": "Install, configure, update, or upgrade the vendored anti-slop Oxlint plugins (dmmulroy/anti-slop) in a local TypeScript or JavaScript repository. Use when adding anti-slop lint rules, picking up upstream rules or fixes, migrating an existing installation while preserving local customizations, or when an oxlint anti-slop gate reports UNMEASURED and the setup needs repair.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 42,
+        "ships_executable_files": true,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 1,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "gh",
+        "git",
+        "node",
+        "npm",
+        "python3"
+      ]
+    },
+    "interview-prep": {
+      "activation": "review",
+      "claude_code_refs": 0,
+      "description": ">- Use when preparing interviews with STAR (result-heavy) stories and practice questions (migrated from Custom GPT).",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": true,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "ios": {
+      "activation": "opt-in",
+      "claude_code_refs": 0,
+      "description": "> THE master iOS/macOS skill \u2014 one entry point for ALL Apple work except production shipping. Develop, build, run, debug, review, test, screenshot, ASO, App Store metadata, compliance scanning, Capacitor web-wrap apps, native Swift/SwiftUI, Rust-core apps. Routes to the right tool (xcodebuildmcp, axiom, asc, greenlight, axe) and the right granular skill. Shipping (archive \u2192 TestFlight \u2192 App Store) lives in /ship's iOS phase. Triggers: \\\"ios\\\", \\\"iphone app\\\", \\\"build the app\\\", \\\"run on simulator\\\", \\\"app crash\\\", \\\"swiftui\\\", \\\"capacitor\\\", \\\"app store screenshots\\\", \\\"ASO\\\", \\\"app review\\\", \\\"TestFlight\\\" (dev questions), \\\"/ios\\\".",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": true,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_deploy"
+      ],
+      "macos_signals": [
+        "brew",
+        "macos",
+        "xcodebuild"
+      ],
+      "shared_layer_refs": 3,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "baguette",
+        "curl",
+        "npm",
+        "npx",
+        "xcodebuild"
+      ]
+    },
+    "ios-ship": {
+      "activation": "opt-in",
+      "claude_code_refs": 0,
+      "description": "> MERGED (2026-06-12) \u2014 kept as a redirect for muscle memory. iOS development (build/run/debug/review/test/screenshots/ASO) is now the /ios super skill; iOS release (greenlight \u2192 sign \u2192 archive \u2192 TestFlight \u2192 App Store \u2192 OTA sync) is /ship's Phase 4.7 (references/ios-release.md). Invoking /ios-ship routes to those.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 3,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": true,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_deploy"
+      ],
+      "macos_signals": [
+        "xcodebuild"
+      ],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "xcodebuild"
+      ]
+    },
+    "it-project-report-assistant": {
+      "activation": "review",
+      "claude_code_refs": 0,
+      "description": ">- Use when drafting IT project status/report writeups (migrated from Custom GPT).",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": true,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "jobsearch": {
+      "activation": "review",
+      "claude_code_refs": 1,
+      "description": "Search job listings in the US (USAJOBS federal, Adzuna private market, and Greenhouse/Lever/Ashby company boards) and Denmark (Jobindex, Jobnet, Akademikernes Jobbank, Jobdanmark), then run the AI job-application workflow from the ai-job-search repo. Use when the user says \\\"/jobsearch\\\", \\\"find jobs\\\", \\\"search jobs\\\", \\\"jobs in USA / [US city]\\\", \\\"federal jobs\\\", \\\"USAJOBS\\\", \\\"Adzuna\\\", \\\"jobs at [company]\\\", \\\"Danish jobs\\\", \\\"jobindex/jobnet/jobbank/jobdanmark\\\", wants to look up listings, job categories, occupation codes, or salary benchmarks, or wants to evaluate fit / tailor a CV / write a cover letter for a posting. Wraps nine Bun CLIs (5 US sources + 4 Danish portals) plus the repo's /setup, /scrape, /apply commands.",
+      "env_or_keys": [
+        "USAJOBS_API_KEY"
+      ],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": true,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "git",
+        "jq",
+        "python3",
+        "stripe"
+      ]
+    },
+    "json-structurer": {
+      "activation": "review",
+      "claude_code_refs": 0,
+      "description": ">- Use when shaping messy data into strict JSON schemas or cleaned structures (migrated from Custom GPT).",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": true,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "launch-strategy": {
+      "activation": "safe",
+      "claude_code_refs": 1,
+      "description": "When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user mentions 'launch,' 'Product Hunt,' 'feature release,' 'announcement,' 'go-to-market,' 'beta launch,' 'early access,' 'waitlist,' 'product update,' 'how do I launch this,' 'launch checklist,' 'GTM plan,' or 'we're about to ship.' Use this whenever someone is preparing to release something publicly. For ongoing marketing after launch, see marketing-ideas.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 3,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "lead-magnets": {
+      "activation": "opt-in",
+      "claude_code_refs": 1,
+      "description": "When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the user mentions \\\"lead magnet,\\\" \\\"gated content,\\\" \\\"content upgrade,\\\" \\\"downloadable,\\\" \\\"ebook,\\\" \\\"cheat sheet,\\\" \\\"checklist,\\\" \\\"template download,\\\" \\\"opt-in,\\\" \\\"freebie,\\\" \\\"PDF download,\\\" \\\"resource library,\\\" \\\"content offer,\\\" \\\"email capture content,\\\" \\\"Notion template,\\\" \\\"spreadsheet template,\\\" or \\\"what should I give away for emails.\\\" Use this for planning what to create and how to distribute it. For interactive tools as lead magnets, see free-tool-strategy. For writing the actual content, see copywriting. For the email sequence after capture, see email-sequence.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 4,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_spend"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "log-hygiene": {
+      "activation": "opt-in",
+      "claude_code_refs": 1,
+      "description": "Proactive log/observability hygiene loop. Assesses recent logs from a real source (wrangler tail, CF Logpush, cron/watcher logfiles, D1), clusters errors, then improves ambiguous error messages, downgrades noise (never deletes), and adds debugging attributes at silent failure points. Runs manually or as a scheduled cron (the Phase-2 Hermes job). Triggers: 'assess the logs', 'clean up the logs', 'improve log output', 'log hygiene', 'why are these errors so vague', '/log-hygiene'.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": true,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": true,
+        "needs_key": false,
+        "scheduled": true
+      },
+      "gate_reasons": [
+        "creates_state",
+        "scheduled",
+        "can_deploy"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 1,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "bd",
+        "npx",
+        "wrangler"
+      ]
+    },
+    "loop-runner": {
+      "activation": "opt-in",
+      "claude_code_refs": 5,
+      "description": "Run a Loop Library loop as a real, bounded, verifiable cycle \u2014 not just a pasted prompt. Use when the user says \\\"/loop-run\\\", \\\"run a loop\\\", \\\"start a loop\\\", \\\"run this loop-library loop\\\", \\\"loop until X\\\", or wants a repeatable agent workflow that measures, learns, and stops on its own. Fetches a loop from the live Loop Library catalog (or a local/inline prompt), then enforces it with a verify check, stop predicates, a JSONL ledger, and two hooks that drive each cycle and refuse premature \\\"done\\\". Triggers: \\\"/loop-run\\\", \\\"run a loop\\\", \\\"start a loop\\\", \\\"loop library\\\", \\\"loop until\\\", \\\"keep iterating until\\\".",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 5,
+        "ships_executable_files": true,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": true,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "creates_state"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "bd",
+        "curl",
+        "git",
+        "npm",
+        "python3"
+      ]
+    },
+    "magazine": {
+      "activation": "opt-in",
+      "claude_code_refs": 0,
+      "description": "Render any content as a magazine-style HTML editorial \u2014 single self-contained file, Fraunces + Inter typography, each section gets its own distinct full-viewport spread (hero, dark midnight, rose alert stamp, terminal, academic drop-cap, big-stat, vinyl vintage, poster, scientific, etc.). Use when the user asks to 'magazine-style', 'editorial layout', 'morning edition', 'render as a zine', or wants any list / digest / report / minutes / curated content rendered as a designed publication instead of raw text. Triggers: 'magazine', 'morning edition', 'editorial', 'newsletter', 'zine', 'magazine-style', 'render this as a magazine', 'make it look like a magazine', 'beautiful html', 'designed digest'. Especially good for: HN/RSS feeds, meeting minutes, research summaries, project status reports, op-ed drafts, link roundups, daily briefings.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 10,
+        "ships_executable_files": true,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": true
+      },
+      "gate_reasons": [
+        "scheduled"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "gh",
+        "git",
+        "python3",
+        "rclone"
+      ]
+    },
+    "makegoal": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": ">- MERGED into /goal (2026-08-26) \u2014 kept as a redirect for muscle memory and for the openai.yaml implicit invocation. The brief-fill + parallel-subgoal + synthesis workflow is now `/goal make <task>` (aliases `/goal build`, `/goal parallel`). Invoking /makegoal routes there. Use when the user types /makegoal, asks for parallel goals for a task, asks to fill the build-task template, or asks to solve a task with parallel goals or parallel agents.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 3,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "marketing-ideas": {
+      "activation": "opt-in",
+      "claude_code_refs": 1,
+      "description": "When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also use when the user asks for 'marketing ideas,' 'growth ideas,' 'how to market,' 'marketing strategies,' 'marketing tactics,' 'ways to promote,' 'ideas to grow,' 'what else can I try,' 'I don't know how to market this,' 'brainstorm marketing,' or 'what marketing should I do.' Use this as a starting point whenever someone is stuck or looking for inspiration on how to grow. For specific channel execution, see the relevant skill (paid-ads, social-content, email-sequence, etc.).",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 4,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_spend"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "marketing-psychology": {
+      "activation": "opt-in",
+      "claude_code_refs": 1,
+      "description": "When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' 'consumer behavior,' 'anchoring,' 'social proof,' 'scarcity,' 'loss aversion,' 'framing,' or 'nudge.' Use this whenever someone wants to understand or leverage how people think and make decisions in a marketing context.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 3,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_spend"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "meta-ads-analyzer": {
+      "activation": "opt-in",
+      "claude_code_refs": 0,
+      "description": "Provides expert-level analysis and diagnosis for Meta Ads campaigns. Use this skill to interpret performance data, identify root causes of issues, and generate actionable recommendations, with a special focus on correctly handling the 'Breakdown Effect'. Use when the user mentions Meta Ads analysis, campaign diagnosis, ad performance, CPA analysis, ROAS analysis, or asks to analyze exported data from Meta Ads Manager.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 12,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_spend"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "bd"
+      ]
+    },
+    "mo-clean": {
+      "activation": "opt-in",
+      "claude_code_refs": 1,
+      "description": "Deep-clean and optimize this Mac with Mole (`mo`) \u2014 clean caches, purge project build artifacts (mo purge, often 40GB+), inventory unused apps by pref-mtime, sweep leftover browser junk (debug-Chrome clones, Kuri, orphaned Chromium) WITHOUT ever touching the real Chrome profiles, and clear dangling brew casks/EOL leaves. Always dry-runs first, shows a tiered findings report, and gets confirmation before deleting anything. Use when the user says \\\"mo clean\\\", \\\"clean up my computer/Mac\\\", \\\"optimize my computer\\\", \\\"free up disk space\\\", \\\"clear caches\\\", \\\"what can I remove\\\", \\\"old programs I don't use\\\", \\\"purge build artifacts\\\", \\\"remove leftover chrome/kuri/debug browser stuff\\\", \\\"mole\\\", \\\"/mo-clean\\\".",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": true
+      },
+      "gate_reasons": [
+        "scheduled"
+      ],
+      "macos_signals": [
+        "brew",
+        "launchagent",
+        "launchd",
+        "macos"
+      ],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "launchctl",
+        "node",
+        "npm"
+      ]
+    },
+    "nano-banana": {
+      "activation": "review",
+      "claude_code_refs": 0,
+      "description": "Generates AI images using the nano-banana CLI (Gemini 3.1 Flash default, Pro available). Handles multi-resolution (512-4K), aspect ratios, reference images for style transfer, green screen workflow for transparent assets, cost tracking, and exact dimension control. Use when asked to \\\"generate an image\\\", \\\"create a sprite\\\", \\\"make an asset\\\", \\\"generate artwork\\\", or any image generation task for UI mockups, game assets, videos, or marketing materials.",
+      "env_or_keys": [
+        "GEMINI_API_KEY"
+      ],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": true,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [
+        "brew"
+      ],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "ffmpeg",
+        "git"
+      ]
+    },
+    "notion-link-triage": {
+      "activation": "opt-in",
+      "claude_code_refs": 0,
+      "description": "Auto-fetch titles, classify, and dedupe links saved to the user's Notion link-inbox database. Use when the user asks to triage their Notion links, inbox-zero a Notion link database, process saved tweets/posts/articles, or auto-action a Notion page they pasted. Triggers on \\\"triage notion links\\\", \\\"inbox-zero notion\\\", \\\"process notion links\\\", \\\"dedupe notion\\\", or pasting a Notion DB URL with v= query param.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": true
+      },
+      "gate_reasons": [
+        "scheduled"
+      ],
+      "macos_signals": [
+        "launchd"
+      ],
+      "shared_layer_refs": 1,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "node",
+        "python3"
+      ]
+    },
+    "onboarding-cro": {
+      "activation": "safe",
+      "claude_code_refs": 1,
+      "description": "When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also use when the user mentions \\\"onboarding flow,\\\" \\\"activation rate,\\\" \\\"user activation,\\\" \\\"first-run experience,\\\" \\\"empty states,\\\" \\\"onboarding checklist,\\\" \\\"aha moment,\\\" \\\"new user experience,\\\" \\\"users aren't activating,\\\" \\\"nobody completes setup,\\\" \\\"low activation rate,\\\" \\\"users sign up but don't use the product,\\\" \\\"time to value,\\\" or \\\"first session experience.\\\" Use this whenever users are signing up but not sticking around. For signup/registration optimization, see signup-flow-cro. For ongoing email sequences, see email-sequence.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 4,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "page-cro": {
+      "activation": "opt-in",
+      "claude_code_refs": 1,
+      "description": "When the user wants to optimize, improve, or increase conversions on any marketing page \u2014 including homepage, landing pages, pricing pages, feature pages, or blog posts. Also use when the user says \\\"CRO,\\\" \\\"conversion rate optimization,\\\" \\\"this page isn't converting,\\\" \\\"improve conversions,\\\" \\\"why isn't this page working,\\\" \\\"my landing page sucks,\\\" \\\"nobody's converting,\\\" \\\"low conversion rate,\\\" \\\"bounce rate is too high,\\\" \\\"people leave without signing up,\\\" or \\\"this page needs work.\\\" Use this even if the user just shares a URL and asks for feedback \u2014 they probably want conversion help. For signup/registration flows, see signup-flow-cro. For post-signup activation, see onboarding-cro. For forms outside of signup, see form-cro. For popups/modals, see popup-cro.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 4,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_spend"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "paid-ads": {
+      "activation": "opt-in",
+      "claude_code_refs": 1,
+      "description": "When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC,' 'paid media,' 'ROAS,' 'CPA,' 'ad campaign,' 'retargeting,' 'audience targeting,' 'Google Ads,' 'Facebook ads,' 'LinkedIn ads,' 'ad budget,' 'cost per click,' 'ad spend,' or 'should I run ads.' Use this for campaign strategy, audience targeting, bidding, and optimization. For bulk ad creative generation and iteration, see ad-creative. For landing page optimization, see page-cro.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 7,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_spend"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "pake": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "> Turn any webpage into a lightweight desktop app (~5MB) using Rust/Tauri. Use when the user wants to create a desktop app from a URL, package a web app as a native app, or build a lightweight Electron alternative. Triggers on: \\\"make a desktop app from\\\", \\\"package this site\\\", \\\"pake\\\", \\\"/pake\\\", \\\"turn this into a desktop app\\\", \\\"wrap this URL\\\".",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [
+        "macos"
+      ],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl"
+      ]
+    },
+    "paywall-upgrade-cro": {
+      "activation": "safe",
+      "claude_code_refs": 1,
+      "description": "When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use when the user mentions \\\"paywall,\\\" \\\"upgrade screen,\\\" \\\"upgrade modal,\\\" \\\"upsell,\\\" \\\"feature gate,\\\" \\\"convert free to paid,\\\" \\\"freemium conversion,\\\" \\\"trial expiration screen,\\\" \\\"limit reached screen,\\\" \\\"plan upgrade prompt,\\\" \\\"in-app pricing,\\\" \\\"free users won't upgrade,\\\" \\\"trial to paid conversion,\\\" or \\\"how do I get users to pay.\\\" Use this for any in-product moment where you're asking users to upgrade. Distinct from public pricing pages (see page-cro) \u2014 this focuses on in-product upgrade moments where the user has already experienced value. For pricing decisions, see pricing-strategy.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 4,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "pdf-fill": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "Fill out fillable PDF forms (government, legal, tax, healthcare, insurance) using PyMuPDF (fitz). Triggered when user provides a PDF and asks to fill it out, complete it, populate fields, or auto-fill data. Covers AcroForm and XFA forms, text fields, radio buttons, checkboxes, and signature fields. Enforces fabrication prevention, visual verification, and multi-section form correctness (don't check boxes you don't qualify for).",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "popup-cro": {
+      "activation": "opt-in",
+      "claude_code_refs": 1,
+      "description": "When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also use when the user mentions \\\"exit intent,\\\" \\\"popup conversions,\\\" \\\"modal optimization,\\\" \\\"lead capture popup,\\\" \\\"email popup,\\\" \\\"announcement banner,\\\" \\\"overlay,\\\" \\\"collect emails with a popup,\\\" \\\"exit popup,\\\" \\\"scroll trigger,\\\" \\\"sticky bar,\\\" or \\\"notification bar.\\\" Use this for any overlay or interrupt-style conversion element. For forms outside of popups, see form-cro. For general page conversion optimization, see page-cro.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 3,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_spend"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "pricing-strategy": {
+      "activation": "safe",
+      "claude_code_refs": 1,
+      "description": "When the user wants help with pricing decisions, packaging, or monetization strategy. Also use when the user mentions 'pricing,' 'pricing tiers,' 'freemium,' 'free trial,' 'packaging,' 'price increase,' 'value metric,' 'Van Westendorp,' 'willingness to pay,' 'monetization,' 'how much should I charge,' 'my pricing is wrong,' 'pricing page,' 'annual vs monthly,' 'per seat pricing,' or 'should I offer a free plan.' Use this whenever someone is figuring out what to charge or how to structure their plans. For in-app upgrade screens, see paywall-upgrade-cro.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 5,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "printing-press": {
+      "activation": "opt-in",
+      "claude_code_refs": 0,
+      "description": "Generate a ship-ready CLI for an API with a lean research -> generate -> build -> shipcheck loop.",
+      "env_or_keys": [
+        "APIFY_TOKEN",
+        "API_TOKEN",
+        "CLIENT_SECRET",
+        "DISCORD_BOT_TOKEN",
+        "DISCORD_TOKEN",
+        "GH_TOKEN",
+        "GITHUB_TOKEN",
+        "HUBSPOT_API_KEY",
+        "HUBSPOT_PRIVATE_APP_TOKEN",
+        "LINEAR_API_KEY",
+        "NOTION_TOKEN",
+        "SLACK_BOT_TOKEN",
+        "SLACK_USER_TOKEN",
+        "STEAM_API_KEY",
+        "TWILIO_AUTH_TOKEN"
+      ],
+      "files": {
+        "file_count": 23,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": true,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": true,
+        "needs_key": true,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "creates_state",
+        "can_spend"
+      ],
+      "macos_signals": [
+        "brew",
+        "homebrew",
+        "macos"
+      ],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "agent-browser",
+        "curl",
+        "gh",
+        "git",
+        "jq",
+        "launchctl",
+        "npm",
+        "npx",
+        "python3",
+        "stripe"
+      ]
+    },
+    "printing-press-amend": {
+      "activation": "opt-in",
+      "claude_code_refs": 5,
+      "description": "> Amend a published CLI from one of two input sources: (1) dogfood mode mines the active Claude Code session transcript for friction (missing flags, hand- rolled API payloads, silent-null returns); (2) direct-input mode accepts user-supplied asks (rename a command, add commands or feeds, fix a named bug, optionally sniff the source site for new endpoints). Confirms scope with the user, plans + executes the fix autonomously, scrubs PII, and opens a PR against mvanhorn/printing-press-library. Two user-in-loop checkpoints: scope after capture, PR draft before open. Trigger phrases: \\\"amend the CLI\\\", \\\"submit a patch\\\", \\\"fix what I just dogfooded\\\", \\\"open a PR for this CLI\\\", \\\"patch this CLI\\\", \\\"add features to my CLI\\\", \\\"rename this command\\\", \\\"add these feeds to <cli>\\\", \\\"sniff for new APIs in <cli>\\\", \\\"amend with these ideas\\\", \\\"use printing-press-amend\\\", \\\"run printing-press-amend\\\".",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 7,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_spend"
+      ],
+      "macos_signals": [
+        "macos"
+      ],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "gh",
+        "git",
+        "jq",
+        "npm",
+        "python3"
+      ]
+    },
+    "printing-press-catalog": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "Browse and install pre-built Go CLIs for popular APIs from the catalog",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "git",
+        "stripe"
+      ]
+    },
+    "printing-press-import": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "> Bring a published CLI from the public library into the internal library so it's identical to a freshly-generated copy \u2014 module path reverted, manuscripts placed alongside, ready for /printing-press-polish or /printing-press-emboss. Use when the public library has a CLI you don't have locally, or to recover from a broken/lost internal copy. Trigger phrases: \\\"import the CLI\\\", \\\"bring it into my library\\\", \\\"fetch from public library\\\", \\\"I don't have it locally yet\\\".",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 6,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "gh",
+        "git",
+        "jq"
+      ]
+    },
+    "printing-press-output-review": {
+      "activation": "opt-in",
+      "claude_code_refs": 0,
+      "description": "> Internal sub-skill: agentic review of a printed CLI's sampled command output for plausibility issues that rule-based checks can't encode (substring-match relevance, format bugs, silent source drops, ranking failures). Invoked via the Skill tool by main printing-press SKILL.md (Phase 4.85) and printing-press-polish SKILL.md during the diagnostic loop. Not for direct user invocation \u2014 its actionable wrappers are /printing-press and /printing-press-polish.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": true
+      },
+      "gate_reasons": [
+        "scheduled"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "printing-press-polish": {
+      "activation": "review",
+      "claude_code_refs": 1,
+      "description": "> Polish a generated CLI to pass verification and become publish-ready. Runs diagnostics (dogfood, verify, scorecard, go vet, gosec), automatically fixes all issues (verify failures, static-analysis findings, dead code, descriptions, README, MCP tool quality), reports the before/after delta, and offers to publish. Use after any /printing-press run, or on any CLI in $PRESS_LIBRARY/. Trigger phrases: \\\"polish\\\", \\\"improve the CLI\\\", \\\"fix verify\\\", \\\"make it publish-ready\\\", \\\"clean up the CLI\\\", \\\"get this ready to ship\\\".",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 5,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": true,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "gh",
+        "git",
+        "jq",
+        "npx"
+      ]
+    },
+    "printing-press-publish": {
+      "activation": "opt-in",
+      "claude_code_refs": 0,
+      "description": "Publish a generated CLI to the printing-press-library repo",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_spend"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "gh",
+        "git",
+        "jq"
+      ]
+    },
+    "printing-press-reprint": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "> Regenerate an existing printed CLI from scratch under the current Printing Press, with prior research, prior novel features, and prior patches (post-publish hand-fixes) carried into the writing pipeline as reconciliation context rather than dropped on the floor. Pulls the CLI from the public library if it isn't local, recommends reuse-vs-redo of prior research based on age, then hands off to /printing-press with the right context. Use when a machine upgrade would benefit a published CLI more than manual polish. Trigger phrases: \\\"reprint <api>\\\", \\\"regenerate <api>\\\", \\\"redo the <api> CLI\\\", \\\"rebuild <api> from scratch\\\", \\\"this CLI would benefit from a reprint\\\".",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [
+        "macos"
+      ],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "gh",
+        "jq",
+        "python3"
+      ]
+    },
+    "printing-press-retro": {
+      "activation": "opt-in",
+      "claude_code_refs": 0,
+      "description": "> Run a retrospective after generating a CLI. Identifies systemic improvements to the Printing Press \u2014 templates, Go binary, skill instructions, catalog \u2014 so the next CLI comes out better. Creates a GitHub issue with actionable findings when there are Printing Press fixes to make. Use after any /printing-press run. Trigger phrases: \\\"retro\\\", \\\"retrospective\\\", \\\"what went wrong\\\", \\\"improve the press\\\", \\\"post-mortem\\\", \\\"lessons learned\\\", \\\"what can we improve\\\", \\\"file a retro\\\", \\\"submit findings\\\".",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 5,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": true,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "creates_state"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "gh",
+        "git",
+        "jq",
+        "python3"
+      ]
+    },
+    "printing-press-score": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "Score a generated CLI against the Steinberger bar, compare two CLIs side-by-side",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "git"
+      ]
+    },
+    "product-description": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "Build a \\\"product description\\\" repo for a software product \u2014 a set of prose documents describing, from the outside in, what the user sees, what they can do, and exactly what happens when they do it, written from the code and tests, then verified against the running product and triaged into a bug list. Works for any product with a user (canvas editors, web apps, CLIs, chat products, mobile apps). Use when the user asks to \\\"write a product description for X\\\", \\\"describe the user experience of X\\\", \\\"document how X behaves for the user\\\", \\\"make a behavior-spec repo\\\", or wants a feature-by-feature, event-by-event account of an app's behavior rather than API docs. Also use to resume or extend an existing product description repo.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 10,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "git",
+        "node",
+        "python3"
+      ]
+    },
+    "product-marketing-context": {
+      "activation": "safe",
+      "claude_code_refs": 2,
+      "description": "When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,' 'marketing context,' 'set up context,' 'positioning,' 'who is my target audience,' 'describe my product,' 'ICP,' 'ideal customer profile,' or wants to avoid repeating foundational information across marketing tasks. Use this at the start of any new project before using other marketing skills \u2014 it creates `.agents/product-marketing-context.md` that all other skills reference for product, audience, and positioning context.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 3,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "professional-text-editor": {
+      "activation": "review",
+      "claude_code_refs": 0,
+      "description": ">- Use when polishing the user's prose for email, docs, or posts into clear professional writing (migrated from Custom GPT).",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": true,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "programmatic-seo": {
+      "activation": "safe",
+      "claude_code_refs": 1,
+      "description": "When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions \\\"programmatic SEO,\\\" \\\"template pages,\\\" \\\"pages at scale,\\\" \\\"directory pages,\\\" \\\"location pages,\\\" \\\"[keyword] + [city] pages,\\\" \\\"comparison pages,\\\" \\\"integration pages,\\\" \\\"building many pages for SEO,\\\" \\\"pSEO,\\\" \\\"generate 100 pages,\\\" \\\"data-driven pages,\\\" or \\\"templated landing pages.\\\" Use this whenever someone wants to create many similar pages targeting different keywords or locations. For auditing existing SEO issues, see seo-audit. For content strategy planning, see content-strategy.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 4,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "stripe"
+      ]
+    },
+    "prompt-architect": {
+      "activation": "review",
+      "claude_code_refs": 0,
+      "description": ">- Use when analyzing or rewriting prompts using strong prompt-engineering patterns (migrated from Custom GPT).",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": true,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "rclone": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "Upload, sync, and manage files across cloud storage providers using rclone. Use when uploading files (images, videos, documents) to S3, Cloudflare R2, Backblaze B2, Google Drive, Dropbox, or any S3-compatible storage. Triggers on \\\"upload to S3\\\", \\\"sync to cloud\\\", \\\"rclone\\\", \\\"backup files\\\", \\\"upload video/image to bucket\\\", or requests to transfer files to remote storage.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 3,
+        "ships_executable_files": true,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [
+        "brew",
+        "macos"
+      ],
+      "shared_layer_refs": 1,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "rclone"
+      ]
+    },
+    "referral-program": {
+      "activation": "review",
+      "claude_code_refs": 1,
+      "description": "When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy. Also use when the user mentions 'referral,' 'affiliate,' 'ambassador,' 'word of mouth,' 'viral loop,' 'refer a friend,' 'partner program,' 'referral incentive,' 'how to get referrals,' 'customers referring customers,' or 'affiliate payout.' Use this whenever someone wants existing users or partners to bring in new customers. For launch-specific virality, see launch-strategy.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 5,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": true,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "stripe"
+      ]
+    },
+    "revops": {
+      "activation": "safe",
+      "claude_code_refs": 1,
+      "description": "When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes. Also use when the user mentions 'RevOps,' 'revenue operations,' 'lead scoring,' 'lead routing,' 'MQL,' 'SQL,' 'pipeline stages,' 'deal desk,' 'CRM automation,' 'marketing-to-sales handoff,' 'data hygiene,' 'leads aren't getting to sales,' 'pipeline management,' 'lead qualification,' or 'when should marketing hand off to sales.' Use this for anything involving the systems and processes that connect marketing to revenue. For cold outreach emails, see cold-email. For email drip campaigns, see email-sequence. For pricing decisions, see pricing-strategy.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 7,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "routerctl": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "Use when managing the user's local Xfinity router, DHCP reservations, printer/Mac LAN stability, firewall/Wi-Fi/DMZ/remote-management audits, or dry-running router actionHandler endpoints through the routerctl CLI.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [
+        "macos"
+      ],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "sales-enablement": {
+      "activation": "opt-in",
+      "claude_code_refs": 1,
+      "description": "When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions 'sales deck,' 'pitch deck,' 'one-pager,' 'leave-behind,' 'objection handling,' 'deal-specific ROI analysis,' 'demo script,' 'talk track,' 'sales playbook,' 'proposal template,' 'buyer persona card,' 'help my sales team,' 'sales materials,' or 'what should I give my sales reps.' Use this for any document or asset that helps a sales team close deals. For competitor comparison pages and battle cards, see competitor-alternatives. For marketing website copy, see copywriting. For cold outreach emails, see cold-email.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 7,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_spend"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "schema-markup": {
+      "activation": "safe",
+      "claude_code_refs": 1,
+      "description": "When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user mentions \\\"schema markup,\\\" \\\"structured data,\\\" \\\"JSON-LD,\\\" \\\"rich snippets,\\\" \\\"schema.org,\\\" \\\"FAQ schema,\\\" \\\"product schema,\\\" \\\"review schema,\\\" \\\"breadcrumb schema,\\\" \\\"Google rich results,\\\" \\\"knowledge panel,\\\" \\\"star ratings in search,\\\" or \\\"add structured data.\\\" Use this whenever someone wants their pages to show enhanced results in Google. For broader SEO issues, see seo-audit. For AI search optimization, see ai-seo.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 4,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "security-deep": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "Deep security review of a git diff with proof-of-exploitability and auditable coverage. Use when the built-in /security-review is not enough \u2014 when you need evidence a vulnerability is real (PoC, not vibes), proof that EVERY changed file was reviewed, or expansion to sibling instances of the same flawed pattern. Triggers on \\\"deep security review\\\", \\\"security audit this branch\\\", \\\"prove this vuln is exploitable\\\", \\\"did you check every file\\\", \\\"security-deep\\\", \\\"/security-deep\\\". For a fast PR-noise-filtered pass, use the built-in /security-review instead.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 7,
+        "ships_executable_files": true,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "git",
+        "npm",
+        "python3"
+      ]
+    },
+    "seo-audit": {
+      "activation": "safe",
+      "claude_code_refs": 1,
+      "description": "When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions \\\"SEO audit,\\\" \\\"technical SEO,\\\" \\\"why am I not ranking,\\\" \\\"SEO issues,\\\" \\\"on-page SEO,\\\" \\\"meta tags review,\\\" \\\"SEO health check,\\\" \\\"my traffic dropped,\\\" \\\"lost rankings,\\\" \\\"not showing up in Google,\\\" \\\"site isn't ranking,\\\" \\\"Google update hit me,\\\" \\\"page speed,\\\" \\\"core web vitals,\\\" \\\"crawl errors,\\\" or \\\"indexing issues.\\\" Use this even if the user just says something vague like \\\"my SEO is bad\\\" or \\\"help with SEO\\\" \u2014 start with an audit. For building pages at scale to target keywords, see programmatic-seo. For adding structured data, see schema-markup. For AI search optimization, see ai-seo.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 7,
+        "ships_executable_files": true,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "vercel"
+      ]
+    },
+    "sf311": {
+      "activation": "review",
+      "claude_code_refs": 1,
+      "description": "| DOGE Service (Digital Operations for Government Enforcement) for San Francisco 311. Relentlessly identifies, reports, and forces action on city issues. Use when: - User wants to report a city issue in San Francisco (pothole, graffiti, dumping, etc.) - User mentions SF311, 311, or asks about city services in SF - User provides a photo of an issue and wants it reported - User asks about abandoned vehicles, blight, or code violations in SF - Keywords: \\\"report pothole\\\", \\\"sf311\\\", \\\"graffiti\\\", \\\"illegal dumping\\\", \\\"abandoned car SF\\\" Don't use when: - Issue is on private property \u2192 Different jurisdiction, may need building dept or police - Issue is on federal land (Presidio, Golden Gate) \u2192 Use National Park Service - Emergency situation \u2192 Call 911, not 311 - Issue is outside San Francisco \u2192 Use that city's 311 or doge-records for general gov - User wants FOIA/records request \u2192 Use doge-records skill instead",
+      "env_or_keys": [
+        "CLERK_TOKEN"
+      ],
+      "files": {
+        "file_count": 5,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": true,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 1,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl"
+      ]
+    },
+    "ship": {
+      "activation": "opt-in",
+      "claude_code_refs": 2,
+      "description": "Safe production deployment with quality gates, safety audits, rollback, and dedicated passkey/TOTP/2FA/passwordless account-security lifecycle checks. Deploys to PRODUCTION by default.",
+      "env_or_keys": [
+        "CF_BEACON_TOKEN",
+        "CLOUDFLARE_API_KEY",
+        "CLOUDFLARE_API_TOKEN"
+      ],
+      "files": {
+        "file_count": 31,
+        "ships_executable_files": true,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": true,
+        "can_send": true,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": true,
+        "needs_key": true,
+        "scheduled": true
+      },
+      "gate_reasons": [
+        "creates_state",
+        "scheduled",
+        "can_spend",
+        "can_deploy"
+      ],
+      "macos_signals": [
+        "brew",
+        "homebrew",
+        "macos"
+      ],
+      "shared_layer_refs": 80,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "bd",
+        "curl",
+        "docker",
+        "gh",
+        "git",
+        "jq",
+        "launchctl",
+        "node",
+        "npm",
+        "npx",
+        "python3",
+        "stripe",
+        "vercel",
+        "wrangler",
+        "xcodebuild"
+      ]
+    },
+    "signup-flow-cro": {
+      "activation": "opt-in",
+      "claude_code_refs": 1,
+      "description": "When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the user mentions \\\"signup conversions,\\\" \\\"registration friction,\\\" \\\"signup form optimization,\\\" \\\"free trial signup,\\\" \\\"reduce signup dropoff,\\\" \\\"account creation flow,\\\" \\\"people aren't signing up,\\\" \\\"signup abandonment,\\\" \\\"trial conversion rate,\\\" \\\"nobody completes registration,\\\" \\\"too many steps to sign up,\\\" or \\\"simplify our signup.\\\" Use this whenever the user has a signup or registration flow that isn't performing. For post-signup onboarding, see onboarding-cro. For lead capture forms (not account creation), see form-cro.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 3,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_spend"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "site-architecture": {
+      "activation": "safe",
+      "claude_code_refs": 1,
+      "description": "When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal linking. Also use when the user mentions \\\"sitemap,\\\" \\\"site map,\\\" \\\"visual sitemap,\\\" \\\"site structure,\\\" \\\"page hierarchy,\\\" \\\"information architecture,\\\" \\\"IA,\\\" \\\"navigation design,\\\" \\\"URL structure,\\\" \\\"breadcrumbs,\\\" \\\"internal linking strategy,\\\" \\\"website planning,\\\" \\\"what pages do I need,\\\" \\\"how should I organize my site,\\\" or \\\"site navigation.\\\" Use this whenever someone is planning what pages a website should have and how they connect. NOT for XML sitemaps (that's technical SEO \u2014 see seo-audit). For SEO audits, see seo-audit. For structured data, see schema-markup.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 6,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "node"
+      ]
+    },
+    "skill-creator": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "skill-creator-official": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 2,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "npm"
+      ]
+    },
+    "slash-help": {
+      "activation": "opt-in",
+      "claude_code_refs": 0,
+      "description": "Reference for all slash commands and CLI tools available in the user's setup. Use when user asks \\\"what slash commands do I have\\\", \\\"list my CLI tools\\\", \\\"/help\\\", \\\"show me commands\\\", or wants a reference card of available automations.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": true,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": true,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "creates_state",
+        "can_deploy"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "bd",
+        "curl",
+        "git",
+        "wrangler"
+      ]
+    },
+    "social-content": {
+      "activation": "safe",
+      "claude_code_refs": 1,
+      "description": "When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, Facebook, or other platforms. Also use when the user mentions 'LinkedIn post,' 'Twitter thread,' 'social media,' 'content calendar,' 'social scheduling,' 'engagement,' 'viral content,' 'what should I post,' 'repurpose this content,' 'tweet ideas,' 'LinkedIn carousel,' 'social media strategy,' 'grow my following,' 'TikTok video,' 'Reels,' 'Shorts,' 'video script,' 'video hook,' 'short-form video,' or 'create a reel.' Use this for social media content creation, repurposing, scheduling, and short-form video scripting. For broader content strategy, see content-strategy. For paid video ads, see ad-creative.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 8,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "taskmaster": {
+      "activation": "opt-in",
+      "claude_code_refs": 4,
+      "description": "| Stop hook that keeps the agent working until all plans and user requests are 100% complete. Fires when the agent tries to stop, re-examines the plan and task list, and forces continuation if anything is unfinished. Prevents premature stopping on multi-step tasks.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 3,
+        "ships_executable_files": true,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": true,
+        "needs_key": false,
+        "scheduled": true
+      },
+      "gate_reasons": [
+        "creates_state",
+        "scheduled"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "bd",
+        "curl",
+        "git",
+        "jq",
+        "python3"
+      ]
+    },
+    "token-usage": {
+      "activation": "safe",
+      "claude_code_refs": 7,
+      "description": "Analyze Claude Code token usage across all projects and sessions",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 3,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "python3"
+      ]
+    },
+    "ui-improver": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "Complete UI improvement workflow combining design intelligence, micro-polish, and code simplification. Use when building, reviewing, or improving any UI \u2014 new pages, components, style decisions, accessibility reviews, animation polish, code cleanup after writing frontend code. Triggers on any frontend work: \\\"make this look better\\\", \\\"polish the UI\\\", \\\"review this component\\\", \\\"improve the interface\\\", \\\"simplify this code\\\", building dashboards, landing pages, forms, modals, buttons, or any visual element.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [
+        "macos"
+      ],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "video": {
+      "activation": "safe",
+      "claude_code_refs": 1,
+      "description": "When the user wants to create, generate, or produce video content using AI tools or programmatic frameworks. Also use when the user mentions 'video production,' 'AI video,' 'Remotion,' 'Hyperframes,' 'HeyGen,' 'Synthesia,' 'Veo,' 'Runway,' 'Kling,' 'Pika,' 'video generation,' 'AI avatar,' 'talking head video,' 'programmatic video,' 'video template,' 'explainer video,' 'product demo video,' 'video pipeline,' or 'make me a video.' Use this for video creation, generation, and production workflows. For video content strategy and what to post, see social-content. For paid video ad creative, see ad-creative.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 3,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "npm",
+        "npx"
+      ]
+    },
+    "video-use": {
+      "activation": "opt-in",
+      "claude_code_refs": 1,
+      "description": "Edit any video by conversation. Transcribe, cut, color grade, generate overlay animations, burn subtitles \u2014 for talking heads, montages, tutorials, travel, interviews. No presets, no menus. Ask questions, confirm the plan, execute, iterate, persist. Production-correctness rules are hard; everything else is artistic freedom.",
+      "env_or_keys": [
+        "ELEVENLABS_API_KEY"
+      ],
+      "files": {
+        "file_count": 31,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": true,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": true,
+        "scheduled": false
+      },
+      "gate_reasons": [
+        "can_deploy"
+      ],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "curl",
+        "ffmpeg",
+        "gh",
+        "git",
+        "mactex-no-gui",
+        "python3",
+        "yt-dlp"
+      ]
+    },
+    "visualise": {
+      "activation": "review",
+      "claude_code_refs": 0,
+      "description": "Render inline interactive visuals \u2014 SVG diagrams, HTML widgets, charts, and explainers \u2014 directly in the conversation. Use this skill whenever the user asks to visualize, diagram, chart, illustrate, or explain something visually, or when an explanation would genuinely benefit from a spatial/interactive diagram rather than text. Also triggers for: flowcharts, architecture diagrams, data visualizations, interactive explainers, comparison layouts, UI mockups, and any request containing 'show me', 'draw', 'map out', 'visualize', or 'diagram'. Even when the user doesn't explicitly ask for a visual, use this skill proactively when the topic has spatial, sequential, or systemic relationships that a diagram would clarify better than prose.",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 8,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": true,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "git",
+        "node"
+      ]
+    },
+    "worker-queue-bridge": {
+      "activation": "opt-in",
+      "claude_code_refs": 0,
+      "description": "'Run commands on a remote machine through a Cloudflare Worker KV queue \u2014 no inbound connectivity, SSH tunnel, or persistent connection required. The reusable pattern behind a proven remote command bridge: Worker /cmd/* routes (submit/pending/result/results/ack), a submitter adapter, and a remote executor with timeout+kill, output cap, denylist, and fail-open behavior. At-least-once execution, at-most-once results. Use when building connector-style integrations that must reach a machine or service behind NAT/firewall, or when replacing a fragile polling/SSH-relay transport.'",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": true,
+        "can_send": false,
+        "can_spend": true,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": true
+      },
+      "gate_reasons": [
+        "scheduled",
+        "can_spend",
+        "can_deploy"
+      ],
+      "macos_signals": [
+        "launchd",
+        "macos"
+      ],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": [
+        "launchctl",
+        "npm",
+        "npx",
+        "wrangler"
+      ]
+    },
+    "x-cli": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "Deterministic Go CLI for X/Twitter API v2 with multi-account OAuth 2.0. Post, reply, delete, like, follow, block, mute, timeline, mentions, search, and DMs across multiple configured accounts. Triggers on \"x post\", \"tweet this\", \"reply to tweet\", \"x cli\", \"post to X\".",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    },
+    "zi-search": {
+      "activation": "safe",
+      "claude_code_refs": 0,
+      "description": "Free-only ZoomInfo company search via zi-search CLI (lookup IDs, search companies, find similar). Use for AIVA GTM company lists, ICP sizing, TAM counts, industry/metro/tech filter resolution. Commands: zi-search lookup / search / similar. Never enrich. Never contacts, intent, scoops, news, research, or raw. Trigger on ZoomInfo company search, GTM company lists, ICP, firmographics, \\\"how many companies like X\\\".",
+      "env_or_keys": [],
+      "files": {
+        "file_count": 2,
+        "ships_executable_files": false,
+        "skill_md": true,
+        "skill_yaml": true
+      },
+      "flags": {
+        "can_deploy": false,
+        "can_send": false,
+        "can_spend": false,
+        "controls_machine": false,
+        "creates_state": false,
+        "needs_key": false,
+        "scheduled": false
+      },
+      "gate_reasons": [],
+      "macos_signals": [
+        "brew",
+        "homebrew"
+      ],
+      "shared_layer_refs": 0,
+      "tools_note": "Referenced only \u2014 install.sh installs files, never external tools.",
+      "tools_referenced": []
+    }
+  }
+}
