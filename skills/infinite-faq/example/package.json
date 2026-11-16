@@ -13,13 +13,13 @@
     "check": "npm run check-template && npm run typecheck && npm run build:island && npm run check:runtime && npm audit --ignore-scripts --audit-level=low"
   },
   "dependencies": {
-    "hono": "^4.13.13",
+    "hono": "^4.13.16",
     "zod": "^4.6.1"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20260831.1",
     "esbuild": "^0.25.0",
     "typescript": "^5.9.0",
-    "wrangler": "^4.151.3"
+    "wrangler": "^4.156.0"
   }
 }
