@@ -143,6 +143,16 @@ How it scales:
   moves a level.
 - **It applies to itself.** Any edit to the tutor's own `SKILL.md`
   goes through the loop with the tutor as the student.
+- **It ships its infrastructure.** The skill-map registry template,
+  the feedback-record JSON schema, and a deterministic reference
+  harvester (stdlib-only, with a built-in sabotage self-test) live in
+  the skill's `references/` and `scripts/` — the loop persists from
+  the first run instead of waiting for every user to improvise the
+  plumbing. And because probe execution is itself a failure-prone
+  flow, the tutor carries its own probe-execution ladder: named lanes,
+  a two-failure retry cap, walls scored NOT LIVE-PROVEN under the
+  paper cap, gates staged and never executed through, and a terminal
+  rule that every probe is accounted for in the report.
 
 The standards it grades against are part of the skill: mandatory
 ladders for failure-prone flows (sign-ins, codes, payments, filings),

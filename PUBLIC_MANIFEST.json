@@ -113,6 +113,9 @@
     "skills/ai-seo/references/platform-ranking-factors.md",
     "skills/ai-seo/skill.yaml",
     "skills/ai-tutor/SKILL.md",
+    "skills/ai-tutor/references/feedback-record-schema.json",
+    "skills/ai-tutor/references/skill-maps-template.md",
+    "skills/ai-tutor/scripts/harvest-feedback.py",
     "skills/ai-tutor/skill.yaml",
     "skills/analytics-tracking/SKILL.md",
     "skills/analytics-tracking/evals/evals.json",
@@ -980,5 +983,5 @@
     "templates/TOOLS.md",
     "templates/USER.md"
   ],
-  "file_count": 978
+  "file_count": 981
 }

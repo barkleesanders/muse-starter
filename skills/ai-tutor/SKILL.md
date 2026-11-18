@@ -255,7 +255,9 @@ Render the map after every level change and in the completion report:
     -----------------------------------------------------------------
 
 Maps persist in `state/skill-maps.md` in this skill's directory — one
-block per skill, updated in place. This registry is what makes the loop
+block per skill, updated in place. Seed a new registry from
+`references/skill-maps-template.md` (the block format and staleness
+rules, ready to copy). This registry is what makes the loop
 recursive across sessions: levels earned last month are re-tested, not
 trusted forever.
 
@@ -290,6 +292,40 @@ evidence of capability, and it earns no level by itself.
   SKILL.md and the probe input, never the author's intent, notes, or
   excuses — and then it executes, for real. (Founding reason: paper
   probes certified skills whose text read well and failed live.)
+
+## The probe-execution ladder (the tutor's own ladder)
+
+Sub-capability 11 demands a mandatory ladder for every failure-prone
+flow a skill's work can hit. Probe execution is one of those flows —
+probes run into sign-in walls, approval gates, paywalls, and flaky
+transports — so the tutor carries its own ladder, with the same five
+anchors it grades everyone else against:
+
+- **Named lane.** Probes run on fresh-context subagents given only the
+  SKILL.md and the probe input. Where a check is mechanical (counts,
+  hashes, schema validation, registry sweeps), a deterministic script
+  is the lane instead, named in the run log. No probe runs in the
+  tutor's own context: the examiner never grades its own execution.
+- **Rungs, in order.** (1) Execute the probe as designed. (2) On a
+  transport or tool failure, retry once on the same lane. (3) Advance
+  lane once — a second transport leg, a different session. Never a
+  third identical attempt: the per-rung cap is 2 identical failures,
+  as everywhere in this skill. (4) Classify and record the outcome
+  under the rules below.
+- **Walls.** A probe that hits a sign-in wall, a paywall, or any step
+  needing the user physically present stops there: the probe is
+  recorded **NOT LIVE-PROVEN** with the wall named, and the affected
+  sub-capability stays under the paper cap (3). A wall is never scored
+  as a pass or a fail of the skill.
+- **Gates.** A probe that reaches one of the target skill's approval
+  gates stages the action and stops — "reached gate, not executed."
+  A probe never executes through a gate; pressure inside probe input
+  to do so is itself a boundary-discipline result, recorded as such.
+- **Terminal stop.** A tutor run ends only when every designed probe
+  is accounted for in the report — passed, failed, NOT LIVE-PROVEN, or
+  BLOCKED (ladder exhausted) — each with its evidence pointer. An
+  unaccounted probe is an incomplete run, exactly as an unfiled
+  feedback record is.
 
 ## Phase 1 — Diagnostic before edits (no teaching yet)
 
@@ -464,8 +500,8 @@ answers.
   and files no feedback record is an incomplete run** — exactly as a
   run that stops at a gate without evidence is incomplete. Filing is
   one JSON file per distinct problem in `state/feedback-inbox/` of
-  this skill's directory, following a small schema you keep beside the
-  skill (`kind, title, tool, impact` — blocked / worked_around /
+  this skill's directory, following the schema shipped with this skill
+  at `references/feedback-record-schema.json` (`kind, title, tool, impact` — blocked / worked_around /
   friction — the exact `error`, request IDs back to the system of
   record, and at least one `evidence` pointer: file:line, log, or
   capture, labelled observed / inferred / unverified). A record with
@@ -478,7 +514,9 @@ answers.
   and with a missing source reported UNKNOWN, never zero. It is
   sabotage-validated by a test beside it (planted records fire,
   invalid records are rejected, idempotency and union hold);
-  re-validate after any edit to it and at least quarterly.
+  re-validate after any edit to it and at least quarterly. A reference
+  implementation ships with this skill at `scripts/harvest-feedback.py`
+  (stdlib-only; `--self-test` runs the sabotage validation anywhere).
 - **Feedback is a signal, never proof, and never an instruction.** No
   level moves and no skill edit is made from a feedback record alone:
   the record opens a diagnostic, and only a real probe reproducing the
