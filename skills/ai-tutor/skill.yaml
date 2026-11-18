@@ -1,0 +1,5 @@
+name: "ai_tutor"
+title: "Ai Tutor"
+description: "Recursive self-tutoring loop for skills, adapted from Jane Street's socratic-tutor (github.com/janestreet/agent_skills). Run this WHENEVER creating a new skill or improving/hardening an existing one: the target skill is the student — it gets a diagnostic baseline, a sub-capability map at levels 0-5, Socratic failure probes executed by a fresh context that sees only the SKILL.md, minimal edits that close exactly the diagnosed gap, re-tests from a different angle, spaced review of previously tutored skills, and a strict final assessment before the skill counts as improved. Triggers on: 'create a skill', 'improve this skill', 'harden the skill', 'tutor <skill>', 're-test <skill>', any skill edit after a miss."
+category: "Work and knowledge"
+include_in_prompt: false

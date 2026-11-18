@@ -74,7 +74,7 @@ installer contract with `bash scripts/check-installer.sh` and
 
 ## What's inside
 
-- **139 skills** — engineering workflows (`carmack`, `debug`, `ship`), research,
+- **140 skills** — engineering workflows (`carmack`, `debug`, `ship`), research,
   government accountability (`gov`), marketing, SEO, mobile, and more. Each skill is a `SKILL.md`
   plus a generated `skill.yaml` descriptor, which is what Muse's skill
   search reads, plus supporting `references/`, `scripts/`, `tools/`, and
@@ -96,6 +96,60 @@ installer contract with `bash scripts/check-installer.sh` and
   shared reminders, another tracker), keep yours and skip beads — a
   second tracker is a second source of truth. [`SHARE.md`](SHARE.md)
   is a short copy-paste blurb for handing this starter to someone.
+
+## The AI Tutor — skills that tutor themselves
+
+Skills rot. A workflow that read well the day it was written quietly
+stops matching the tools, routes, and failure modes around it, and the
+agent improvises the difference. The [`ai-tutor`](skills/ai-tutor/SKILL.md)
+skill is this pack's answer: a recursive self-tutoring loop, adapted
+from Jane Street's `socratic-tutor`, in which **the student is the
+skill itself**.
+
+How it works:
+
+- **Diagnose before editing.** The target skill is decomposed into
+  4–10 sub-capabilities (trigger precision, procedure correctness,
+  failure handling, boundary discipline, …), each graded on a 0–5
+  scale. The baseline is earned by **probes**: fresh-context agents
+  that see only the `SKILL.md` and a task input, and execute the
+  procedure for real — real tools, real read-backs — stopping only at
+  the skill's own approval gates. Paper probes (reading the text and
+  narrating what it *would* do) cap a sub-capability at 3.
+- **One gap, one edit, one re-test.** The loop works weakest-first:
+  name the single gap a failing probe exposed, make the minimal edit
+  that closes exactly it, then re-test from a different angle, with a
+  devil's-advocate probe on every pass trying to break the fix.
+- **A final assessment is the ship gate.** Every sub-capability at
+  target (4 by default, 5 for safety/credential/payment-adjacent
+  skills), a fresh mixed probe set, and a proved / not-proved line in
+  the report. Fail, and the loop continues.
+
+How it scales:
+
+- **The registry persists.** Skill maps live in the tutor's own
+  `state/` directory, so levels survive across sessions — and are
+  re-tested, not trusted. Every tutor run ends with **spaced review**:
+  up to two previously tutored skills get a fresh unprompted probe,
+  and a regression lowers the recorded level on the spot. A map stale
+  for 60+ days is reported UNVERIFIED, whatever it says.
+- **It scales down as well as up.** A one-line skill fix gets a
+  two-probe micro-loop, not the full assessment — the loop shrinks; it
+  does not switch off.
+- **Real failures feed it.** Tool failures and workarounds from daily
+  work are filed as structured feedback records and swept by a
+  deterministic harvester into a ledger the tutor triages by
+  mechanism. Feedback opens a diagnostic; only a reproduced failure
+  moves a level.
+- **It applies to itself.** Any edit to the tutor's own `SKILL.md`
+  goes through the loop with the tutor as the student.
+
+The standards it grades against are part of the skill: mandatory
+ladders for failure-prone flows (sign-ins, codes, payments, filings),
+a no-arbitrary-limits rule (a cap that binds silently is data loss),
+and Richard Cook's complex-systems failure discipline — TAC
+decomposition instead of "root cause", sabotage-validated guards,
+sunset/coupling accounting for every defence added.
 
 ## Roles, hooks, and other honest deltas
 

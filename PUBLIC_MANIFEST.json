@@ -112,6 +112,8 @@
     "skills/ai-seo/references/content-patterns.md",
     "skills/ai-seo/references/platform-ranking-factors.md",
     "skills/ai-seo/skill.yaml",
+    "skills/ai-tutor/SKILL.md",
+    "skills/ai-tutor/skill.yaml",
     "skills/analytics-tracking/SKILL.md",
     "skills/analytics-tracking/evals/evals.json",
     "skills/analytics-tracking/references/event-library.md",
@@ -978,5 +980,5 @@
     "templates/TOOLS.md",
     "templates/USER.md"
   ],
-  "file_count": 976
+  "file_count": 978
 }

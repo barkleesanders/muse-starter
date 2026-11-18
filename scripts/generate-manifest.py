@@ -79,6 +79,9 @@ OVERRIDES = {
     # The goal/taskmaster pair create tracker state by design.
     "goal": {"creates_state": True},
     "taskmaster": {"creates_state": True, "scheduled": True},
+    # "ship it" appears only inside quoted devil's-advocate probe lines;
+    # the tutor edits skill text and never deploys anything.
+    "ai-tutor": {"can_deploy": False},
 }
 
 # Hard gate: skills with any of these change the *system* they land on —
